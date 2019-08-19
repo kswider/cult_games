@@ -1,8 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
@@ -28,17 +25,6 @@ public class MenuController : MonoBehaviour
             cameraEventFired = false;
             movingCoroutine = StartCoroutine(Lerp());            
         }
-
-        // Make sure user is on Android platform
-        if (Application.platform == RuntimePlatform.Android) {
-        
-            // Check if Back was pressed this frame
-            if (Input.GetKeyDown(KeyCode.Escape)) {
-            
-                // Quit the application
-                Application.Quit();
-            }
-        }
     }
 
     public void LookAtMenu(Transform menuTransform)
@@ -50,18 +36,8 @@ public class MenuController : MonoBehaviour
         cameraDesiredPosition = cameraTransform.position;
         cameraDesiredPosition.x = menuTransform.position.x;
         cameraEventFired = true;
-    }  
-
-    public void GoToScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName); 
     }
 
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
- 
     private IEnumerator Lerp()
     {
         while (true)

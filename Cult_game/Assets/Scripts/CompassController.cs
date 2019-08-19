@@ -1,8 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Android;
-using UnityEngine.UI;
 
 public class CompassController : MonoBehaviour
 {
@@ -10,7 +8,8 @@ public class CompassController : MonoBehaviour
     {
         StartCoroutine(InitializeLocation());
     }
-    public IEnumerator InitializeLocation()
+
+    private IEnumerator InitializeLocation()
     {
 #if UNITY_EDITOR
         //Wait until Unity connects to the Unity Remote, while not connected, yield return null
@@ -60,15 +59,9 @@ public class CompassController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("UpdateCompass", 0.5f, 0.025f);
+        InvokeRepeating(nameof(UpdateCompass), 0.5f, 0.025f);
     }
-
-    // Update is called once per frame
-    void Update () 
-    {
-
-    }
-
+    
     void UpdateCompass()
     {
         transform.localRotation = Quaternion.Euler(0, 0, Mathf.Round(Input.compass.trueHeading));
