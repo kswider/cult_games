@@ -76,18 +76,18 @@ public class ExploringController : MonoBehaviour
     public void SetCustomPlace(int index)
     {
         SetPlaceAsLocal(index);
-        _nameText.text = "Selected attraction: " + _selectedPlace.name;
+        _nameText.text = "Selected attraction: " + _selectedPlace.engName;
     }
     
     public void SetPlaceToNearest()
     {
         SetPlaceAsLocal(FindNearestPlaceIndex());
-        _nameText.text = "Nearest attraction: " + _selectedPlace.name;
+        _nameText.text = "Nearest attraction: " + _selectedPlace.engName;
     }
 
     private void SetPlaceAsLocal(int index)
     {
-        _selectedPlace = places.Find(p => p.index == index);
+        _selectedPlace = places.Find(p => p.id == index);
         _localTarget = new Vector2(_selectedPlace.latitude, _selectedPlace.longitude);
     }
 
@@ -105,6 +105,6 @@ public class ExploringController : MonoBehaviour
                 nearest = place;
             }
         }
-        return nearest.index;
+        return nearest.id;
     }
 }

@@ -751,9 +751,14 @@ MonoBehaviour:
   selectedObjectName: {fileID: 1642584281}
   selectedObjectDistance: {fileID: 675662940}
   places:
-  - {fileID: 11400000, guid: 1d174553d032d9d47aa6299811851a15, type: 2}
-  - {fileID: 11400000, guid: 867eddbce0072d440b2333e93eec0fc4, type: 2}
-  - {fileID: 11400000, guid: 78f9150b06e155240b92be54409cc901, type: 2}
+  - {fileID: 11400000, guid: 9be7ca48612c22d49bb6fb1e51d43551, type: 2}
+  - {fileID: 11400000, guid: 33a5d0fe5b57ea44389ff5e16cd867aa, type: 2}
+  - {fileID: 11400000, guid: 9cee3d7d2b8b8c14a86a3bffcb14885c, type: 2}
+  - {fileID: 11400000, guid: b34bc5bcf97f7ef408d42dbb808bdfae, type: 2}
+  - {fileID: 11400000, guid: fd2cfdd8526d74a49b767e58cc5092bf, type: 2}
+  - {fileID: 11400000, guid: c47b6e619937a1a4a96f0098286b80e0, type: 2}
+  - {fileID: 11400000, guid: b129a10e4c432b24bbbbca5a8136d25a, type: 2}
+  - {fileID: 11400000, guid: 7448fa425e632634ab2df9373219304b, type: 2}
 --- !u!4 &1332159837
 Transform:
   m_ObjectHideFlags: 0

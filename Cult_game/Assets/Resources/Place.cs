@@ -5,13 +5,15 @@ namespace Resources
     [CreateAssetMenu]
     public class Place : ScriptableObject
     {
-        public int index;
+        public int id;
+        public string engName;
+        public string plName;
         public string type;
         public float latitude;
         public float longitude;
-        public float score_value;
+        public float scoreValue;
         public string description;
-        public int curiosity_quiz_index;
-        public int legend_puzzle_index;
+        public int curiosityQuizIndex;
+        public int legendPuzzleIndex;
     }
 }
