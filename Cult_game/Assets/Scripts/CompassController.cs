@@ -9,12 +9,19 @@ public class CompassController : MonoBehaviour
     public int smoothingProbes = 15;
     
     private List<float> _headings;
-    
-    public void Awake()
+
+    private void Awake()
     {
         StartCoroutine(InitializeLocation());
     }
 
+    // Start is called before the first frame update
+    private void Start()
+    {
+        _headings = new List<float>();
+        InvokeRepeating(nameof(UpdateCompass), 0.5f, 0.025f);
+    }
+    
     private IEnumerator InitializeLocation()
     {
 #if UNITY_EDITOR
@@ -60,13 +67,6 @@ public class CompassController : MonoBehaviour
             yield break;
         }
         Debug.Log("location service loaded");
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        _headings = new List<float>();
-        InvokeRepeating(nameof(UpdateCompass), 0.5f, 0.025f);
     }
 
     private void UpdateCompass()

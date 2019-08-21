@@ -5,6 +5,7 @@ namespace Resources
     [CreateAssetMenu]
     public class Place : ScriptableObject
     {
+        
         public int id;
         public string engName;
         public string plName;

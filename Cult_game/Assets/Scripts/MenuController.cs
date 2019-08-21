@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
-
     private Transform cameraTransform;
     private Vector3 cameraDesiredPosition;
     private float transitionSpeed = 5f;

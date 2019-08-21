@@ -3,9 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    
+    private PlayerController _playerController;
+
+    private void Start()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            _playerController = player.GetComponent<PlayerController>();
+        }
+    }
+
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // Make sure user is on Android platform
         if (Application.platform != RuntimePlatform.Android) return;
@@ -24,6 +34,7 @@ public class SceneController : MonoBehaviour
 
     public void ExitGame()
     {
+        _playerController.SaveGame();
         Application.Quit();
     }
 }

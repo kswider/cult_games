@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b33611243d120140854b37394ddb9d6, type: 3}
   m_Name: Wanda
   m_EditorClassIdentifier: 
-  id: 0
+  id: 203
   engName: The legend of Wanda
   plName: Legenda o Wandzie
   type: LEGEND
