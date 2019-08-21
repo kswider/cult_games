@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b33611243d120140854b37394ddb9d6, type: 3}
-  m_Name: Efes
+  m_Name: Bazylika Mariacka
   m_EditorClassIdentifier: 
-  index: 2
-  type: 
-  latitude: 50.06618
-  longitude: 19.940615
-  score_value: 0
-  description: "Dobre kebsy, troch\u0119 daleko od miasteczka"
-  curiosity_quiz_index: 0
-  legend_puzzle_index: 0
+  id: 1
+  engName: St. Mary's Basilica
+  plName: Bazylika Mariacka
+  type: PLACE
+  latitude: 50.06168
+  longitude: 19.939226
+  scoreValue: 100
+  description: 
+  curiosityQuizIndex: 0
+  legendPuzzleIndex: 0

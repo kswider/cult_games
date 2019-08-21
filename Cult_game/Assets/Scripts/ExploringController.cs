@@ -7,44 +7,92 @@ using UnityEngine.UI;
 public class ExploringController : MonoBehaviour
 {
     public GameObject compassArrow;
-    public GameObject selectedObjectName;
-    public GameObject selectedObjectDistance;
-
     public List<Place> places;
+    
     private Place _selectedPlace;
     
     private Text _nameText;
     private Text _distanceText;
-
-    private Vector2 _localTarget;
+    private Text _currentScore;
+    private PlayerController _playerController;
     
+    private Vector2 _localTarget;
     private Vector2 _currentPosition;
 
-    private float _angle;
-    // Start is called before the first frame update
-    void Start()
+    public void SetCustomPlace(int index)
     {
-        _nameText = selectedObjectName.GetComponent<Text>();
-        _distanceText = selectedObjectDistance.GetComponent<Text>();
-        
-        _currentPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
-        SetPlaceToNearest();
-        
-        InvokeRepeating(nameof(UpdateArrowDirection), 0.5f, 0.5f);
+        SetPlaceAsLocal(index);
+        _nameText.text = "Selected attraction: " + _selectedPlace.engName;
     }
     
-    void UpdateArrowDirection()
+    public void SetPlaceToNearest()
     {
+        SetPlaceAsLocal(FindNearestPlaceId());
+        _nameText.text = "Nearest attraction: " + _selectedPlace.engName;
+    }
+    
+    // Start is called before the first frame update
+    private void Start()
+    {
+        GameObject firstLine = GameObject.Find("FirstLine");
+        if (firstLine != null)
+        {
+            _nameText = firstLine.GetComponent<Text>();
+        }
+        GameObject secondLine = GameObject.Find("SecondLine");
+        if (secondLine != null)
+        {
+            _distanceText = secondLine.GetComponent<Text>();
+        }
+        GameObject player = GameObject.Find("Player");
+        if (player != null)
+        {
+            _playerController = player.GetComponent<PlayerController>();
+        }
+        GameObject score = GameObject.Find("Points");
+        if (score != null)
+        {
+            _currentScore = score.GetComponent<Text>();
+        }
+
         _currentPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
-        _distanceText.text = "Distance: " + Mathf.Round(DistanceFromCoordinates(_currentPosition, _localTarget)) + "m";
-        _angle = AngleFromCoordinate(_currentPosition, _localTarget);
-        compassArrow.transform.localRotation = Quaternion.Euler(0, 0, Mathf.Round(_angle));
+        SetPlaceToNearest();
+        UpdateScore();
+        
+        InvokeRepeating(nameof(UpdateNavigation), 0.5f, 0.5f);
     }
 
-    private float DistanceFromCoordinates(Vector2 coord1, Vector2 coord2)
+    private void UpdateNavigation()
+    {
+        _currentPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
+        UpdateDistance();
+        UpdateArrowDirection();
+    }
+    private void UpdateDistance()
+    {
+        float distance = DistanceFromCoordinates(_currentPosition, _localTarget);
+        _distanceText.text = "Distance: " + Mathf.Round(distance) + "m";
+    }
+    private void UpdateArrowDirection()
+    {
+        float angle = AngleFromCoordinate(_currentPosition, _localTarget);
+        compassArrow.transform.localRotation = Quaternion.Euler(0, 0, Mathf.Round(angle));
+    }
+
+    public void UpdateScore()
+    {
+        _currentScore.text = "Total points: " + _playerController.Score;
+    }
+
+    public void AddPoints(int points)
+    {
+        _playerController.AddPoints(points);
+    }
+
+    private static float DistanceFromCoordinates(Vector2 coord1, Vector2 coord2)
     {
         //sauce: https://stackoverflow.com/questions/639695/how-to-convert-latitude-or-longitude-to-meters
-        double R = 6378.137; // Radius of earth in KM
+        const double R = 6378.137; // Radius of earth in KM
         double dLat = coord2.x * Math.PI / 180 - coord1.x * Math.PI / 180;
         double dLon = coord2.y * Math.PI / 180 - coord1.y * Math.PI / 180;
         double a = Math.Sin(dLat/2) * Math.Sin(dLat/2) +
@@ -55,7 +103,7 @@ public class ExploringController : MonoBehaviour
         return (float)d * 1000; // meters
     }
     
-    private float AngleFromCoordinate(Vector2 coord1, Vector2 coord2)
+    private static float AngleFromCoordinate(Vector2 coord1, Vector2 coord2)
     {
         //sauce: https://stackoverflow.com/questions/3932502/calculate-angle-between-two-latitude-longitude-points
         double dLon = coord2.y - coord1.y;
@@ -73,38 +121,29 @@ public class ExploringController : MonoBehaviour
         return (float)brng;
     }
 
-    public void SetCustomPlace(int index)
-    {
-        SetPlaceAsLocal(index);
-        _nameText.text = "Selected attraction: " + _selectedPlace.name;
-    }
-    
-    public void SetPlaceToNearest()
-    {
-        SetPlaceAsLocal(FindNearestPlaceIndex());
-        _nameText.text = "Nearest attraction: " + _selectedPlace.name;
-    }
-
     private void SetPlaceAsLocal(int index)
     {
-        _selectedPlace = places.Find(p => p.index == index);
+        _selectedPlace = places.Find(p => p.id == index);
         _localTarget = new Vector2(_selectedPlace.latitude, _selectedPlace.longitude);
     }
 
-    private int FindNearestPlaceIndex()
+    private int FindNearestPlaceId()
     {
         float minDistance = float.MaxValue;
         Place nearest = null;
         
         foreach (var place in places)
         {
+            if(_playerController.DiscoveredPlaces.Contains(place.id)) continue;
+            
             Vector2 localTarget = new Vector2(place.latitude, place.longitude);
             float localDistance = DistanceFromCoordinates(_currentPosition, localTarget);
             if (localDistance < minDistance)
             {
+                minDistance = localDistance;
                 nearest = place;
             }
         }
-        return nearest.index;
+        return nearest.id;
     }
 }

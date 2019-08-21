@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b33611243d120140854b37394ddb9d6, type: 3}
-  m_Name: Biedra
+  m_Name: Wanda
   m_EditorClassIdentifier: 
-  index: 3
-  type: 
-  latitude: 50.071457
-  longitude: 19.90505
-  score_value: 200
-  description: Biedra na ul.Piastowskiej, obok akademika Piast
-  curiosity_quiz_index: 0
-  legend_puzzle_index: 0
+  id: 203
+  engName: The legend of Wanda
+  plName: Legenda o Wandzie
+  type: LEGEND
+  latitude: 50.070156
+  longitude: 20.068073
+  scoreValue: 150
+  description: 
+  curiosityQuizIndex: 0
+  legendPuzzleIndex: 0

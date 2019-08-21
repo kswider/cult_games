@@ -1,14 +1,27 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Android;
+using System.Linq;
 
 public class CompassController : MonoBehaviour
 {
-    public void Awake()
+    public int smoothingProbes = 15;
+    
+    private List<float> _headings;
+
+    private void Awake()
     {
         StartCoroutine(InitializeLocation());
     }
 
+    // Start is called before the first frame update
+    private void Start()
+    {
+        _headings = new List<float>();
+        InvokeRepeating(nameof(UpdateCompass), 0.5f, 0.025f);
+    }
+    
     private IEnumerator InitializeLocation()
     {
 #if UNITY_EDITOR
@@ -55,15 +68,15 @@ public class CompassController : MonoBehaviour
         }
         Debug.Log("location service loaded");
     }
-    
-    // Start is called before the first frame update
-    void Start()
+
+    private void UpdateCompass()
     {
-        InvokeRepeating(nameof(UpdateCompass), 0.5f, 0.025f);
-    }
-    
-    void UpdateCompass()
-    {
-        transform.localRotation = Quaternion.Euler(0, 0, Mathf.Round(Input.compass.trueHeading));
+        if (_headings.Count > smoothingProbes)
+        {
+            _headings.RemoveAt(0);
+        }
+        _headings.Add(Input.compass.trueHeading);
+        
+        transform.localRotation = Quaternion.Euler(0, 0, _headings.Average());
     }
 }
