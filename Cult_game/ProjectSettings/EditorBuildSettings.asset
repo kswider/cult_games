@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SCN_LEGENDS.unity
     guid: 7669dc8b535cc2843a74d103e277d970
+  - enabled: 1
+    path: Assets/Scenes/SCN_QUIZ.unity
+    guid: 647e4a811bbf01343acc8352416a5882
   m_configObjects: {}
