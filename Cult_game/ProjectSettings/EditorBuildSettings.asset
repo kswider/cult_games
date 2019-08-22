@@ -17,10 +17,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SCN_PLACES.unity
     guid: c7b293bc91eec0b42a3707329636240c
-  - enabled: 1
-    path: Assets/Scenes/SCN_CURIOSITIES.unity
-    guid: 82b1acedde6ab4b40aaf30d39fe35413
-  - enabled: 1
-    path: Assets/Scenes/SCN_LEGENDS.unity
-    guid: 7669dc8b535cc2843a74d103e277d970
   m_configObjects: {}

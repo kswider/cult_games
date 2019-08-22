@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Resources;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,9 +6,6 @@ using UnityEngine.UI;
 public class ExploringController : MonoBehaviour
 {
     public GameObject compassArrow;
-    public List<Place> places;
-    
-    private Place _selectedPlace;
     
     private Text _nameText;
     private Text _distanceText;
@@ -19,18 +15,6 @@ public class ExploringController : MonoBehaviour
     private Vector2 _localTarget;
     private Vector2 _currentPosition;
 
-    public void SetCustomPlace(int index)
-    {
-        SetPlaceAsLocal(index);
-        _nameText.text = "Selected attraction: " + _selectedPlace.engName;
-    }
-    
-    public void SetPlaceToNearest()
-    {
-        SetPlaceAsLocal(FindNearestPlaceId());
-        _nameText.text = "Nearest attraction: " + _selectedPlace.engName;
-    }
-    
     // Start is called before the first frame update
     private void Start()
     {
@@ -56,10 +40,32 @@ public class ExploringController : MonoBehaviour
         }
 
         _currentPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
-        SetPlaceToNearest();
-        UpdateScore();
-        
+        if (_playerController.selectedPlace == null)
+        {
+            SetPlaceToNearest();
+        }
+        else
+        {
+            SetCustomPlace();
+        }
         InvokeRepeating(nameof(UpdateNavigation), 0.5f, 0.5f);
+    }
+    
+    public void SetPlaceToNearest()
+    {
+        SetPlaceAsLocal(FindNearestPlaceId());
+        _nameText.text = "Nearest attraction: " + _playerController.selectedPlace.engName;
+    }
+    
+    private void SetCustomPlace()
+    {
+        _localTarget = new Vector2(_playerController.selectedPlace.latitude, _playerController.selectedPlace.longitude);
+        _nameText.text = "Selected attraction: " + _playerController.selectedPlace.engName;
+    }
+
+    public void AddPoints(int points)
+    {
+        _playerController.AddPoints(points);
     }
 
     private void UpdateNavigation()
@@ -79,16 +85,30 @@ public class ExploringController : MonoBehaviour
         compassArrow.transform.localRotation = Quaternion.Euler(0, 0, Mathf.Round(angle));
     }
 
-    public void UpdateScore()
+    private void SetPlaceAsLocal(int index)
     {
-        _currentScore.text = "Total points: " + _playerController.Score;
+        _playerController.selectedPlace = _playerController.places.Find(p => p.id == index);
+        _localTarget = new Vector2(_playerController.selectedPlace.latitude, _playerController.selectedPlace.longitude);
     }
 
-    public void AddPoints(int points)
+    private int FindNearestPlaceId()
     {
-        _playerController.AddPoints(points);
+        float minDistance = float.MaxValue;
+        Place nearest = null;
+        
+        foreach (var place in _playerController.places)
+        {
+            if(_playerController.DiscoveredPlaces.Contains(place.id)) continue;
+            
+            Vector2 localTarget = new Vector2(place.latitude, place.longitude);
+            float localDistance = DistanceFromCoordinates(_currentPosition, localTarget);
+            if (!(localDistance < minDistance)) continue;
+            minDistance = localDistance;
+            nearest = place;
+        }
+        return nearest.id;
     }
-
+    
     private static float DistanceFromCoordinates(Vector2 coord1, Vector2 coord2)
     {
         //sauce: https://stackoverflow.com/questions/639695/how-to-convert-latitude-or-longitude-to-meters
@@ -119,31 +139,5 @@ public class ExploringController : MonoBehaviour
         brng = 360 - brng; // count degrees counter-clockwise - remove to make clockwise
 
         return (float)brng;
-    }
-
-    private void SetPlaceAsLocal(int index)
-    {
-        _selectedPlace = places.Find(p => p.id == index);
-        _localTarget = new Vector2(_selectedPlace.latitude, _selectedPlace.longitude);
-    }
-
-    private int FindNearestPlaceId()
-    {
-        float minDistance = float.MaxValue;
-        Place nearest = null;
-        
-        foreach (var place in places)
-        {
-            if(_playerController.DiscoveredPlaces.Contains(place.id)) continue;
-            
-            Vector2 localTarget = new Vector2(place.latitude, place.longitude);
-            float localDistance = DistanceFromCoordinates(_currentPosition, localTarget);
-            if (localDistance < minDistance)
-            {
-                minDistance = localDistance;
-                nearest = place;
-            }
-        }
-        return nearest.id;
     }
 }

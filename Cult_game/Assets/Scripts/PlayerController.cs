@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Resources;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +14,11 @@ public class PlayerController : MonoBehaviour
     public List<int> DiscoveredPlaces { get; set; }
     public List<Save.PlaceBlock> BlockedPlaces { get; set; }
 
+    public List<Place> places;
+    
+    public Place selectedPlace;
+    
+    public String LookedType { get; set; }
     private void Awake()
     {
         if (Instance == null)
