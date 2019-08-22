@@ -4,7 +4,6 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using Resources;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -34,6 +33,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        LookedType = "PLACE";
         LoadGame();
     }
 

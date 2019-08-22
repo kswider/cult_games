@@ -26,6 +26,12 @@ public class SceneController : MonoBehaviour
             ExitGame();
         }
     }
+
+    public void GoToPlacesSceneWithType(string type)
+    {
+        _playerController.LookedType = type;
+        GoToScene("SCN_PLACES");
+    }
     
     public void GoToScene(string sceneName)
     {

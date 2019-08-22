@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Resources;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,10 +7,10 @@ public class PlacesTableController : MonoBehaviour
 {
     public GameObject entryPrefab;
     public Transform tableContent;
-    
-    private PlayerController _playerController;
-    private Text _type;
+    public Text type;
 
+    private PlayerController _playerController;
+    
     private List<GameObject> _shownPlaces = new List<GameObject>();
     
     // Start is called before the first frame update
@@ -22,23 +21,15 @@ public class PlacesTableController : MonoBehaviour
         {
             _playerController = player.GetComponent<PlayerController>();
         }
-        GameObject type = GameObject.Find("Type");
-        if (type != null)
-        {
-            _type = type.GetComponent<Text>();
-        }
 
-        _type.text = _playerController.LookedType;
+        SetTypeBarToLookedType();
         UpdateTable();
     }
 
     public void UpdateTable()
     {
-        foreach (var oldPlace in _shownPlaces)
-        {
-            Destroy(oldPlace);
-        }
-        
+        ClearTable();
+
         List<Place> placesToShow = _playerController.places.FindAll(p => p.type.Equals(_playerController.LookedType));
 
         foreach (var place in placesToShow)
@@ -48,16 +39,42 @@ public class PlacesTableController : MonoBehaviour
             newPlace.transform.Find("Distance").GetComponent<Text>().text = "0m";
             newPlace.transform.Find("BTN_FOLLOW").GetComponent<Button>().onClick.AddListener(delegate
             {
-                _playerController.selectedPlace = _playerController.places.Find(p => p.engName == place.engName); 
-                Debug.Log("Target set to " + place.engName);
+                _playerController.selectedPlace = _playerController.places.Find(p => p.engName == place.engName);
             });
             _shownPlaces.Add(newPlace);
         }
     }
 
-    public void setLookedType(string type)
+    private void ClearTable()
     {
-        _playerController.LookedType = type;
-        _type.text = type;
+        foreach (var place in _shownPlaces)
+        {
+            Destroy(place);
+        }
+    }
+
+    public void SetLookedType(string newType)
+    {
+        _playerController.LookedType = newType;
+        SetTypeBarToLookedType();
+    }
+
+    private void SetTypeBarToLookedType()
+    {
+        switch (_playerController.LookedType)
+        {
+            case "PLACE":
+                type.text = "Places";
+                break;
+            case "CURIOSITY":
+                type.text = "Curiosities";
+                break;
+            case "LEGEND":
+                type.text = "Legends";
+                break;
+            default:
+                Debug.Log("Not recognized type");
+                break;
+        }
     }
 }

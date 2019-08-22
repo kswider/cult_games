@@ -203,7 +203,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1857073753}
-        m_MethodName: setLookedType
+        m_MethodName: SetLookedType
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1160,7 +1160,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1857073753}
-        m_MethodName: setLookedType
+        m_MethodName: SetLookedType
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1728,7 +1728,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1857073753}
-        m_MethodName: setLookedType
+        m_MethodName: SetLookedType
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2388,6 +2388,7 @@ MonoBehaviour:
   entryPrefab: {fileID: 145240898854108860, guid: 811b2edee38cc3e4d823bdef924efcc0,
     type: 3}
   tableContent: {fileID: 1515200185}
+  type: {fileID: 1096337178}
 --- !u!4 &1857073754
 Transform:
   m_ObjectHideFlags: 0

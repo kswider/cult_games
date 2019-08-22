@@ -71,12 +71,21 @@ public class CompassController : MonoBehaviour
 
     private void UpdateCompass()
     {
+        EnqueueHeading();
+        RotateCompass();
+    }
+
+    private void EnqueueHeading()
+    {
         if (_headings.Count > smoothingProbes)
         {
             _headings.RemoveAt(0);
         }
         _headings.Add(Input.compass.trueHeading);
-        
+    }
+
+    private void RotateCompass()
+    {
         transform.localRotation = Quaternion.Euler(0, 0, _headings.Average());
     }
 }

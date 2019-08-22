@@ -6,61 +6,51 @@ using UnityEngine.UI;
 public class ExploringController : MonoBehaviour
 {
     public GameObject compassArrow;
-    
-    private Text _nameText;
-    private Text _distanceText;
-    private Text _currentScore;
+    public Text nameText;
+    public Text distanceText;
+
     private PlayerController _playerController;
-    
-    private Vector2 _localTarget;
-    private Vector2 _currentPosition;
+
+    private Vector2 _localTargetPosition;
+    private Vector2 _playerPosition;
 
     // Start is called before the first frame update
     private void Start()
     {
-        GameObject firstLine = GameObject.Find("FirstLine");
-        if (firstLine != null)
-        {
-            _nameText = firstLine.GetComponent<Text>();
-        }
-        GameObject secondLine = GameObject.Find("SecondLine");
-        if (secondLine != null)
-        {
-            _distanceText = secondLine.GetComponent<Text>();
-        }
         GameObject player = GameObject.Find("Player");
         if (player != null)
         {
             _playerController = player.GetComponent<PlayerController>();
         }
-        GameObject score = GameObject.Find("Points");
-        if (score != null)
-        {
-            _currentScore = score.GetComponent<Text>();
-        }
 
-        _currentPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
+        _playerPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
         if (_playerController.selectedPlace == null)
         {
-            SetPlaceToNearest();
+            SetTargetToNearestPlace();
         }
         else
         {
-            SetCustomPlace();
+            SetTargetToCustomPlace();
         }
         InvokeRepeating(nameof(UpdateNavigation), 0.5f, 0.5f);
     }
     
-    public void SetPlaceToNearest()
+    public void SetTargetToNearestPlace()
     {
-        SetPlaceAsLocal(FindNearestPlaceId());
-        _nameText.text = "Nearest attraction: " + _playerController.selectedPlace.engName;
+        Place nearest = FindNearestPlace();
+        SetPlaceAsLocalTarget(nearest);
+        nameText.text = "Nearest attraction: " + nearest.engName;
     }
     
-    private void SetCustomPlace()
+    private void SetTargetToCustomPlace()
     {
-        _localTarget = new Vector2(_playerController.selectedPlace.latitude, _playerController.selectedPlace.longitude);
-        _nameText.text = "Selected attraction: " + _playerController.selectedPlace.engName;
+        SetPlaceAsLocalTarget(_playerController.selectedPlace);
+        nameText.text = "Selected attraction: " + _playerController.selectedPlace.engName;
+    }
+    
+    private void SetPlaceAsLocalTarget(Place place)
+    {
+        _localTargetPosition = new Vector2(place.latitude, place.longitude);
     }
 
     public void AddPoints(int points)
@@ -70,28 +60,22 @@ public class ExploringController : MonoBehaviour
 
     private void UpdateNavigation()
     {
-        _currentPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
+        _playerPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
         UpdateDistance();
         UpdateArrowDirection();
     }
     private void UpdateDistance()
     {
-        float distance = DistanceFromCoordinates(_currentPosition, _localTarget);
-        _distanceText.text = "Distance: " + Mathf.Round(distance) + "m";
+        float distance = DistanceFromCoordinates(_playerPosition, _localTargetPosition);
+        distanceText.text = "Distance: " + Mathf.Round(distance) + "m";
     }
     private void UpdateArrowDirection()
     {
-        float angle = AngleFromCoordinate(_currentPosition, _localTarget);
+        float angle = AngleFromCoordinate(_playerPosition, _localTargetPosition);
         compassArrow.transform.localRotation = Quaternion.Euler(0, 0, Mathf.Round(angle));
     }
 
-    private void SetPlaceAsLocal(int index)
-    {
-        _playerController.selectedPlace = _playerController.places.Find(p => p.id == index);
-        _localTarget = new Vector2(_playerController.selectedPlace.latitude, _playerController.selectedPlace.longitude);
-    }
-
-    private int FindNearestPlaceId()
+    private Place FindNearestPlace()
     {
         float minDistance = float.MaxValue;
         Place nearest = null;
@@ -101,12 +85,12 @@ public class ExploringController : MonoBehaviour
             if(_playerController.DiscoveredPlaces.Contains(place.id)) continue;
             
             Vector2 localTarget = new Vector2(place.latitude, place.longitude);
-            float localDistance = DistanceFromCoordinates(_currentPosition, localTarget);
+            float localDistance = DistanceFromCoordinates(_playerPosition, localTarget);
             if (!(localDistance < minDistance)) continue;
             minDistance = localDistance;
             nearest = place;
         }
-        return nearest.id;
+        return nearest;
     }
     
     private static float DistanceFromCoordinates(Vector2 coord1, Vector2 coord2)

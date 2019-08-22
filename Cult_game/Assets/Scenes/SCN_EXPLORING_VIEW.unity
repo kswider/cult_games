@@ -793,6 +793,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compassArrow: {fileID: 165678624}
+  nameText: {fileID: 1642584283}
+  distanceText: {fileID: 675662942}
 --- !u!4 &1332159837
 Transform:
   m_ObjectHideFlags: 0
@@ -1337,7 +1339,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1332159836}
-        m_MethodName: SetPlaceToNearest
+        m_MethodName: SetTargetToNearestPlace
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
