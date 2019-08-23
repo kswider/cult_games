@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour
     public List<Place> places;
     
     public Place selectedPlace;
-    
+
+    public int DistanceThreshold { get; set; }
     public String LookedType { get; set; }
     private void Awake()
     {
@@ -33,8 +34,14 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        LookedType = "PLACE";
+        SetDefaults();
         LoadGame();
+    }
+
+    private void SetDefaults()
+    {
+        LookedType = "PLACE";
+        DistanceThreshold = 100;
     }
 
     public void SaveGame()

@@ -8,15 +8,22 @@ public class ExploringController : MonoBehaviour
     public GameObject compassArrow;
     public Text nameText;
     public Text distanceText;
+    public Transform background;
+    public GameObject discoveryPromptPrefab;
 
     private PlayerController _playerController;
 
     private Vector2 _localTargetPosition;
     private Vector2 _playerPosition;
+    private Place _targettedPlace;
 
+    private bool _promptExists;
+    
     // Start is called before the first frame update
     private void Start()
     {
+        _promptExists = false;
+        
         GameObject player = GameObject.Find("Player");
         if (player != null)
         {
@@ -37,25 +44,21 @@ public class ExploringController : MonoBehaviour
     
     public void SetTargetToNearestPlace()
     {
-        Place nearest = FindNearestPlace();
-        SetPlaceAsLocalTarget(nearest);
-        nameText.text = "Nearest attraction: " + nearest.engName;
+        _targettedPlace = FindNearestPlace();
+        SetPlaceAsLocalTarget(_targettedPlace);
+        nameText.text = "Nearest attraction: " + _targettedPlace.engName;
     }
     
     private void SetTargetToCustomPlace()
     {
         SetPlaceAsLocalTarget(_playerController.selectedPlace);
-        nameText.text = "Selected attraction: " + _playerController.selectedPlace.engName;
+        _targettedPlace = _playerController.selectedPlace;
+        nameText.text = "Selected attraction: " + _targettedPlace.engName;
     }
     
     private void SetPlaceAsLocalTarget(Place place)
     {
         _localTargetPosition = new Vector2(place.latitude, place.longitude);
-    }
-
-    public void AddPoints(int points)
-    {
-        _playerController.AddPoints(points);
     }
 
     private void UpdateNavigation()
@@ -68,6 +71,11 @@ public class ExploringController : MonoBehaviour
     {
         float distance = DistanceFromCoordinates(_playerPosition, _localTargetPosition);
         distanceText.text = "Distance: " + Mathf.Round(distance) + "m";
+        if (distance < _playerController.DistanceThreshold && _promptExists == false)
+        {
+            _promptExists = true;
+            CreateDiscoveryPrompt();
+        }
     }
     private void UpdateArrowDirection()
     {
@@ -75,6 +83,32 @@ public class ExploringController : MonoBehaviour
         compassArrow.transform.localRotation = Quaternion.Euler(0, 0, Mathf.Round(angle));
     }
 
+    private void CreateDiscoveryPrompt()
+    {
+        GameObject newDiscoveryPrompt = Instantiate(discoveryPromptPrefab, background);
+        newDiscoveryPrompt.transform.Find("SecondLine").GetComponent<Text>().text = _targettedPlace.engName;
+
+        String gameType = "???"; //TODO
+        String difficulty = "???"; //TODO
+
+        newDiscoveryPrompt.transform.Find("FourthLine").GetComponent<Text>().text =
+            "Game type: " + gameType + "\nDifficulty: " + difficulty;
+        newDiscoveryPrompt.transform.Find("Buttons/BTN_NO").GetComponent<Button>().onClick.AddListener(delegate
+        {
+            // TODO set block time to prevent prompt spam
+            _promptExists = false;
+            Destroy(newDiscoveryPrompt);
+        });
+        newDiscoveryPrompt.transform.Find("Buttons/BTN_YES").GetComponent<Button>().onClick.AddListener(delegate
+        {
+            // TODO sceneController -> move to valid scene according to gameType.
+            _playerController.DiscoveredPlaces.Add(_targettedPlace.id);
+            SetTargetToNearestPlace();
+            _promptExists = false;
+            Destroy(newDiscoveryPrompt);
+        });
+    }
+    
     private Place FindNearestPlace()
     {
         float minDistance = float.MaxValue;
