@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using Resources;
+using ResourcesObjects;
 using UnityEngine;
 
 public class PlayerController : Singleton<PlayerController>
@@ -11,6 +11,7 @@ public class PlayerController : Singleton<PlayerController>
     public int Score { get; set; }
     public List<int> DiscoveredPlaces { get; set; }
     public List<Save.PlaceBlock> BlockedPlaces { get; set; }
+    public int CurrentQuizId { get; set; }
 
     //Database
     public List<Place> places;

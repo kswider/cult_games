@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a12d0148d34e246a2ac48910a488bb, type: 3}
+  m_Name: WawelQuiz
+  m_EditorClassIdentifier: 
+  id: 0
+  learningText: "Jednym z najwa\u017Cniejszych miejsc w Krakowie jest bez w\u0105tpienia
+    Wzg\xF3rze Wawelskie \u2013 miejsce pierwszego osadnictwa na obszarze miasta
+    i zamek kr\xF3l\xF3w polskich. Kryje w sobie wiele tajemnic, kt\xF3re warto pozna\u0107
+    w trakcie zwiedzania tego arcydzie\u0142a polskiej sztuki, g\xF3ruj\u0105cej
+    nad Starym Miastem.  Zacznijmy od samej genezy s\u0142owa \u201EWawel\u201D.
+    Trudno jednoznacznie okre\u015Bli\u0107 jego etymologi\u0119. Niekt\xF3rzy badacze
+    sk\u0142aniaj\u0105 si\u0119 do teorii, \u017Ce wywodzi si\u0119 ona ze s\u0142\xF3w:
+    \u201Ew\u0105d\xF3\u0142\u201D, \u201Ew\u0105wa\u0142\u201D lub \u201Ew\u0105wel\u201D,
+    kt\xF3re odnosz\u0105 si\u0119 do geologicznej budowy ska\u0142, z kt\xF3rej
+    zbudowane jest wzg\xF3rze. Istnieje r\xF3wnie\u017C inna hipoteza, powtarzana
+    za kronik\u0105 wielkopolsk\u0105 z ko\u0144ca XIII wieku, \u017Ce s\u0142owo
+    \u201Ew\u0105wel\u201D mia\u0142o oznacza\u0107 \u201Ewynios\u0142o\u015B\u0107
+    po\u015Br\xF3d mokrade\u0142\u201D.  Na podstawie bada\u0144 archeologicznych,
+    badacze twierdz\u0105, \u017Ce najstarsze \u015Blady osadnictwa na tym terenie
+    si\u0119gaj\u0105 a\u017C paleolitu. Osada rozwija\u0142a si\u0119 intensywnie
+    ze wzgl\u0119du na jej zlokalizowanie na przeci\u0119ciu wa\u017Cnych szlak\xF3w
+    handlowych. Najwcze\u015Bniejsze zachowane do naszych czas\xF3w \u015Blady architektoniczne
+    pochodz\u0105 z ko\u0144ca X i pocz\u0105tku XI wieku. Jest to ko\u015Bci\xF3\u0142
+    \u015Bw. Jerzego oraz dwie rotundy: pierwsza Naj\u015Bwi\u0119tszej Panny Marii
+    i druga znajduj\u0105ca si\u0119 przy baszcie W\u0142adys\u0142awa IV.  Dalsza
+    zabudowa ukszta\u0142towa\u0142a obecnie znan\u0105 zabudow\u0119 wzg\xF3rza
+    \u2013 z wynios\u0142\u0105 sylwetk\u0105 gotyckiej katedry \u2013 miejsca koronacji
+    i poch\xF3wku polskich w\u0142adc\xF3w oraz zamkiem kr\xF3lewskim, sk\u0142adaj\u0105cym
+    si\u0119 z cz\u0119\u015Bci gotyckiej, renesansowej i barokowej."
+  points: 50
+  questions:
+  - questionText: "Co wed\u0142ug hipotezy oznacza s\u0142owo \"w\u0105wel\" od kt\xF3rego
+      pochodzi nazwa Wawel?"
+    possibleAnswers:
+    - answerText: "Wzg\xF3rze przy rzece"
+      isCorrect: 0
+    - answerText: "Wynios\u0142o\u015B\u0107 po\u015Br\xF3d mokrade\u0142"
+      isCorrect: 1
+    - answerText: "W\u0105w\xF3z po\u015Br\xF3d g\xF3r"
+      isCorrect: 0
+    - answerText: Wzniesienie widokowe
+      isCorrect: 0
+  - questionText: "Jakiej ery si\u0119gaj\u0105 najstarsze \u015Blady osadnictwa
+      na Wawelu?"
+    possibleAnswers:
+    - answerText: Mezolitu
+      isCorrect: 0
+    - answerText: Neolitu
+      isCorrect: 0
+    - answerText: Paleolitu
+      isCorrect: 1
+    - answerText: Eneolitu
+      isCorrect: 0
+  - questionText: "W jaki stylu architektonicznym zosta\u0142a zbudowana katedra
+      na wawelu?"
+    possibleAnswers:
+    - answerText: "Roma\u0144skim"
+      isCorrect: 0
+    - answerText: Gotyckim
+      isCorrect: 1
+    - answerText: Renesansowym
+      isCorrect: 0
+    - answerText: Barokowym
+      isCorrect: 0

@@ -1,5 +1,5 @@
 ﻿using System;
-using Resources;
+using ResourcesObjects;
 using UnityEngine;
 using UnityEngine.UI;
 
