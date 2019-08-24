@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Resources
+namespace ResourcesObjects
 {
     [CreateAssetMenu]
     public class Place : ScriptableObject

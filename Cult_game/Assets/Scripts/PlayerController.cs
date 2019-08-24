@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public int Score { get; set; }
     public List<int> DiscoveredPlaces { get; set; }
     public List<Save.PlaceBlock> BlockedPlaces { get; set; }
+    public int CurrentQuizId { get; set; }
 
     private void Awake()
     {

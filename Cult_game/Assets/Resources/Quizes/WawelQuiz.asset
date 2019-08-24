@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a12d0148d34e246a2ac48910a488bb, type: 3}
+  m_Name: WawelQuiz
+  m_EditorClassIdentifier: 
+  id: 0
+  learningText: "Na podstawie bada\u0144 archeologicznych, badacze twierdz\u0105,
+    \u017Ce najstarsze \u015Blady osadnictwa na tym terenie si\u0119gaj\u0105 a\u017C
+    paleolitu. Osada rozwija\u0142a si\u0119 intensywnie ze wzgl\u0119du na jej zlokalizowanie
+    na przeci\u0119ciu wa\u017Cnych szlak\xF3w handlowych. Najwcze\u015Bniejsze zachowane
+    do naszych czas\xF3w \u015Blady architektoniczne pochodz\u0105 z ko\u0144ca X
+    i pocz\u0105tku XI wieku. Jest to ko\u015Bci\xF3\u0142 \u015Bw. Jerzego oraz
+    dwie rotundy: pierwsza Naj\u015Bwi\u0119tszej Panny Marii i druga znajduj\u0105ca
+    si\u0119 przy baszcie W\u0142adys\u0142awa IV."
+  points: 50
+  questions:
+  - questionText: "Jakiej ery si\u0119gaj\u0105 najstarsze \u015Blady osadnictwa
+      na Wawelu?"
+    possibleAnswers:
+    - answerText: Mezolitu
+      isCorrect: 0
+    - answerText: Neolitu
+      isCorrect: 0
+    - answerText: Paleolitu
+      isCorrect: 1
+    - answerText: Eneolitu
+      isCorrect: 0
