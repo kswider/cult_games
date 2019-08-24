@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using Resources;
+using ResourcesObjects;
 using UnityEngine;
 
 public class PlayerController : Singleton<PlayerController>

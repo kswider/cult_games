@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SCN_PLACES.unity
     guid: c7b293bc91eec0b42a3707329636240c
   - enabled: 1
+    path: Assets/Scenes/SCN_QUIZ_LEARNING.unity
+    guid: c2e2ec0b66139f941a3ea0fb0cd61f10
+  - enabled: 1
     path: Assets/Scenes/SCN_QUIZ.unity
     guid: 647e4a811bbf01343acc8352416a5882
   m_configObjects: {}
