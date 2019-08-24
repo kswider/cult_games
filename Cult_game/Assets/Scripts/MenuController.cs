@@ -3,48 +3,43 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
-    private Transform cameraTransform;
-    private Vector3 cameraDesiredPosition;
-    private float transitionSpeed = 5f;
-    private bool cameraEventFired = false;
-    private bool isCameraMoving = false;
-    private Coroutine movingCoroutine;
-
-    // Start is called before the first frame update
+    private Transform _cameraTransform;
+    private Vector3 _cameraDesiredPosition;
+    private const float TransitionSpeed = 5f;
+    private bool _cameraEventFired;
+    private Coroutine _movingCoroutine;
+    
     void Start()
     {
-        cameraTransform = Camera.main.transform;
+        _cameraTransform = Camera.main.transform;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if (cameraEventFired)
-        {
-            cameraEventFired = false;
-            movingCoroutine = StartCoroutine(Lerp());            
-        }
+        if (!_cameraEventFired) return;
+        _cameraEventFired = false;
+        _movingCoroutine = StartCoroutine(Lerp());
     }
 
     public void LookAtMenu(Transform menuTransform)
     {
-        if (movingCoroutine != null)
+        if (_movingCoroutine != null)
         {
-            StopCoroutine(movingCoroutine);
+            StopCoroutine(_movingCoroutine);
         }            
-        cameraDesiredPosition = cameraTransform.position;
-        cameraDesiredPosition.x = menuTransform.position.x;
-        cameraEventFired = true;
+        _cameraDesiredPosition = _cameraTransform.position;
+        _cameraDesiredPosition.x = menuTransform.position.x;
+        _cameraEventFired = true;
     }
 
     private IEnumerator Lerp()
     {
         while (true)
         {
-            cameraTransform.position = Vector3.Lerp(cameraTransform.position, cameraDesiredPosition, transitionSpeed * Time.deltaTime);
+            _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _cameraDesiredPosition, TransitionSpeed * Time.deltaTime);
 
             // We are at the position, stop this IEnumerator
-            if (Mathf.Approximately(cameraTransform.position.x, cameraDesiredPosition.x))
+            if (Mathf.Approximately(_cameraTransform.position.x, _cameraDesiredPosition.x))
             {
                 break;
             }

@@ -2,34 +2,35 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Resources;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
-    public static PlayerController Instance;
-    
+    //Save
     public int Score { get; set; }
     public List<int> DiscoveredPlaces { get; set; }
     public List<Save.PlaceBlock> BlockedPlaces { get; set; }
     public int CurrentQuizId { get; set; }
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
-    }
+    //Database
+    public List<Place> places;
+    
+    //PlayerSettings
+    public Settings Settings { get; private set; }
 
     private void Start()
     {
+        Settings = new Settings();
+        Place selected = places.Find(p => p.id == Settings.SelectedPlaceId);
+        if (selected != null)
+        {
+            Settings.SelectedPlace = selected;
+        }
         LoadGame();
     }
+
+
 
     public void SaveGame()
     {
