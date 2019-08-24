@@ -8,14 +8,12 @@ public class MenuController : MonoBehaviour
     private const float TransitionSpeed = 5f;
     private bool _cameraEventFired;
     private Coroutine _movingCoroutine;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         _cameraTransform = Camera.main.transform;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (!_cameraEventFired) return;

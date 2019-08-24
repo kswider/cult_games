@@ -7,11 +7,7 @@ public class SceneController : MonoBehaviour
 
     private void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-        {
-            _playerController = player.GetComponent<PlayerController>();
-        }
+        _playerController = Utilities.FindPlayer();
     }
 
     // Update is called once per frame
@@ -29,7 +25,8 @@ public class SceneController : MonoBehaviour
 
     public void GoToPlacesSceneWithType(string type)
     {
-        _playerController.LookedType = type;
+        _playerController.Settings.LookedType = type;
+        _playerController.Settings.SaveSettings();
         GoToScene("SCN_PLACES");
     }
     
@@ -41,6 +38,7 @@ public class SceneController : MonoBehaviour
     public void ExitGame()
     {
         _playerController.SaveGame();
+        _playerController.Settings.SaveSettings();
         Application.Quit();
     }
 }

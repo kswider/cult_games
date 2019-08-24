@@ -16,11 +16,7 @@ public class PlacesTableController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject player = GameObject.Find("Player");
-        if (player != null)
-        {
-            _playerController = player.GetComponent<PlayerController>();
-        }
+        _playerController = Utilities.FindPlayer();
 
         SetTypeBarToLookedType();
         UpdateTable();
@@ -30,16 +26,25 @@ public class PlacesTableController : MonoBehaviour
     {
         ClearTable();
 
-        List<Place> placesToShow = _playerController.places.FindAll(p => p.type.Equals(_playerController.LookedType));
-
+        List<Place> placesToShow = _playerController.places.FindAll(p => p.type.Equals(_playerController.Settings.LookedType));
+        
+        Vector2 currentPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
+        
         foreach (var place in placesToShow)
         {
+            Vector2 placePosition = new Vector2(place.latitude, place.longitude);
+            
             GameObject newPlace = Instantiate(entryPrefab, tableContent);
             newPlace.transform.Find("Name").GetComponent<Text>().text = place.engName;
-            newPlace.transform.Find("Distance").GetComponent<Text>().text = "0m";
+            newPlace.transform.Find("Distance").GetComponent<Text>().text = 
+                ((int)Geometry.DistanceFromCoordinates(currentPosition, placePosition)) + "m";
+            newPlace.transform.Find("Name/IsVisited").gameObject.SetActive(
+                _playerController.DiscoveredPlaces.Contains(place.id)
+            );
             newPlace.transform.Find("BTN_FOLLOW").GetComponent<Button>().onClick.AddListener(delegate
             {
-                _playerController.selectedPlace = _playerController.places.Find(p => p.engName == place.engName);
+                _playerController.Settings.SelectedPlace = _playerController.places.Find(p => p.engName == place.engName);
+                _playerController.Settings.SaveSettings();
             });
             _shownPlaces.Add(newPlace);
         }
@@ -55,13 +60,14 @@ public class PlacesTableController : MonoBehaviour
 
     public void SetLookedType(string newType)
     {
-        _playerController.LookedType = newType;
+        _playerController.Settings.LookedType = newType;
+        _playerController.Settings.SaveSettings();
         SetTypeBarToLookedType();
     }
 
     private void SetTypeBarToLookedType()
     {
-        switch (_playerController.LookedType)
+        switch (_playerController.Settings.LookedType)
         {
             case "PLACE":
                 type.text = "Places";

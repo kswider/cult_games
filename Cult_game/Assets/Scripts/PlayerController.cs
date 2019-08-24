@@ -5,44 +5,31 @@ using System.Runtime.Serialization.Formatters.Binary;
 using Resources;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
-    public static PlayerController Instance;
-    
+    //Save
     public int Score { get; set; }
     public List<int> DiscoveredPlaces { get; set; }
     public List<Save.PlaceBlock> BlockedPlaces { get; set; }
 
+    //Database
     public List<Place> places;
     
-    public Place selectedPlace;
-
-    public int DistanceThreshold { get; set; }
-    public String LookedType { get; set; }
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
-    }
+    //PlayerSettings
+    public Settings Settings { get; private set; }
 
     private void Start()
     {
-        SetDefaults();
+        Settings = new Settings();
+        Place selected = places.Find(p => p.id == Settings.SelectedPlaceId);
+        if (selected != null)
+        {
+            Settings.SelectedPlace = selected;
+        }
         LoadGame();
     }
 
-    private void SetDefaults()
-    {
-        LookedType = "PLACE";
-        DistanceThreshold = 100;
-    }
+
 
     public void SaveGame()
     {

@@ -15,7 +15,7 @@ public class ExploringController : MonoBehaviour
 
     private Vector2 _localTargetPosition;
     private Vector2 _playerPosition;
-    private Place _targettedPlace;
+    private Place _targetedPlace;
 
     private bool _promptExists;
     
@@ -24,14 +24,10 @@ public class ExploringController : MonoBehaviour
     {
         _promptExists = false;
         
-        GameObject player = GameObject.Find("Player");
-        if (player != null)
-        {
-            _playerController = player.GetComponent<PlayerController>();
-        }
+        _playerController = Utilities.FindPlayer();
 
         _playerPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
-        if (_playerController.selectedPlace == null)
+        if (_playerController.Settings.SelectedPlace == null)
         {
             SetTargetToNearestPlace();
         }
@@ -44,16 +40,18 @@ public class ExploringController : MonoBehaviour
     
     public void SetTargetToNearestPlace()
     {
-        _targettedPlace = FindNearestPlace();
-        SetPlaceAsLocalTarget(_targettedPlace);
-        nameText.text = "Nearest attraction: " + _targettedPlace.engName;
+        _playerController.Settings.SelectedPlaceId = -1;
+        _playerController.Settings.SelectedPlace = null;
+        _targetedPlace = FindNearestPlace();
+        SetPlaceAsLocalTarget(_targetedPlace);
+        nameText.text = "Nearest attraction: " + _targetedPlace.engName;
     }
     
     private void SetTargetToCustomPlace()
     {
-        SetPlaceAsLocalTarget(_playerController.selectedPlace);
-        _targettedPlace = _playerController.selectedPlace;
-        nameText.text = "Selected attraction: " + _targettedPlace.engName;
+        SetPlaceAsLocalTarget(_playerController.Settings.SelectedPlace);
+        _targetedPlace = _playerController.Settings.SelectedPlace;
+        nameText.text = "Selected attraction: " + _targetedPlace.engName;
     }
     
     private void SetPlaceAsLocalTarget(Place place)
@@ -69,24 +67,23 @@ public class ExploringController : MonoBehaviour
     }
     private void UpdateDistance()
     {
-        float distance = DistanceFromCoordinates(_playerPosition, _localTargetPosition);
+        float distance = Geometry.DistanceFromCoordinates(_playerPosition, _localTargetPosition);
         distanceText.text = "Distance: " + Mathf.Round(distance) + "m";
-        if (distance < _playerController.DistanceThreshold && _promptExists == false)
-        {
-            _promptExists = true;
-            CreateDiscoveryPrompt();
-        }
+        
+        if (!(distance < _playerController.Settings.DistanceThreshold) || _promptExists) return;
+        _promptExists = true;
+        CreateDiscoveryPrompt();
     }
     private void UpdateArrowDirection()
     {
-        float angle = AngleFromCoordinate(_playerPosition, _localTargetPosition);
+        float angle = Geometry.AngleFromCoordinate(_playerPosition, _localTargetPosition);
         compassArrow.transform.localRotation = Quaternion.Euler(0, 0, Mathf.Round(angle));
     }
 
     private void CreateDiscoveryPrompt()
     {
         GameObject newDiscoveryPrompt = Instantiate(discoveryPromptPrefab, background);
-        newDiscoveryPrompt.transform.Find("SecondLine").GetComponent<Text>().text = _targettedPlace.engName;
+        newDiscoveryPrompt.transform.Find("SecondLine").GetComponent<Text>().text = _targetedPlace.engName;
 
         String gameType = "???"; //TODO
         String difficulty = "???"; //TODO
@@ -102,7 +99,7 @@ public class ExploringController : MonoBehaviour
         newDiscoveryPrompt.transform.Find("Buttons/BTN_YES").GetComponent<Button>().onClick.AddListener(delegate
         {
             // TODO sceneController -> move to valid scene according to gameType.
-            _playerController.DiscoveredPlaces.Add(_targettedPlace.id);
+            _playerController.DiscoveredPlaces.Add(_targetedPlace.id);
             SetTargetToNearestPlace();
             _promptExists = false;
             Destroy(newDiscoveryPrompt);
@@ -119,43 +116,11 @@ public class ExploringController : MonoBehaviour
             if(_playerController.DiscoveredPlaces.Contains(place.id)) continue;
             
             Vector2 localTarget = new Vector2(place.latitude, place.longitude);
-            float localDistance = DistanceFromCoordinates(_playerPosition, localTarget);
+            float localDistance = Geometry.DistanceFromCoordinates(_playerPosition, localTarget);
             if (!(localDistance < minDistance)) continue;
             minDistance = localDistance;
             nearest = place;
         }
         return nearest;
-    }
-    
-    private static float DistanceFromCoordinates(Vector2 coord1, Vector2 coord2)
-    {
-        //sauce: https://stackoverflow.com/questions/639695/how-to-convert-latitude-or-longitude-to-meters
-        const double R = 6378.137; // Radius of earth in KM
-        double dLat = coord2.x * Math.PI / 180 - coord1.x * Math.PI / 180;
-        double dLon = coord2.y * Math.PI / 180 - coord1.y * Math.PI / 180;
-        double a = Math.Sin(dLat/2) * Math.Sin(dLat/2) +
-                Math.Cos(coord1.x * Math.PI / 180) * Math.Cos(coord2.x * Math.PI / 180) *
-                Math.Sin(dLon/2) * Math.Sin(dLon/2);
-        double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1-a));
-        double d = R * c;
-        return (float)d * 1000; // meters
-    }
-    
-    private static float AngleFromCoordinate(Vector2 coord1, Vector2 coord2)
-    {
-        //sauce: https://stackoverflow.com/questions/3932502/calculate-angle-between-two-latitude-longitude-points
-        double dLon = coord2.y - coord1.y;
-
-        double y = Math.Sin(dLon) * Math.Cos(coord2.x);
-        double x = Math.Cos(coord1.x) * Math.Sin(coord2.x) - Math.Sin(coord1.x)
-                   * Math.Cos(coord2.x) * Math.Cos(dLon);
-
-        double brng = Math.Atan2(y, x);
-
-        brng = brng * 180 / Math.PI;
-        brng = (brng + 360) % 360;
-        brng = 360 - brng; // count degrees counter-clockwise - remove to make clockwise
-
-        return (float)brng;
     }
 }
