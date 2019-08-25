@@ -14,7 +14,7 @@ namespace ResourcesObjects
         public float longitude;
         public float scoreValue;
         public string description;
-        public int curiosityQuizIndex;
-        public int legendPuzzleIndex;
+        public int gameId;
+        public string gameType;
     }
 }

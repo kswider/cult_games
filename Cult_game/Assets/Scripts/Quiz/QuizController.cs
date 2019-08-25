@@ -24,7 +24,7 @@ public class QuizController : MonoBehaviour
     {
         _playerController = Utilities.FindPlayer();
         _sceneController = GameObject.FindObjectOfType<SceneController>();
-        _currentQuiz = Resources.LoadAll<Quiz>("Quizes").First(x => x.id == _playerController.CurrentQuizId);
+        _currentQuiz = Resources.LoadAll<Quiz>("Quizes").First(x => x.id == _playerController.CurrentPlayedGameId);
         _buttons = buttonsHolder.GetComponentsInChildren<Button>();
         LoadNextQuestion();
     }
@@ -58,10 +58,12 @@ public class QuizController : MonoBehaviour
                 _playerController.AddPoints(_currentQuiz.points);
                 questionText.text = "Quiz rozwiązany pomyślnie!";
                 yield return new WaitForSeconds(3);
-                _sceneController.GoToScene("SCN_EXPLORING_VIEW");
+                _sceneController.GoToScene("SCN_INSPIRATIONAL_LEARNING");
             }
             else
             {
+                var pb = new Save.PlaceBlock {placeId = _playerController.CurrentPlayedPlaceId, blockUntil = DateTime.Now.AddSeconds(300)};
+                _playerController.BlockedPlaces.Add(pb);
                 questionText.text = $"Niestety nie udalo Ci się poprawnie rozwiązać quizu. Liczba poprawnych odpowiedzi to {_correctlyAnsweredQuestionsNumber}/{_currentQuiz.questions.Count}";
                 yield return new WaitForSeconds(3);
                 _sceneController.GoToScene("SCN_EXPLORING_VIEW");

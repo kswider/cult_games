@@ -1,16 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
-[System.Serializable]
+[Serializable]
 public class Save
 {
-    [System.Serializable]
+    [Serializable]
     public struct PlaceBlock
     {
-        int placeId;
-        int blockUntil;
+        public int placeId;
+        public DateTime blockUntil;
     }
 
-    public int generalScore = 0;
+    public int generalScore;
     public List<int> discoveredPlaces = new List<int>();
     public List<PlaceBlock> blockedPlaces = new List<PlaceBlock>();
 

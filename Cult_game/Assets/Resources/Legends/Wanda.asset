@@ -20,5 +20,5 @@ MonoBehaviour:
   longitude: 20.068073
   scoreValue: 150
   description: 
-  curiosityQuizIndex: 0
-  legendPuzzleIndex: 0
+  gameId: 11
+  gameType: Action

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using ResourcesObjects;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlacesTableController : MonoBehaviour
@@ -10,6 +11,7 @@ public class PlacesTableController : MonoBehaviour
     public Text type;
 
     private PlayerController _playerController;
+    private SceneController _sceneController;
     
     private List<GameObject> _shownPlaces = new List<GameObject>();
     
@@ -17,7 +19,8 @@ public class PlacesTableController : MonoBehaviour
     void Start()
     {
         _playerController = Utilities.FindPlayer();
-
+        _sceneController = FindObjectOfType<SceneController>();
+        
         SetTypeBarToLookedType();
         UpdateTable();
     }
@@ -45,6 +48,7 @@ public class PlacesTableController : MonoBehaviour
             {
                 _playerController.Settings.SelectedPlace = _playerController.places.Find(p => p.engName == place.engName);
                 _playerController.Settings.SaveSettings();
+                _sceneController.GoToScene("SCN_EXPLORING_VIEW");
             });
             _shownPlaces.Add(newPlace);
         }

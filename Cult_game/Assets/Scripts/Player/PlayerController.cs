@@ -11,8 +11,9 @@ public class PlayerController : Singleton<PlayerController>
     public int Score { get; set; }
     public List<int> DiscoveredPlaces { get; set; }
     public List<Save.PlaceBlock> BlockedPlaces { get; set; }
-    public int CurrentQuizId { get; set; }
-
+    public int CurrentPlayedGameId { get; set; }
+    public int CurrentPlayedPlaceId { get; set; }
+    
     //Database
     public List<Place> places;
     
@@ -27,6 +28,7 @@ public class PlayerController : Singleton<PlayerController>
         {
             Settings.SelectedPlace = selected;
         }
+        
         LoadGame();
     }
 
@@ -34,6 +36,7 @@ public class PlayerController : Singleton<PlayerController>
 
     public void SaveGame()
     {
+        clearPlaceBlocks();
         Save save = CreateSaveGameObject();
         
         BinaryFormatter bf = new BinaryFormatter();
@@ -86,6 +89,7 @@ public class PlayerController : Singleton<PlayerController>
             BlockedPlaces = save.blockedPlaces;
             
             Debug.Log("Game Loaded");
+            clearPlaceBlocks();
         }
         else
         {
@@ -93,6 +97,17 @@ public class PlayerController : Singleton<PlayerController>
             DiscoveredPlaces = new List<int>();
             BlockedPlaces = new List<Save.PlaceBlock>();
             Debug.Log("No game saved!");
+        }
+    }
+
+    private void clearPlaceBlocks()
+    {
+        foreach (var block in BlockedPlaces)
+        {
+            if (block.blockUntil.CompareTo(DateTime.Now) <= 0)
+            {
+                BlockedPlaces.Remove(block);
+            }
         }
     }
 }

@@ -12,7 +12,8 @@ public class ExploringController : MonoBehaviour
     public GameObject discoveryPromptPrefab;
 
     private PlayerController _playerController;
-
+    private SceneController _sceneController;
+    
     private Vector2 _localTargetPosition;
     private Vector2 _playerPosition;
     private Place _targetedPlace;
@@ -25,7 +26,8 @@ public class ExploringController : MonoBehaviour
         _promptExists = false;
         
         _playerController = Utilities.FindPlayer();
-
+        _sceneController = FindObjectOfType<SceneController>();
+        
         _playerPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
         if (_playerController.Settings.SelectedPlace == null)
         {
@@ -85,24 +87,40 @@ public class ExploringController : MonoBehaviour
         GameObject newDiscoveryPrompt = Instantiate(discoveryPromptPrefab, background);
         newDiscoveryPrompt.transform.Find("SecondLine").GetComponent<Text>().text = _targetedPlace.engName;
 
-        String gameType = "???"; //TODO
+        String gameType = _targetedPlace.gameType;
         String difficulty = "???"; //TODO
 
         newDiscoveryPrompt.transform.Find("FourthLine").GetComponent<Text>().text =
             "Game type: " + gameType + "\nDifficulty: " + difficulty;
         newDiscoveryPrompt.transform.Find("Buttons/BTN_NO").GetComponent<Button>().onClick.AddListener(delegate
         {
-            // TODO set block time to prevent prompt spam
+            var pb = new Save.PlaceBlock {placeId = _targetedPlace.id, blockUntil = DateTime.Now.AddSeconds(300)};
+            _playerController.BlockedPlaces.Add(pb);
+            _playerController.Settings.SelectedPlace = null;
             _promptExists = false;
+            SetTargetToNearestPlace();
             Destroy(newDiscoveryPrompt);
         });
         newDiscoveryPrompt.transform.Find("Buttons/BTN_YES").GetComponent<Button>().onClick.AddListener(delegate
         {
-            // TODO sceneController -> move to valid scene according to gameType.
-            _playerController.DiscoveredPlaces.Add(_targetedPlace.id);
-            SetTargetToNearestPlace();
-            _promptExists = false;
-            Destroy(newDiscoveryPrompt);
+            _playerController.CurrentPlayedGameId = _targetedPlace.gameId;
+            _playerController.CurrentPlayedPlaceId = _targetedPlace.id;
+            
+            if (gameType.Equals("Quiz"))
+            {
+                _sceneController.GoToScene("SCN_QUIZ_LEARNING");
+            }
+            else if (gameType.Equals("Puzzle"))
+            {
+                //TODO Puzzle minigame
+                _sceneController.GoToScene("SCN_INSPIRATIONAL_LEARNING");
+            }
+            else
+            {
+                //TODO Action minigame
+                _sceneController.GoToScene("SCN_INSPIRATIONAL_LEARNING");
+            }
+
         });
     }
     
@@ -113,8 +131,12 @@ public class ExploringController : MonoBehaviour
         
         foreach (var place in _playerController.places)
         {
-            if(_playerController.DiscoveredPlaces.Contains(place.id)) continue;
-            
+            if(_playerController.DiscoveredPlaces.Contains(place.id)) 
+                continue;
+            if (_playerController.BlockedPlaces.Exists(
+                p => p.placeId == place.id && p.blockUntil.CompareTo(DateTime.Now) > 0)) 
+                continue;
+
             Vector2 localTarget = new Vector2(place.latitude, place.longitude);
             float localDistance = Geometry.DistanceFromCoordinates(_playerPosition, localTarget);
             if (!(localDistance < minDistance)) continue;

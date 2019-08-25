@@ -18,7 +18,7 @@ public class QuizLearningController : MonoBehaviour
     void Start()
     {
         _playerController = Utilities.FindPlayer();
-        _currentQuiz = Resources.LoadAll<Quiz>("Quizes").First(x => x.id == _playerController.CurrentQuizId);
+        _currentQuiz = Resources.LoadAll<Quiz>("Quizes").First(x => x.id == _playerController.CurrentPlayedGameId);
         learningText.text = _currentQuiz.learningText;
         scrollbar.value = 1;
     }

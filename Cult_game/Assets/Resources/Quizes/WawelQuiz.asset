@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a12d0148d34e246a2ac48910a488bb, type: 3}
   m_Name: WawelQuiz
   m_EditorClassIdentifier: 
-  id: 0
+  id: 1
   learningText: "Jednym z najwa\u017Cniejszych miejsc w Krakowie jest bez w\u0105tpienia
     Wzg\xF3rze Wawelskie \u2013 miejsce pierwszego osadnictwa na obszarze miasta
     i zamek kr\xF3l\xF3w polskich. Kryje w sobie wiele tajemnic, kt\xF3re warto pozna\u0107
