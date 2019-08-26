@@ -13,62 +13,67 @@ MonoBehaviour:
   m_Name: WawelQuiz
   m_EditorClassIdentifier: 
   id: 1
-  learningText: "Jednym z najwa\u017Cniejszych miejsc w Krakowie jest bez w\u0105tpienia
-    Wzg\xF3rze Wawelskie \u2013 miejsce pierwszego osadnictwa na obszarze miasta
-    i zamek kr\xF3l\xF3w polskich. Kryje w sobie wiele tajemnic, kt\xF3re warto pozna\u0107
-    w trakcie zwiedzania tego arcydzie\u0142a polskiej sztuki, g\xF3ruj\u0105cej
-    nad Starym Miastem.  Zacznijmy od samej genezy s\u0142owa \u201EWawel\u201D.
-    Trudno jednoznacznie okre\u015Bli\u0107 jego etymologi\u0119. Niekt\xF3rzy badacze
-    sk\u0142aniaj\u0105 si\u0119 do teorii, \u017Ce wywodzi si\u0119 ona ze s\u0142\xF3w:
-    \u201Ew\u0105d\xF3\u0142\u201D, \u201Ew\u0105wa\u0142\u201D lub \u201Ew\u0105wel\u201D,
-    kt\xF3re odnosz\u0105 si\u0119 do geologicznej budowy ska\u0142, z kt\xF3rej
-    zbudowane jest wzg\xF3rze. Istnieje r\xF3wnie\u017C inna hipoteza, powtarzana
-    za kronik\u0105 wielkopolsk\u0105 z ko\u0144ca XIII wieku, \u017Ce s\u0142owo
-    \u201Ew\u0105wel\u201D mia\u0142o oznacza\u0107 \u201Ewynios\u0142o\u015B\u0107
-    po\u015Br\xF3d mokrade\u0142\u201D.  Na podstawie bada\u0144 archeologicznych,
-    badacze twierdz\u0105, \u017Ce najstarsze \u015Blady osadnictwa na tym terenie
-    si\u0119gaj\u0105 a\u017C paleolitu. Osada rozwija\u0142a si\u0119 intensywnie
-    ze wzgl\u0119du na jej zlokalizowanie na przeci\u0119ciu wa\u017Cnych szlak\xF3w
-    handlowych. Najwcze\u015Bniejsze zachowane do naszych czas\xF3w \u015Blady architektoniczne
-    pochodz\u0105 z ko\u0144ca X i pocz\u0105tku XI wieku. Jest to ko\u015Bci\xF3\u0142
-    \u015Bw. Jerzego oraz dwie rotundy: pierwsza Naj\u015Bwi\u0119tszej Panny Marii
-    i druga znajduj\u0105ca si\u0119 przy baszcie W\u0142adys\u0142awa IV.  Dalsza
-    zabudowa ukszta\u0142towa\u0142a obecnie znan\u0105 zabudow\u0119 wzg\xF3rza
-    \u2013 z wynios\u0142\u0105 sylwetk\u0105 gotyckiej katedry \u2013 miejsca koronacji
-    i poch\xF3wku polskich w\u0142adc\xF3w oraz zamkiem kr\xF3lewskim, sk\u0142adaj\u0105cym
-    si\u0119 z cz\u0119\u015Bci gotyckiej, renesansowej i barokowej."
-  points: 50
+  learningText: "Wawel is a limestone hill in the centre of Krak\xF3w upon the Vistula
+    River with a complex of impressive historical monuments of unique historical
+    and artistic values. This extraordinary sanctuary determines the Poles\u2019
+    identity, is their national and cultural symbol. Wawel used to be the seat of
+    Polish rulers, their necropolis and place where the Polish history took shape.
+    Wawel of the Piast dynasty Towering above its vicinity and surrounded by swamps,
+    the rock of 228 m above the sea level attracted human groups since the beginning
+    of the Palaeolithic period as early as 100,000 years BC. In the 9th century Wawel
+    was the centre of the Vistulan tribes\u2019 union. At the end of the 10th century
+    Boleslav the Brave captured the Wawel burgh and incorporated the Lesser Poland
+    in the Piast state. In 1000 the Krak\xF3w bishopric was established as part of
+    the Gniezno archdiocese and the Wawel cathedral building was erected. In the
+    1st half of the 11th century the stone pre-Romanesque buildings were erected
+    in connection with the ruler\u2019s residence of sacral and secular nature, e.g.
+    the four-apse rotunda of St. Felix and St. Adaukt, the baptistery rotunda at
+    the cathedral, the \u201Cquadrangular building.\u201D During the reign of Casimir
+    the Restorer in the years 1034-1058 Wawel became the main capital of the state.
+    The reconstruction of ruler\u2019s residence started a new phase of construction,
+    already in the Romanesque style (palace with the two-storey hall, the so-called
+    hall of twenty-four pillars with a chapel, the palace basilica of St. Mary of
+    Egypt). In the 2nd half of the 12th century Wawel became a burgh of extraordinarily
+    high importance with the number of sacral buildings reaching ten and the expanded
+    residential complex.  At the turn of the 13th and 14th century the hill was surrounded
+    with a stone defensive wall at the site of the previous wooden and earth works.
+    Clear division was then established between the upper castle, that is, the royal
+    residence (constructed throughout the entire 14th century) and the lower castle
+    which provided service and economic facilities. At the initiative of W\u0142adys\u0142aw
+    the Elbow-high and with participation of Bishop Nanker the Gothic Cathedral was
+    constructed and consecrated in 1364. In the 14th century and the 1st half of
+    the 15th century, during the reign of W\u0142adys\u0142aw Jagie\u0142\u0142o,
+    the castle fortifications were reconstructed and expanded (towers: Jordanka,
+    Z\u0142odziejska, Lubranka, and the Lower Gate defensive complex)."
+  points: 150
   questions:
-  - questionText: "Co wed\u0142ug hipotezy oznacza s\u0142owo \"w\u0105wel\" od kt\xF3rego
-      pochodzi nazwa Wawel?"
+  - questionText: The oldest traces of settlement in wawel dates back to which era?
     possibleAnswers:
-    - answerText: "Wzg\xF3rze przy rzece"
+    - answerText: Mesolithic
       isCorrect: 0
-    - answerText: "Wynios\u0142o\u015B\u0107 po\u015Br\xF3d mokrade\u0142"
+    - answerText: Neolithic
+      isCorrect: 0
+    - answerText: Palaeolithic
       isCorrect: 1
-    - answerText: "W\u0105w\xF3z po\u015Br\xF3d g\xF3r"
+    - answerText: Chalcolithic
       isCorrect: 0
-    - answerText: Wzniesienie widokowe
-      isCorrect: 0
-  - questionText: "Jakiej ery si\u0119gaj\u0105 najstarsze \u015Blady osadnictwa
-      na Wawelu?"
+  - questionText: During the reign of which king, Wawel became the capitol of Poland?
     possibleAnswers:
-    - answerText: Mezolitu
+    - answerText: Mieszko I
       isCorrect: 0
-    - answerText: Neolitu
+    - answerText: "Boles\u0142aw I the Brave"
       isCorrect: 0
-    - answerText: Paleolitu
+    - answerText: Mieszko II Lambert
+      isCorrect: 0
+    - answerText: Casimir I the Restorer
       isCorrect: 1
-    - answerText: Eneolitu
-      isCorrect: 0
-  - questionText: "W jaki stylu architektonicznym zosta\u0142a zbudowana katedra
-      na wawelu?"
+  - questionText: In which century the Wawel Cathedra was constructed?
     possibleAnswers:
-    - answerText: "Roma\u0144skim"
+    - answerText: XIII
       isCorrect: 0
-    - answerText: Gotyckim
+    - answerText: XIV
       isCorrect: 1
-    - answerText: Renesansowym
+    - answerText: XV
       isCorrect: 0
-    - answerText: Barokowym
+    - answerText: XVI
       isCorrect: 0

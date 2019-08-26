@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a12d0148d34e246a2ac48910a488bb, type: 3}
+  m_Name: BazylikaMariackaQuiz
+  m_EditorClassIdentifier: 
+  id: 2
+  learningText: "Saint Mary's Basilica (Polish: Ko\u015Bci\xF3\u0142 Mariacki) is
+    a Brick Gothic church adjacent to the Main Market Square in Krak\xF3w, Poland.
+    Built in the 14th century, its foundations date back to the early 13th century
+    and serve as one of the best examples of Polish Gothic architecture. Standing
+    80 m (262 ft) tall, it is particularly famous for its wooden altarpiece carved
+    by Veit Stoss (Wit Stwosz). In 1978 it became a UNESCO World Heritage Site alongside
+    the Historic Centre of Krak\xF3w.  On every hour, a trumpet signal\u2014called
+    the Hejna\u0142 mariacki\u2014is played from the top of the taller of Saint Mary's
+    two towers. The plaintive tune breaks off in mid-stream, to commemorate a famous
+    13th century trumpeter who was shot in the throat while sounding the alarm before
+    a Mongol attack on the city. The noon-time hejna\u0142 is heard across Poland
+    and abroad broadcast live by the Polish national Radio 1 Station.[1] [2]  Saint
+    Mary's Basilica also served as an architectural model for many of the churches
+    that were built by the Polish diaspora abroad, particularly those like Saint
+    Michael's and Saint John Cantius in Chicago, designed in the Polish Cathedral
+    style.  The church is familiar to many English-speaking readers from the 1929
+    book The Trumpeter of Krakow by Eric P. Kelly."
+  points: 100
+  questions:
+  - questionText: How tall is Saint Mary's Basilica?
+    possibleAnswers:
+    - answerText: 60m
+      isCorrect: 0
+    - answerText: 70m
+      isCorrect: 0
+    - answerText: 80m
+      isCorrect: 1
+    - answerText: 90m
+      isCorrect: 0
+  - questionText: "What instrument is the \"Hejna\u0142 Mariacki\" played on?"
+    possibleAnswers:
+    - answerText: Saxophone
+      isCorrect: 0
+    - answerText: Trumpet
+      isCorrect: 1
+    - answerText: Violin
+      isCorrect: 0
+    - answerText: Trombone
+      isCorrect: 0
+  - questionText: "What nation was attacking Krak\xF3w when the \"Hejna\u0142\" was
+      played?"
+    possibleAnswers:
+    - answerText: Mongols
+      isCorrect: 1
+    - answerText: Turks
+      isCorrect: 0
+    - answerText: Lithuanians
+      isCorrect: 0
+    - answerText: Russians
+      isCorrect: 0
