@@ -26,7 +26,7 @@ public class ExploringController : MonoBehaviour
         _promptExists = false;
         
         _playerController = Utilities.FindPlayer();
-        _sceneController = FindObjectOfType<SceneController>();
+        _sceneController = Utilities.FindSceneController();
         
         _playerPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
         if (_playerController.Settings.SelectedPlace == null)
@@ -106,19 +106,23 @@ public class ExploringController : MonoBehaviour
             _playerController.CurrentPlayedGameId = _targetedPlace.gameId;
             _playerController.CurrentPlayedPlaceId = _targetedPlace.id;
             
+            _playerController.Settings.SelectedPlace = null;
+            
             if (gameType.Equals("Quiz"))
             {
-                _sceneController.GoToScene("SCN_QUIZ_LEARNING");
+                _sceneController.GoToScene(SceneController.SCN_QUIZ_LEARNING);
             }
             else if (gameType.Equals("Puzzle"))
             {
                 //TODO Puzzle minigame
-                _sceneController.GoToScene("SCN_INSPIRATIONAL_LEARNING");
+                _playerController.DiscoveredPlaces.Add(_targetedPlace.id);
+                _sceneController.GoToScene(SceneController.SCN_INSPIRATIONAL_LEARNING);
             }
             else
             {
                 //TODO Action minigame
-                _sceneController.GoToScene("SCN_INSPIRATIONAL_LEARNING");
+                _playerController.DiscoveredPlaces.Add(_targetedPlace.id);
+                _sceneController.GoToScene(SceneController.SCN_INSPIRATIONAL_LEARNING);
             }
 
         });

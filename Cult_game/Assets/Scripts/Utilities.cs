@@ -4,4 +4,9 @@
     {
         return Singleton<PlayerController>.Instance;
     }
+
+    public static SceneController FindSceneController()
+    {
+        return Singleton<SceneController>.Instance;
+    }
 }

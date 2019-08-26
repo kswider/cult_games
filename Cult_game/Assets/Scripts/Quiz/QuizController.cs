@@ -27,7 +27,7 @@ public class QuizController : MonoBehaviour
     void Start()
     {
         _playerController = Utilities.FindPlayer();
-        _sceneController = GameObject.FindObjectOfType<SceneController>();
+        _sceneController = Utilities.FindSceneController();
         _currentQuiz = Resources.LoadAll<Quiz>("Quizes").First(x => x.id == _playerController.CurrentPlayedGameId);
         _buttons = buttonsHolder.GetComponentsInChildren<Button>();
         LoadNextQuestion();
@@ -68,7 +68,7 @@ public class QuizController : MonoBehaviour
                 _playerController.AddPoints(_currentQuiz.points);
                 questionText.text = "Quiz was passed successfully!";
                 yield return new WaitForSeconds(3);
-                _sceneController.GoToScene("SCN_INSPIRATIONAL_LEARNING");
+                _sceneController.GoToScene(SceneController.SCN_INSPIRATIONAL_LEARNING);
             }
             else
             {
@@ -76,11 +76,11 @@ public class QuizController : MonoBehaviour
                 _playerController.BlockedPlaces.Add(pb);
                 questionText.text = $"Unfortunatelly you have not passed the quiz successfully. Number of correct answers: {_correctlyAnsweredQuestionsNumber}/{_currentQuiz.questions.Count}";
                 yield return new WaitForSeconds(5);
-                _sceneController.GoToScene("SCN_EXPLORING_VIEW");
+                _sceneController.GoToScene(SceneController.SCN_EXPLORING_VIEW);
             }
         }
     }
-
+    
     private void LoadNextQuestion()
     {
         var currentQuestion = _currentQuiz.questions[_currentQuestionNumber];

@@ -22,17 +22,15 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Start()
     {
+        LoadGame();
+        
         Settings = new Settings();
         Place selected = places.Find(p => p.id == Settings.SelectedPlaceId);
         if (selected != null)
         {
             Settings.SelectedPlace = selected;
         }
-        
-        LoadGame();
     }
-
-
 
     public void SaveGame()
     {

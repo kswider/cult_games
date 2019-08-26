@@ -8,10 +8,13 @@ public class MenuController : MonoBehaviour
     private const float TransitionSpeed = 5f;
     private bool _cameraEventFired;
     private Coroutine _movingCoroutine;
-    
+
+    private SceneController _sceneController;
     void Start()
     {
         _cameraTransform = Camera.main.transform;
+
+        _sceneController = Utilities.FindSceneController();
     }
     
     void Update()
@@ -31,6 +34,11 @@ public class MenuController : MonoBehaviour
         _cameraDesiredPosition.x = menuTransform.position.x;
         _cameraEventFired = true;
     }
+    
+    public void ExitGame()
+    {
+        _sceneController.ExitGame();
+    }
 
     private IEnumerator Lerp()
     {
@@ -48,4 +56,6 @@ public class MenuController : MonoBehaviour
         }
         yield return null;
     }
+
+
 }

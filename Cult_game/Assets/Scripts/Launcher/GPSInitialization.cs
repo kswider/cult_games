@@ -2,9 +2,9 @@
 using UnityEngine;
 using UnityEngine.Android;
 
-public class GPSInitialization : MonoBehaviour
+public class GPSInitialization : Singleton<GPSInitialization>
 {
-    private void Awake()
+    private void Start()
     {
         StartCoroutine(InitializeLocation());
     }
@@ -54,5 +54,7 @@ public class GPSInitialization : MonoBehaviour
             yield break;
         }
         Debug.Log("location service loaded");
+        
+        Destroy(gameObject);
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using ResourcesObjects;
+﻿using ResourcesObjects;
 using UnityEngine;
 using UnityEngine.UI;
 

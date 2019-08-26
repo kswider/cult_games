@@ -19,7 +19,7 @@ public class PlacesTableController : MonoBehaviour
     void Start()
     {
         _playerController = Utilities.FindPlayer();
-        _sceneController = FindObjectOfType<SceneController>();
+        _sceneController = Utilities.FindSceneController();
         
         SetTypeBarToLookedType();
         UpdateTable();
@@ -36,19 +36,27 @@ public class PlacesTableController : MonoBehaviour
         foreach (var place in placesToShow)
         {
             Vector2 placePosition = new Vector2(place.latitude, place.longitude);
+            bool isVisited = _playerController.DiscoveredPlaces.Contains(place.id);
             
             GameObject newPlace = Instantiate(entryPrefab, tableContent);
             newPlace.transform.Find("Name").GetComponent<Text>().text = place.engName;
             newPlace.transform.Find("Distance").GetComponent<Text>().text = 
                 ((int)Geometry.DistanceFromCoordinates(currentPosition, placePosition)) + "m";
-            newPlace.transform.Find("Name/IsVisited").gameObject.SetActive(
-                _playerController.DiscoveredPlaces.Contains(place.id)
-            );
+            newPlace.transform.Find("Name/IsVisited").gameObject.SetActive(isVisited);
+            if (isVisited)
+            {
+                newPlace.transform.Find("Name/BTN_GOTO").GetComponent<Button>().onClick.AddListener(delegate
+                {
+                    _playerController.CurrentPlayedPlaceId = place.id;
+                    _sceneController.GoToScene(SceneController.SCN_INSPIRATIONAL_LEARNING);
+                });
+            }
+
             newPlace.transform.Find("BTN_FOLLOW").GetComponent<Button>().onClick.AddListener(delegate
             {
                 _playerController.Settings.SelectedPlace = _playerController.places.Find(p => p.engName == place.engName);
                 _playerController.Settings.SaveSettings();
-                _sceneController.GoToScene("SCN_EXPLORING_VIEW");
+                _sceneController.GoToScene(SceneController.SCN_EXPLORING_VIEW);
             });
             _shownPlaces.Add(newPlace);
         }
