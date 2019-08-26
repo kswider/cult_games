@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class QuizController : MonoBehaviour
 {
     public Text questionText;
+    public Text remainingTimeText;
     public GameObject buttonsHolder;
 
     private PlayerController _playerController;
@@ -18,6 +19,9 @@ public class QuizController : MonoBehaviour
     private int _correctlyAnsweredQuestionsNumber = 0;
     private bool _isButtonClicked;
     private int _currentQuestionNumber;
+    private Coroutine _timerCoroutine;
+
+    private const int TimeForAnswer = 10;
     
     // Start is called before the first frame update
     void Start()
@@ -41,7 +45,13 @@ public class QuizController : MonoBehaviour
 
     private IEnumerator AnswerWasClicked()
     {
-        ChangeButtonState(false);        
+        StopCoroutine(_timerCoroutine);
+        yield return PrepareForNextQuestion();
+    }
+
+    private IEnumerator PrepareForNextQuestion()
+    {
+        ChangeButtonState(false);
         _currentQuestionNumber++;
         if (_currentQuestionNumber < _currentQuiz.questions.Count)
         {
@@ -56,22 +66,20 @@ public class QuizController : MonoBehaviour
             if (_correctlyAnsweredQuestionsNumber == _currentQuiz.questions.Count)
             {
                 _playerController.AddPoints(_currentQuiz.points);
-                questionText.text = "Quiz rozwiązany pomyślnie!";
+                questionText.text = "Quiz was passed successfully!";
                 yield return new WaitForSeconds(3);
                 _sceneController.GoToScene("SCN_INSPIRATIONAL_LEARNING");
             }
             else
             {
-                var pb = new Save.PlaceBlock {placeId = _playerController.CurrentPlayedPlaceId, blockUntil = DateTime.Now.AddSeconds(300)};
+                var pb = new Save.PlaceBlock { placeId = _playerController.CurrentPlayedPlaceId, blockUntil = DateTime.Now.AddSeconds(300) };
                 _playerController.BlockedPlaces.Add(pb);
-                questionText.text = $"Niestety nie udalo Ci się poprawnie rozwiązać quizu. Liczba poprawnych odpowiedzi to {_correctlyAnsweredQuestionsNumber}/{_currentQuiz.questions.Count}";
-                yield return new WaitForSeconds(3);
+                questionText.text = $"Unfortunatelly you have not passed the quiz successfully. Number of correct answers: {_correctlyAnsweredQuestionsNumber}/{_currentQuiz.questions.Count}";
+                yield return new WaitForSeconds(5);
                 _sceneController.GoToScene("SCN_EXPLORING_VIEW");
             }
         }
     }
-
-
 
     private void LoadNextQuestion()
     {
@@ -97,6 +105,19 @@ public class QuizController : MonoBehaviour
                 _buttons[localCounter].onClick.AddListener(delegate { WrongAnswerAction(_buttons[localCounter]); });
             }
         }
+        _timerCoroutine = StartCoroutine(StartAnswerTimer());
+    }
+
+    private IEnumerator StartAnswerTimer()
+    {
+        for (int i = TimeForAnswer; i > 0; i--)
+        {
+            remainingTimeText.text = $"Remaining time: {i}s";
+            yield return new WaitForSeconds(1);
+        }
+        remainingTimeText.text = $"Time has expired!";
+        NoAnswerAction();
+        yield return PrepareForNextQuestion();
     }
 
     private void ResetColorOfButtons()
@@ -128,6 +149,12 @@ public class QuizController : MonoBehaviour
         var buttonImage = button.GetComponentInChildren<Image>();
         buttonImage.color = Color.red;
         _isButtonClicked = true;
+        var correctButtonImage = _correctAnswerButton.GetComponentInChildren<Image>();
+        correctButtonImage.color = Color.green;
+    }
+
+    private void NoAnswerAction()
+    {
         var correctButtonImage = _correctAnswerButton.GetComponentInChildren<Image>();
         correctButtonImage.color = Color.green;
     }
