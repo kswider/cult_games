@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a12d0148d34e246a2ac48910a488bb, type: 3}
   m_Name: KrakQuiz
   m_EditorClassIdentifier: 
-  id: 0
+  id: 3
   learningText: "The word 'Krak\xF3w' originates from 'Krak,' or 'Krakus' - the fabled
     ruler of the Vistulan tribes. According to various legends (and there are many),
     Krakus founded the city sometime around 700AD, built Wawel Castle, and vanquished
