@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b33611243d120140854b37394ddb9d6, type: 3}
-  m_Name: Kopiec Kosciuszki
+  m_Name: ICE
   m_EditorClassIdentifier: 
-  id: 102
-  engName: "Ko\u015Bciuszko Mound"
-  plName: "Kopiec Ko\u015Bciuszki"
+  id: 103
+  engName: ICE Congress Centre
+  plName: Centrum Kongresowe ICE
   type: CURIOSITY
-  latitude: 50.054867
-  longitude: 19.893318
-  scoreValue: 50
+  latitude: 50.048023
+  longitude: 19.931456
+  scoreValue: 75
   description: 
-  gameId: 102
-  gameType: Action
+  gameId: 103
+  gameType: Puzzle

@@ -114,9 +114,7 @@ public class ExploringController : MonoBehaviour
             }
             else if (gameType.Equals("Puzzle"))
             {
-                //TODO Puzzle minigame
-                _playerController.DiscoveredPlaces.Add(_targetedPlace.id);
-                _sceneController.GoToScene(SceneController.SCN_INSPIRATIONAL_LEARNING);
+                _sceneController.GoToScene(SceneController.SCN_PUZZLE_GAME);
             }
             else
             {
@@ -133,7 +131,7 @@ public class ExploringController : MonoBehaviour
         float minDistance = float.MaxValue;
         Place nearest = null;
         
-        foreach (var place in _playerController.places)
+        foreach (var place in _playerController.Places)
         {
             if(_playerController.DiscoveredPlaces.Contains(place.id)) 
                 continue;

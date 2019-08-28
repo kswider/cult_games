@@ -18,7 +18,7 @@ public class InspirationalLearningController : MonoBehaviour
     void Start()
     {
         _playerController = Utilities.FindPlayer();
-        Place shownPlace = _playerController.places.Find(p => p.id == _playerController.CurrentPlayedPlaceId);
+        Place shownPlace = _playerController.Places.Find(p => p.id == _playerController.CurrentPlayedPlaceId);
 
         engName.text = shownPlace.engName;
         plName.text = "Polish name: " + shownPlace.plName;

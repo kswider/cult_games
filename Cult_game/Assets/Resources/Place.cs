@@ -12,7 +12,7 @@ namespace ResourcesObjects
         public string type;
         public float latitude;
         public float longitude;
-        public float scoreValue;
+        public int scoreValue;
         public string description;
         public int gameId;
         public string gameType;

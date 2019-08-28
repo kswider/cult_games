@@ -29,7 +29,7 @@ public class PlacesTableController : MonoBehaviour
     {
         ClearTable();
 
-        List<Place> placesToShow = _playerController.places.FindAll(p => p.type.Equals(_playerController.Settings.LookedType));
+        List<Place> placesToShow = _playerController.Places.FindAll(p => p.type.Equals(_playerController.Settings.LookedType));
         
         Vector2 currentPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
         
@@ -54,7 +54,7 @@ public class PlacesTableController : MonoBehaviour
 
             newPlace.transform.Find("BTN_FOLLOW").GetComponent<Button>().onClick.AddListener(delegate
             {
-                _playerController.Settings.SelectedPlace = _playerController.places.Find(p => p.engName == place.engName);
+                _playerController.Settings.SelectedPlace = _playerController.Places.Find(p => p.engName == place.engName);
                 _playerController.Settings.SaveSettings();
                 _sceneController.GoToScene(SceneController.SCN_EXPLORING_VIEW);
             });

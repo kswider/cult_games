@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
+using ResourcesObjects;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class GridController : MonoBehaviour
     private static Vector2Int CONFIG_GRID_EASY_BOUNDS = new Vector2Int(3, 5);
     private static Vector2Int CONFIG_GRID_MEDIUM_BOUNDS = new Vector2Int(4, 6);
     private static Vector2Int CONFIG_GRID_HARD_BOUNDS = new Vector2Int(5, 8);
-
+    
     private string lvl_indicator;
     public Canvas canvasGui;
     public Text txt_title;
@@ -23,7 +24,6 @@ public class GridController : MonoBehaviour
     public GameObject btn_help;
 
     private bool inHelpMode;
-    private bool successfull;
 
     private int rows;
     private int cols;
@@ -35,27 +35,30 @@ public class GridController : MonoBehaviour
     private GameObject flames_help;
     private TileTracker[] tiles_grid;
 
-    private int draggedTileKey;
+    public int DraggedTileKey { get; set; }
 
     private int optimalMoves;
     private int userMoves;
     private int properlyPlacedAmount;
     private float efficiency;
 
-    void Awake()
+    private PlayerController _playerController;
+    private SceneController _sceneController;
+
+    private void Awake()
     {
-        InitializeGridHolder(1);
+        _playerController = Utilities.FindPlayer();
+        _sceneController = Utilities.FindSceneController();
+        
+        InitializeGridHolder(_playerController.CurrentPlayedGameId);
     }
 
-    public void InitializeGridHolder(int id)
+    private void InitializeGridHolder(int id)
     {
         switch (id)
         {
             case 1:
                 InitializeGrid("mariacki_inside_lvl_hard", "St. Mary's Basilica", CONFIG_GRID_HARD_BOUNDS);
-                break;
-            case 11:
-                InitializeGrid("mariacki_outside_lvl_easy", "St. Mary's Basilica", CONFIG_GRID_EASY_BOUNDS);
                 break;
             case 2:
                 InitializeGrid("sukiennice_lvl_hard", "Krakow Cloth Hall", CONFIG_GRID_HARD_BOUNDS);
@@ -63,14 +66,8 @@ public class GridController : MonoBehaviour
             case 3:
                 InitializeGrid("wawel_lvl_med", "Wawel Castle", CONFIG_GRID_MEDIUM_BOUNDS);
                 break;
-            case 202:
-                InitializeGrid("king_krak_lvl_med", "The Legend of Krakus", CONFIG_GRID_MEDIUM_BOUNDS);
-                break;
-            case 201:
-                InitializeGrid("wawel_dragon_lvl_med", "Wawel Dragon", CONFIG_GRID_MEDIUM_BOUNDS);
-                break;
-            case 203:
-                InitializeGrid("wandas_death_lvl_hard", "The legend of Wanda", CONFIG_GRID_HARD_BOUNDS);
+            case 4:
+                InitializeGrid("uj_garden_lvl_med", "Botanic Garden of the UJ", CONFIG_GRID_MEDIUM_BOUNDS);
                 break;
             case 101:
                 InitializeGrid("rakowicki_lvl_easy", "Rakowicki Cemetery", CONFIG_GRID_EASY_BOUNDS);
@@ -81,82 +78,83 @@ public class GridController : MonoBehaviour
             case 103:
                 InitializeGrid("ice_lvl_easy", "ICE Congress Centre", CONFIG_GRID_EASY_BOUNDS);
                 break;
-            case 4:
-                InitializeGrid("uj_garden_lvl_med", "Botanic Garden of the UJ", CONFIG_GRID_MEDIUM_BOUNDS);
+            case 201:
+                InitializeGrid("wawel_dragon_lvl_med", "Wawel Dragon", CONFIG_GRID_MEDIUM_BOUNDS);
+                break;
+            case 202:
+                InitializeGrid("king_krak_lvl_med", "The Legend of Krakus", CONFIG_GRID_MEDIUM_BOUNDS);
+                break;
+            case 203:
+                InitializeGrid("wandas_death_lvl_hard", "The legend of Wanda", CONFIG_GRID_HARD_BOUNDS);
+                break;
+            //Unused
+            case 11:
+                InitializeGrid("mariacki_outside_lvl_easy", "St. Mary's Basilica", CONFIG_GRID_EASY_BOUNDS);
                 break;
         }
     }
 
-    private void InitializeGrid(String jigsaw_subject, string title, Vector2Int lvlIndicator)
+    private void InitializeGrid(string jigsaw_subject, string title, Vector2Int lvlIndicator)
     {
-        this.txt_title.text = title;
+        txt_title.text = title;
         switch (lvlIndicator.x)
         {
             case 3:
-                this.lvl_indicator = "Grid_Easy";
+                lvl_indicator = "Grid_Easy";
                 break;
             case 4:
-                this.lvl_indicator = "Grid_Medium";
+                lvl_indicator = "Grid_Medium";
                 break;
             case 5:
-                this.lvl_indicator = "Grid_Hard";
+                lvl_indicator = "Grid_Hard";
                 break;
         }
-        this.successfull = false;
-        this.rows = lvlIndicator.x;
-        this.cols = lvlIndicator.y;
-        this.inHelpMode = false;
-        this.txt_help.enabled = false;
-        this.sprites_array = Resources.LoadAll<Sprite>("Sprites/" + jigsaw_subject);
-        this.tiles_grid = new TileTracker[rows*cols];
+        
+        rows = lvlIndicator.x;
+        cols = lvlIndicator.y;
+        inHelpMode = false;
+        txt_help.enabled = false;
+        sprites_array = Resources.LoadAll<Sprite>("Sprites/" + jigsaw_subject);
+        tiles_grid = new TileTracker[rows*cols];
         int key = 0;
 
-        this.grid = Instantiate(Resources.Load<GameObject>("Jigsaw_prefabs/"+lvl_indicator));
-        this.flames_help = Instantiate(Resources.Load<GameObject>("Jigsaw_prefabs/" + "Grid_Help_Flames"));
+        grid = Instantiate(Resources.Load<GameObject>("Jigsaw_prefabs/"+lvl_indicator), canvasGui.transform, false);
+        flames_help = Instantiate(Resources.Load<GameObject>("Jigsaw_prefabs/" + "Grid_Help_Flames"), canvasGui.transform, false);
 
-        grid.transform.SetParent(canvasGui.transform, false);
         TileTracker[] gridChildren = grid.GetComponentsInChildren<TileTracker>();
 
         for (int i = 0; i < rows*cols; i++)
         {
             TileTracker tileTracker = gridChildren[key];
-          
-            tileTracker.SetOriginTileKey(key).SetCurrentTileKey(key).SetStationaryPosition(gridChildren[key].transform.localPosition).SetSprite(this.sprites_array[key]);
-            this.tiles_grid[key++] = tileTracker;
+            tileTracker
+                .SetOriginTileKey(key)
+                .SetCurrentTileKey(key)
+                .SetStationaryPosition(gridChildren[key].transform.localPosition)
+                .SetSprite(sprites_array[key]);
+            tiles_grid[key++] = tileTracker;
         }
 
-        this.grid_help = Instantiate(this.grid);
-        this.grid_help.transform.position = this.flames_help.transform.position;
+        grid_help = Instantiate(grid, canvasGui.transform, false);
+        grid_help.transform.position = flames_help.transform.position;
 
-        this.grid_help.transform.SetParent(canvasGui.transform, false);
-        this.flames_help.transform.SetParent(canvasGui.transform, false);
+        ScaleGrid(grid_help, new Vector3(0.7f, 0.7f, 0.7f), false);
 
-        this.ScaleGrid(this.grid_help, new Vector3(0.7f, 0.7f, 0.7f), false);
+        grid_help.SetActive(false);
+        flames_help.SetActive(false);
 
-        this.grid_help.SetActive(false);
-        this.flames_help.SetActive(false);
-
-        initGridForGame();
+        InitGridForGame();
     }
-    private void initGridForGame()
+    private void InitGridForGame()
     {
-        this.properlyPlacedAmount = 0;
-        this.draggedTileKey = -1;
-        this.optimalMoves = 0;
-        this.userMoves = 0;
-        this.ShuffleGrid();
-        this.computeOptimalMoves();
-        this.CheckProperPlacement();
+        properlyPlacedAmount = 0;
+        DraggedTileKey = -1;
+        optimalMoves = 0;
+        userMoves = 0;
+        ShuffleGrid();
+        ComputeOptimalMoves();
+        CheckProperPlacement();
     }
-
-    public void SetDraggingTile(int key)
-    {
-        this.draggedTileKey = key;
-    }
-    public int CheckDraggingTile()
-    {
-        return this.draggedTileKey;
-    }
+    
     public void MarkNewPlacement(TileTracker dragged, TileTracker on, bool isInit)
     {
         Vector3 onPos = on.GetStationaryPosition();
@@ -174,20 +172,12 @@ public class GridController : MonoBehaviour
     }
     public void CheckProperPlacement()
     {
-        int properlyPlacedAmount = 0;
-        foreach(TileTracker tileTracker in this.tiles_grid)
-        {
-            if (tileTracker.CheckProperPlace() && (tileTracker.CheckNeededRotationsAmount() == 0))
-            {
-                properlyPlacedAmount++;
-            }
-        }
-        this.properlyPlacedAmount = properlyPlacedAmount;
-        this.updateProgress();
+        properlyPlacedAmount = tiles_grid.Count(tileTracker => tileTracker.CheckProperPlace() && (tileTracker.CheckNeededRotationsAmount() == 0));
+        UpdateProgress();
 
         if (properlyPlacedAmount == rows * cols)
         {
-            proceedEndGameEvent();
+            ProceedEndGameEvent();
         }
     }
     private void ShuffleGrid()
@@ -199,30 +189,28 @@ public class GridController : MonoBehaviour
             this.tiles_grid[UnityEngine.Random.Range(0, rows * cols)].RotateBy(UnityEngine.Random.Range(0, 4) * 90f), true);
         }
     }
-    private void computeOptimalMoves()
+    private void ComputeOptimalMoves()
     {
-        foreach (TileTracker tile in this.tiles_grid)
+        foreach (TileTracker tile in tiles_grid)
         {
             if (!tile.CheckProperPlace())
-                this.optimalMoves++;
-            this.optimalMoves += tile.CheckNeededRotationsAmount();
+                optimalMoves++;
+            optimalMoves += tile.CheckNeededRotationsAmount();
         }
-        this.optimalMoves--;
+        optimalMoves--;
     }
-    public void updateEfficiency()
+    public void UpdateEfficiency()
     {
-        this.userMoves++;
-        this.efficiency = ((float)this.optimalMoves / (float)this.userMoves) * 100.0f;
-        this.txt_efficiency.text = "Efficiency " + (int)(this.efficiency)+ "%";
+        userMoves++;
+        efficiency = ((float)optimalMoves / (float)userMoves) * 100.0f;
+        txt_efficiency.text = "Efficiency " + (int)efficiency + "%";
     }
-    public void updateProgress()
+
+    private void UpdateProgress()
     {
-        this.txt_progress.text = "Progress " + this.properlyPlacedAmount + "/" + this.rows*this.cols;
+        txt_progress.text = "Progress " + properlyPlacedAmount + "/" + rows*cols;
     }
-    public void updateTitle(String title)
-    {
-        this.txt_title.text = title;
-    }
+    
     private void PutFireOnlyOnGridBounds(TileTracker[] tilesArray)
     {
         int key = 0;
@@ -240,7 +228,7 @@ public class GridController : MonoBehaviour
                 if (row == rows - 1)
                     bottom = true;
 
-                this.enableFlames(tilesArray[key], up, bottom, left, right);
+                enableFlames(tilesArray[key], up, bottom, left, right);
                 key++;
             }
         }
@@ -261,66 +249,77 @@ public class GridController : MonoBehaviour
     private void ScaleGrid(GameObject grid, Vector3 scale, bool enableTilesFlames)
     {
         grid.transform.localScale = scale;
-        if (!enableTilesFlames)
+        if (enableTilesFlames) return;
+        
+        foreach (TileTracker tile in grid.GetComponentsInChildren<TileTracker>())
         {
-            foreach (TileTracker tile in grid.GetComponentsInChildren<TileTracker>())
+            foreach (ParticleSystem particle in tile.GetComponentsInChildren<ParticleSystem>())
             {
-                foreach (ParticleSystem particle in tile.GetComponentsInChildren<ParticleSystem>())
-                {
-                    ParticleSystem.EmissionModule em = particle.emission;
-                    em.enabled = false;
-                }
+                ParticleSystem.EmissionModule em = particle.emission;
+                em.enabled = false;
             }
         }
     }
-    private void proceedEndGameEvent()
+    private void ProceedEndGameEvent()
     {
-        this.PutFireOnlyOnGridBounds(this.tiles_grid);
-        this.successfull = true;
+        PutFireOnlyOnGridBounds(tiles_grid);
+
+        Place wonPlace = _playerController.Places.Find(p => p.id == _playerController.CurrentPlayedPlaceId);
+        
+        _playerController.AddPoints(wonPlace.scoreValue);
+        _playerController.DiscoveredPlaces.Add(wonPlace.id);
+        StartCoroutine(EndGameWait(5));
+        _sceneController.GoToScene(SceneController.SCN_INSPIRATIONAL_LEARNING);
     }
+
+    private IEnumerator EndGameWait(int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+    }
+    
     public void OnClickBtnReset()
     {
-        initGridForGame();
-        if (this.inHelpMode)
-        {
-            
-            this.btn_help.GetComponentInChildren<Text>().text = "Help";
-            this.inHelpMode = false;
-            this.grid.SetActive(true);
-            this.grid_help.SetActive(false);
-            this.flames_help.SetActive(false);
-            this.txt_title.resizeTextMaxSize = 30;
-            this.txt_help.enabled = false;
-            
-        }
+        InitGridForGame();
+        if (!inHelpMode) return;
+        
+        DisableHelpMode();
     }
     public void OnClickBtnHelp()
     {
-        if (!this.inHelpMode)
+        if (!inHelpMode)
         {
-            this.btn_help.GetComponentInChildren<Text>().text = "Back to game";
-            this.inHelpMode = true;
-            this.grid.SetActive(false);
-            this.grid_help.SetActive(true);
-            this.flames_help.SetActive(true);
-            this.txt_title.resizeTextMaxSize = 50;
-            this.txt_help.enabled = true;
+            EnableHelpMode();
         }
         else
         {
-            this.btn_help.GetComponentInChildren<Text>().text = "Help";
-            this.inHelpMode = false;
-            this.grid.SetActive(true);
-            this.grid_help.SetActive(false);
-            this.flames_help.SetActive(false);
-            this.txt_title.resizeTextMaxSize = 30;
-            this.txt_help.enabled = false;
+            DisableHelpMode();
         }
+    }
 
+    private void EnableHelpMode()
+    {
+        btn_help.GetComponentInChildren<Text>().text = "Back to game";
+        grid.SetActive(false);
+        grid_help.SetActive(true);
+        flames_help.SetActive(true);
+        txt_title.resizeTextMaxSize = 50;
+        txt_help.enabled = true;
+        inHelpMode = true;
+    }
+
+    private void DisableHelpMode()
+    {
+        btn_help.GetComponentInChildren<Text>().text = "Help";
+        grid.SetActive(true);
+        grid_help.SetActive(false);
+        flames_help.SetActive(false);
+        txt_title.resizeTextMaxSize = 30;
+        txt_help.enabled = false;
+        inHelpMode = false;
     }
 
     public void OnClickBtnLeave()
     {
-        //
+        _sceneController.GoBackFromGame();
     }
 }
