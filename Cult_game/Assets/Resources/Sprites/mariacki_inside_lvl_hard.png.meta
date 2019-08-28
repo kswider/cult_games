@@ -1,0 +1,1075 @@
+fileFormatVersion: 2
+guid: 06e420e34daadab469b811e819975be1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2973434976556509023
+    second: mariacki_inside_lvl_hard_0
+  - first:
+      213: 7952903493062950834
+    second: mariacki_inside_lvl_hard_1
+  - first:
+      213: 1709586179378024172
+    second: mariacki_inside_lvl_hard_2
+  - first:
+      213: -7931245161006054726
+    second: mariacki_inside_lvl_hard_3
+  - first:
+      213: 1824943986049810114
+    second: mariacki_inside_lvl_hard_4
+  - first:
+      213: -2066231877935038581
+    second: mariacki_inside_lvl_hard_5
+  - first:
+      213: -2136508414809385014
+    second: mariacki_inside_lvl_hard_6
+  - first:
+      213: -1357636272865314498
+    second: mariacki_inside_lvl_hard_7
+  - first:
+      213: -6553526323799963630
+    second: mariacki_inside_lvl_hard_8
+  - first:
+      213: 7875517060835794051
+    second: mariacki_inside_lvl_hard_9
+  - first:
+      213: -4748679040246944698
+    second: mariacki_inside_lvl_hard_10
+  - first:
+      213: 6766279341268097187
+    second: mariacki_inside_lvl_hard_11
+  - first:
+      213: -3380654290206310050
+    second: mariacki_inside_lvl_hard_12
+  - first:
+      213: -2333258467964308376
+    second: mariacki_inside_lvl_hard_13
+  - first:
+      213: -596035898509265384
+    second: mariacki_inside_lvl_hard_14
+  - first:
+      213: -1601576540761198243
+    second: mariacki_inside_lvl_hard_15
+  - first:
+      213: 346322322563037328
+    second: mariacki_inside_lvl_hard_16
+  - first:
+      213: -5918449881557623483
+    second: mariacki_inside_lvl_hard_17
+  - first:
+      213: 439670542493579654
+    second: mariacki_inside_lvl_hard_18
+  - first:
+      213: -7700465624735996892
+    second: mariacki_inside_lvl_hard_19
+  - first:
+      213: 5021516879091359778
+    second: mariacki_inside_lvl_hard_20
+  - first:
+      213: 6070303188318522188
+    second: mariacki_inside_lvl_hard_21
+  - first:
+      213: 8949255240632455312
+    second: mariacki_inside_lvl_hard_22
+  - first:
+      213: 6487264874113283337
+    second: mariacki_inside_lvl_hard_23
+  - first:
+      213: -8475570807888519689
+    second: mariacki_inside_lvl_hard_24
+  - first:
+      213: 91881069096515833
+    second: mariacki_inside_lvl_hard_25
+  - first:
+      213: 5867577015402807020
+    second: mariacki_inside_lvl_hard_26
+  - first:
+      213: 327664407096276871
+    second: mariacki_inside_lvl_hard_27
+  - first:
+      213: -5644504568361197539
+    second: mariacki_inside_lvl_hard_28
+  - first:
+      213: 6467271764697169985
+    second: mariacki_inside_lvl_hard_29
+  - first:
+      213: 593411449281679439
+    second: mariacki_inside_lvl_hard_30
+  - first:
+      213: -902990634735926395
+    second: mariacki_inside_lvl_hard_31
+  - first:
+      213: 2552965551972845662
+    second: mariacki_inside_lvl_hard_32
+  - first:
+      213: -6688364050542540929
+    second: mariacki_inside_lvl_hard_33
+  - first:
+      213: 7817052632426034293
+    second: mariacki_inside_lvl_hard_34
+  - first:
+      213: 3933736194618130641
+    second: mariacki_inside_lvl_hard_35
+  - first:
+      213: 4256410743898482112
+    second: mariacki_inside_lvl_hard_36
+  - first:
+      213: 8401807481846737371
+    second: mariacki_inside_lvl_hard_37
+  - first:
+      213: -9161767590068804559
+    second: mariacki_inside_lvl_hard_38
+  - first:
+      213: -8834009996924532133
+    second: mariacki_inside_lvl_hard_39
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266eb8ceaef1e3e4c994dded7fec7b0b
+      internalID: 2973434976556509023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123d7bdac8d1a4a419b848c8a601fd8c
+      internalID: 7952903493062950834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df29b3857024fe645b9a408732a5dbb8
+      internalID: 1709586179378024172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b65f7b143831a4882755253700c49d
+      internalID: -7931245161006054726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a2088730de2d24ea9d7e1bb383759e
+      internalID: 1824943986049810114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9167fd4074ffc3742868d83d94a9ebc0
+      internalID: -2066231877935038581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e440a1f767f014e47b6647b34968b572
+      internalID: -2136508414809385014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_7
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5cd786f3e9f3541996d1e71116b2b0
+      internalID: -1357636272865314498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3914cf451a0f147b3aef9dad7fc1c4
+      internalID: -6553526323799963630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_9
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f20021b8e845fd479879366ac487b86
+      internalID: 7875517060835794051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc22a9926b2e4f04a99979d3735707d7
+      internalID: -4748679040246944698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0641785d0d62cd4ba663ad276a8f5de
+      internalID: 6766279341268097187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9cd01a8c894f34e97fdfa69bf5d430
+      internalID: -3380654290206310050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3d665c10d045c44b87000c88d9fc46
+      internalID: -2333258467964308376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b75cfc1a89dbaa4aa6d2476b468749e
+      internalID: -596035898509265384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7578e486dbb90e741a468b241645dbfb
+      internalID: -1601576540761198243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_16
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c8fcfe78ee0234cbe1c6e047510ef5
+      internalID: 346322322563037328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720bc8329d47a8647a68e8710baea5dd
+      internalID: -5918449881557623483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_18
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb74a2a72f33224fb72b0899d6d3c1e
+      internalID: 439670542493579654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_19
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a042f1c1da79b94449960a432848862b
+      internalID: -7700465624735996892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389882cf0bc1ca5479174d15e512f60f
+      internalID: 5021516879091359778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96e6a21cc17c224c9110e373c524ed5
+      internalID: 6070303188318522188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd472daa51cc8f47ae7a31001add40f
+      internalID: 8949255240632455312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_23
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a725913b489152448f137fd548d6bec
+      internalID: 6487264874113283337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_24
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ce88ef27a58f140b20029ca2d5bdbd
+      internalID: -8475570807888519689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c194a5d75c5184a8b0296d83165fa7
+      internalID: 91881069096515833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_26
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b85becca25b674dbd66579c8291739
+      internalID: 5867577015402807020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_27
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79bc2dcb6138194da58162055f7abae
+      internalID: 327664407096276871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_28
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f4950a293dc884ea8e987b998cf4f2
+      internalID: -5644504568361197539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_29
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd97a87d85778f49a6c58c1a0d5c181
+      internalID: 6467271764697169985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f1a774053d7af4a9516cf8f6474553
+      internalID: 593411449281679439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_31
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c559064c67feec478eeb5a70ebc1b66
+      internalID: -902990634735926395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_32
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51fe65388dc49f46b567f0373541d5d
+      internalID: 2552965551972845662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_33
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c091dcef258cb48add7a132fe12423
+      internalID: -6688364050542540929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_34
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5560e7b8473ec284eb852103c26f7e85
+      internalID: 7817052632426034293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6e4f4124bc4ae46b26e3556829f5ce
+      internalID: 3933736194618130641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_36
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e63017b0e445945840c384b3bd37ea
+      internalID: 4256410743898482112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_37
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b0152a92094d9438e189ba9e905dc6
+      internalID: 8401807481846737371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_38
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1eb8eee8a5a7354b93ce2eb68e120aa
+      internalID: -9161767590068804559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_inside_lvl_hard_39
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f655b2809028b648948a93b169a013c
+      internalID: -8834009996924532133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

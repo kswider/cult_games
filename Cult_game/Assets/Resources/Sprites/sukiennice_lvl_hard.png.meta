@@ -1,0 +1,1075 @@
+fileFormatVersion: 2
+guid: 0339ccd533c88d240bc4aa5742458954
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2925215327028847218
+    second: sukiennice_lvl_hard_0
+  - first:
+      213: -4103423374671587296
+    second: sukiennice_lvl_hard_1
+  - first:
+      213: -8826994888826346184
+    second: sukiennice_lvl_hard_2
+  - first:
+      213: 37022136804688640
+    second: sukiennice_lvl_hard_3
+  - first:
+      213: 1723937469574663022
+    second: sukiennice_lvl_hard_4
+  - first:
+      213: 5074992033610257947
+    second: sukiennice_lvl_hard_5
+  - first:
+      213: 4238315512512467803
+    second: sukiennice_lvl_hard_6
+  - first:
+      213: 1470641104335873729
+    second: sukiennice_lvl_hard_7
+  - first:
+      213: -1419116257153840662
+    second: sukiennice_lvl_hard_8
+  - first:
+      213: 269163621655491313
+    second: sukiennice_lvl_hard_9
+  - first:
+      213: 2291584356066804031
+    second: sukiennice_lvl_hard_10
+  - first:
+      213: 7140873706183280009
+    second: sukiennice_lvl_hard_11
+  - first:
+      213: 7343090043879353625
+    second: sukiennice_lvl_hard_12
+  - first:
+      213: -2427314888623275154
+    second: sukiennice_lvl_hard_13
+  - first:
+      213: 6309825190477921962
+    second: sukiennice_lvl_hard_14
+  - first:
+      213: 184443583055301642
+    second: sukiennice_lvl_hard_15
+  - first:
+      213: 1942049335535296342
+    second: sukiennice_lvl_hard_16
+  - first:
+      213: -6262913827838841876
+    second: sukiennice_lvl_hard_17
+  - first:
+      213: -2393094040199420929
+    second: sukiennice_lvl_hard_18
+  - first:
+      213: -4049471210883551163
+    second: sukiennice_lvl_hard_19
+  - first:
+      213: -3545356807819083038
+    second: sukiennice_lvl_hard_20
+  - first:
+      213: 8959529567581571196
+    second: sukiennice_lvl_hard_21
+  - first:
+      213: 7549690396209423190
+    second: sukiennice_lvl_hard_22
+  - first:
+      213: -7867280945443219785
+    second: sukiennice_lvl_hard_23
+  - first:
+      213: 3405335620100553978
+    second: sukiennice_lvl_hard_24
+  - first:
+      213: 5942423141925261447
+    second: sukiennice_lvl_hard_25
+  - first:
+      213: 5276165281013360226
+    second: sukiennice_lvl_hard_26
+  - first:
+      213: -583742199043281354
+    second: sukiennice_lvl_hard_27
+  - first:
+      213: -6096266095257568032
+    second: sukiennice_lvl_hard_28
+  - first:
+      213: -3895103092525496510
+    second: sukiennice_lvl_hard_29
+  - first:
+      213: -5168067104774637903
+    second: sukiennice_lvl_hard_30
+  - first:
+      213: -3841938210174057196
+    second: sukiennice_lvl_hard_31
+  - first:
+      213: -909010876460465965
+    second: sukiennice_lvl_hard_32
+  - first:
+      213: -2168507331972760587
+    second: sukiennice_lvl_hard_33
+  - first:
+      213: 4157794573721884718
+    second: sukiennice_lvl_hard_34
+  - first:
+      213: 5217344855951929381
+    second: sukiennice_lvl_hard_35
+  - first:
+      213: -8850265561613658870
+    second: sukiennice_lvl_hard_36
+  - first:
+      213: 2191598769690610220
+    second: sukiennice_lvl_hard_37
+  - first:
+      213: 5586215231979548661
+    second: sukiennice_lvl_hard_38
+  - first:
+      213: -1491853162795435234
+    second: sukiennice_lvl_hard_39
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fde956b8451e4249895e3f797d63526
+      internalID: 2925215327028847218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b7519636a1465a49b21fc6eb48d4a62
+      internalID: -4103423374671587296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b7873d91afd494eaf42e55c84c5030
+      internalID: -8826994888826346184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c103d76592776ca428607c21c349532b
+      internalID: 37022136804688640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0fd1e2b4151494098e06e838ae72ef
+      internalID: 1723937469574663022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c711ae76dec974086eb6c289910432
+      internalID: 5074992033610257947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275f320e90ff50c4084f7e16cb683ecd
+      internalID: 4238315512512467803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_7
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529f430d1e5bbe34fbe4fc690123184f
+      internalID: 1470641104335873729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bae262c1166a84b81e6b9b5314bf3e
+      internalID: -1419116257153840662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_9
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9687684ebf87448b31da9c29fe0d24
+      internalID: 269163621655491313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acafd545ff1118241a219656f4fb48bd
+      internalID: 2291584356066804031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cff319df4f8563458673e4b2e729f7f
+      internalID: 7140873706183280009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a6e9fe9bf5e0746a30f637b051de8a
+      internalID: 7343090043879353625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00742329db78e54e83983efa849877a
+      internalID: -2427314888623275154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8a387ea8e8f51419124f1e82bf2cca
+      internalID: 6309825190477921962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf5b1cbdb28995478e33c81f49b7d6e
+      internalID: 184443583055301642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_16
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31439f7b192d3f49b545acc53cfd766
+      internalID: 1942049335535296342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c0d3e2442dbb04f943485af94c2252
+      internalID: -6262913827838841876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_18
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb583e27ea2ce34cb2146cca40e8f3b
+      internalID: -2393094040199420929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_19
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ffbf3b6c3d5c7a4d96c4f023d86a402
+      internalID: -4049471210883551163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9183916c1b40e4047b009be12e8f4478
+      internalID: -3545356807819083038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aef14ab7906ff64b8c50164a35aea79
+      internalID: 8959529567581571196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12cc90d379e5415429ea0527ecf4c6b8
+      internalID: 7549690396209423190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_23
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd58bcab9fad5154c82763a19a0c840e
+      internalID: -7867280945443219785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_24
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b009c470f7df943871a06d1a4af733
+      internalID: 3405335620100553978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968a36cae1ac49642abb2c93c4d1d6cc
+      internalID: 5942423141925261447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_26
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc56d474c69d8144acf68dd9276c169
+      internalID: 5276165281013360226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_27
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6ed665d0e8ef347b254e7278bafe9e
+      internalID: -583742199043281354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_28
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4259516ab4831c14fb42c29f39e612d8
+      internalID: -6096266095257568032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_29
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae3ed688bb80aa47908215bb3f2ec88
+      internalID: -3895103092525496510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e66a43dfa244104b838ffd891fa644b
+      internalID: -5168067104774637903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_31
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5c57ccd89d3244fa13ddaae2bfa451
+      internalID: -3841938210174057196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_32
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d542a694485eb6a4d9097dbe75033e51
+      internalID: -909010876460465965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_33
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8973e5756cdcb741947471572ecd82e
+      internalID: -2168507331972760587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_34
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374e33f7dc1fd6241b6a6fd7dbbcde00
+      internalID: 4157794573721884718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70b270c79190fe4b8dcc5a3d9f29183
+      internalID: 5217344855951929381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_36
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da9ce1b6bfdca8d4a95bb0e0ccb676a1
+      internalID: -8850265561613658870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_37
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2e69311be5225458c6735be7baebfd
+      internalID: 2191598769690610220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_38
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36e1a486efec074fa8e68cef42a2251
+      internalID: 5586215231979548661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukiennice_lvl_hard_39
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f2f7d8f23fabc4997087ae029ea8e3
+      internalID: -1491853162795435234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
