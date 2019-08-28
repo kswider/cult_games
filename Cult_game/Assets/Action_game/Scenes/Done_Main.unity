@@ -1504,5 +1504,29 @@ PrefabInstance:
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3300000, guid: 738bdf56857a65f479c367c7b62c4ad7, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: eefd1a05969455744913d50c785b91e5, type: 3}
+    - target: {fileID: 2300000, guid: 738bdf56857a65f479c367c7b62c4ad7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 738bdf56857a65f479c367c7b62c4ad7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b914d59752d923f47b36d68b4f26f984, type: 2}
+    - target: {fileID: 2300000, guid: 738bdf56857a65f479c367c7b62c4ad7, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 619dfddba20f4e84da177cdb2ad04d32, type: 2}
+    - target: {fileID: 19900000, guid: 738bdf56857a65f479c367c7b62c4ad7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900002, guid: 738bdf56857a65f479c367c7b62c4ad7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 738bdf56857a65f479c367c7b62c4ad7, type: 3}
