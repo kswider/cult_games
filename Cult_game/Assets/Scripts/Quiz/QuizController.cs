@@ -75,7 +75,7 @@ public class QuizController : MonoBehaviour
                 _playerController.BlockedPlaces.Add(pb);
                 questionText.text = $"Unfortunately you have not passed the quiz successfully. Number of correct answers: {_correctlyAnsweredQuestionsNumber}/{_currentQuiz.questions.Count}";
                 yield return new WaitForSeconds(5);
-                _sceneController.GoToScene(SceneController.SCN_EXPLORING_VIEW);
+                _sceneController.GoBackFromGame();
             }
         }
     }
