@@ -104,7 +104,6 @@ public class ExploringController : MonoBehaviour
         newDiscoveryPrompt.transform.Find("Buttons/BTN_YES").GetComponent<Button>().onClick.AddListener(delegate
         {
             _playerController.CurrentPlayedPlaceId = _targetedPlace.id;
-            
             _playerController.Settings.SelectedPlace = null;
             
             if (gameType.Equals("Quiz"))
@@ -117,9 +116,7 @@ public class ExploringController : MonoBehaviour
             }
             else
             {
-                //TODO Action minigame
-                _playerController.DiscoveredPlaces.Add(_targetedPlace.id);
-                _sceneController.GoToScene(SceneController.SCN_INSPIRATIONAL_LEARNING);
+                _sceneController.GoToScene(SceneController.SCN_ACTION_GAME);
             }
 
         });
