@@ -88,7 +88,7 @@ public class ExploringController : MonoBehaviour
         newDiscoveryPrompt.transform.Find("SecondLine").GetComponent<Text>().text = _targetedPlace.engName;
 
         String gameType = _targetedPlace.gameType;
-        String difficulty = "???"; //TODO
+        String difficulty = _targetedPlace.gameDifficulty;
 
         newDiscoveryPrompt.transform.Find("FourthLine").GetComponent<Text>().text =
             "Game type: " + gameType + "\nDifficulty: " + difficulty;
@@ -103,7 +103,6 @@ public class ExploringController : MonoBehaviour
         });
         newDiscoveryPrompt.transform.Find("Buttons/BTN_YES").GetComponent<Button>().onClick.AddListener(delegate
         {
-            _playerController.CurrentPlayedGameId = _targetedPlace.gameId;
             _playerController.CurrentPlayedPlaceId = _targetedPlace.id;
             
             _playerController.Settings.SelectedPlace = null;

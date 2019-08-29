@@ -25,7 +25,6 @@ public class InspirationalLearningController : MonoBehaviour
         type.text = "Type: " + shownPlace.type;
         points.text = "Points: " + shownPlace.scoreValue;
         description.text = shownPlace.description;
-        
         _placePosition = new Vector2(shownPlace.latitude, shownPlace.longitude);
         InvokeRepeating(nameof(UpdateNavigation), 0.5f, 1f);
     }

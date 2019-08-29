@@ -15,10 +15,11 @@ MonoBehaviour:
   id: 202
   engName: The Legend of Krakus
   plName: "Legenda o Kr\xF3lu Kraku"
+  imagePath: king_krak
   type: LEGEND
   latitude: 50.03805
   longitude: 19.958279
   scoreValue: 200
   description: 
-  gameId: 202
   gameType: Quiz
+  gameDifficulty: Medium

@@ -15,10 +15,11 @@ MonoBehaviour:
   id: 2
   engName: "Krak\xF3w Cloth Hall"
   plName: Sukiennice
+  imagePath: sukiennice
   type: PLACE
   latitude: 50.06156
   longitude: 19.937336
   scoreValue: 100
   description: 
-  gameId: 2
   gameType: Puzzle
+  gameDifficulty: Hard

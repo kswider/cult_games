@@ -12,7 +12,6 @@ public class PlayerController : Singleton<PlayerController>
     public int Score { get; set; }
     public List<int> DiscoveredPlaces { get; set; }
     public List<Save.PlaceBlock> BlockedPlaces { get; set; }
-    public int CurrentPlayedGameId { get; set; }
     public int CurrentPlayedPlaceId { get; set; }
     
     //Database
@@ -110,7 +109,8 @@ public class PlayerController : Singleton<PlayerController>
 
     private void ClearPlaceBlocks()
     {
-        foreach (var block in BlockedPlaces.Where(block => block.blockUntil.CompareTo(DateTime.Now) <= 0))
+        var copy = BlockedPlaces.ToList();
+        foreach (var block in copy.Where(block => block.blockUntil.CompareTo(DateTime.Now) <= 0))
         {
             BlockedPlaces.Remove(block);
         }

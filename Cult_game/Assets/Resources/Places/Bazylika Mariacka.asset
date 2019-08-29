@@ -15,10 +15,11 @@ MonoBehaviour:
   id: 1
   engName: St. Mary's Basilica
   plName: Bazylika Mariacka
+  imagePath: mariacki_outside
   type: PLACE
   latitude: 50.06168
   longitude: 19.939226
   scoreValue: 100
   description: 
-  gameId: 1
   gameType: Quiz
+  gameDifficulty: Easy

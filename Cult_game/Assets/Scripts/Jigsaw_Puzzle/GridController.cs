@@ -8,12 +8,11 @@ using UnityEngine.UI;
 public class GridController : MonoBehaviour
 {
     //one sprite has 100 px per one unit
-    private static int SHUFFLE_GRID_LOOPS = 3;
+    private const int SHUFFLE_GRID_LOOPS = 3;
     private static Vector2Int CONFIG_GRID_EASY_BOUNDS = new Vector2Int(3, 5);
     private static Vector2Int CONFIG_GRID_MEDIUM_BOUNDS = new Vector2Int(4, 6);
     private static Vector2Int CONFIG_GRID_HARD_BOUNDS = new Vector2Int(5, 8);
     
-    private string lvl_indicator;
     public Canvas canvasGui;
     public Text txt_title;
     public Text txt_progress;
@@ -45,71 +44,43 @@ public class GridController : MonoBehaviour
     private PlayerController _playerController;
     private SceneController _sceneController;
 
+    private Place _playedPlace;
+    
     private void Awake()
     {
         _playerController = Utilities.FindPlayer();
         _sceneController = Utilities.FindSceneController();
-        
-        InitializeGridHolder(_playerController.CurrentPlayedGameId);
+
+        _playedPlace = _playerController.Places.Find(p => p.id == _playerController.CurrentPlayedPlaceId);
+        InitializeGridHolder();
     }
 
-    private void InitializeGridHolder(int id)
+    private void InitializeGridHolder()
     {
-        switch (id)
+        Vector2Int difficulty;
+        switch (_playedPlace.gameDifficulty)
         {
-            case 1:
-                InitializeGrid("mariacki_inside_lvl_hard", "St. Mary's Basilica", CONFIG_GRID_HARD_BOUNDS);
+            case "Easy":
+                difficulty = CONFIG_GRID_EASY_BOUNDS;
                 break;
-            case 2:
-                InitializeGrid("sukiennice_lvl_hard", "Krakow Cloth Hall", CONFIG_GRID_HARD_BOUNDS);
+            case "Medium":
+                difficulty = CONFIG_GRID_MEDIUM_BOUNDS;
                 break;
-            case 3:
-                InitializeGrid("wawel_lvl_med", "Wawel Castle", CONFIG_GRID_MEDIUM_BOUNDS);
+            case "Hard":
+                difficulty = CONFIG_GRID_HARD_BOUNDS;
                 break;
-            case 4:
-                InitializeGrid("uj_garden_lvl_med", "Botanic Garden of the UJ", CONFIG_GRID_MEDIUM_BOUNDS);
-                break;
-            case 101:
-                InitializeGrid("rakowicki_lvl_easy", "Rakowicki Cemetery", CONFIG_GRID_EASY_BOUNDS);
-                break;
-            case 102:
-                InitializeGrid("kosciuszko_mound_lvl_easy", "Kosciuszko Mound", CONFIG_GRID_EASY_BOUNDS);
-                break;
-            case 103:
-                InitializeGrid("ice_lvl_easy", "ICE Congress Centre", CONFIG_GRID_EASY_BOUNDS);
-                break;
-            case 201:
-                InitializeGrid("wawel_dragon_lvl_med", "Wawel Dragon", CONFIG_GRID_MEDIUM_BOUNDS);
-                break;
-            case 202:
-                InitializeGrid("king_krak_lvl_med", "The Legend of Krakus", CONFIG_GRID_MEDIUM_BOUNDS);
-                break;
-            case 203:
-                InitializeGrid("wandas_death_lvl_hard", "The legend of Wanda", CONFIG_GRID_HARD_BOUNDS);
-                break;
-            //Unused
-            case 11:
-                InitializeGrid("mariacki_outside_lvl_easy", "St. Mary's Basilica", CONFIG_GRID_EASY_BOUNDS);
-                break;
+            default:
+                throw new NotImplementedException("Error: wrong difficulty");
         }
+        
+        InitializeGrid(_playedPlace.imagePath, _playedPlace.engName, difficulty);
+        
     }
 
     private void InitializeGrid(string jigsaw_subject, string title, Vector2Int lvlIndicator)
     {
         txt_title.text = title;
-        switch (lvlIndicator.x)
-        {
-            case 3:
-                lvl_indicator = "Grid_Easy";
-                break;
-            case 4:
-                lvl_indicator = "Grid_Medium";
-                break;
-            case 5:
-                lvl_indicator = "Grid_Hard";
-                break;
-        }
-        
+
         rows = lvlIndicator.x;
         cols = lvlIndicator.y;
         inHelpMode = false;
@@ -118,7 +89,7 @@ public class GridController : MonoBehaviour
         tiles_grid = new TileTracker[rows*cols];
         int key = 0;
 
-        grid = Instantiate(Resources.Load<GameObject>("Jigsaw_prefabs/"+lvl_indicator), canvasGui.transform, false);
+        grid = Instantiate(Resources.Load<GameObject>("Jigsaw_prefabs/Grid_"+_playedPlace.gameDifficulty), canvasGui.transform, false);
         flames_help = Instantiate(Resources.Load<GameObject>("Jigsaw_prefabs/" + "Grid_Help_Flames"), canvasGui.transform, false);
 
         TileTracker[] gridChildren = grid.GetComponentsInChildren<TileTracker>();
@@ -185,8 +156,8 @@ public class GridController : MonoBehaviour
         //MarkNewPlacement(this.tiles_grid[0].RotateBy(90f), this.tiles_grid[5].RotateBy(270f),true); // this for tests and debug
         for (int i = 0; i < SHUFFLE_GRID_LOOPS * rows * cols; i++)
         {
-            MarkNewPlacement(this.tiles_grid[UnityEngine.Random.Range(0, rows * cols)].RotateBy(UnityEngine.Random.Range(0, 4) * 90f),
-            this.tiles_grid[UnityEngine.Random.Range(0, rows * cols)].RotateBy(UnityEngine.Random.Range(0, 4) * 90f), true);
+            MarkNewPlacement(tiles_grid[UnityEngine.Random.Range(0, rows * cols)].RotateBy(UnityEngine.Random.Range(0, 4) * 90f),
+            tiles_grid[UnityEngine.Random.Range(0, rows * cols)].RotateBy(UnityEngine.Random.Range(0, 4) * 90f), true);
         }
     }
     private void ComputeOptimalMoves()
@@ -269,12 +240,12 @@ public class GridController : MonoBehaviour
         _playerController.AddPoints(wonPlace.scoreValue);
         _playerController.DiscoveredPlaces.Add(wonPlace.id);
         StartCoroutine(EndGameWait(5));
-        _sceneController.GoToScene(SceneController.SCN_INSPIRATIONAL_LEARNING);
     }
 
     private IEnumerator EndGameWait(int seconds)
     {
         yield return new WaitForSeconds(seconds);
+        _sceneController.GoToScene(SceneController.SCN_INSPIRATIONAL_LEARNING);
     }
     
     public void OnClickBtnReset()

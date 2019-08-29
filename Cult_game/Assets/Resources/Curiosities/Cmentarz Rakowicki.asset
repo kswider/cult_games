@@ -15,10 +15,11 @@ MonoBehaviour:
   id: 101
   engName: Rakowicki Cemetery
   plName: Cmentarz Rakowicki
+  imagePath: rakowicki
   type: CURIOSITY
   latitude: 50.074745
   longitude: 19.951506
   scoreValue: 100
   description: 
-  gameId: 101
   gameType: Action
+  gameDifficulty: Easy

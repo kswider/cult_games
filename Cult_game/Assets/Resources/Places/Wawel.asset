@@ -15,10 +15,11 @@ MonoBehaviour:
   id: 3
   engName: Wawel Castle
   plName: "Zamek Kr\xF3lewski na Wawelu"
+  imagePath: wawel
   type: PLACE
   latitude: 50.054108
   longitude: 19.935312
   scoreValue: 100
   description: 
-  gameId: 3
   gameType: Quiz
+  gameDifficulty: Medium

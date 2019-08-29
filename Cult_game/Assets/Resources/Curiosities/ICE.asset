@@ -15,10 +15,11 @@ MonoBehaviour:
   id: 103
   engName: ICE Congress Centre
   plName: Centrum Kongresowe ICE
+  imagePath: ice
   type: CURIOSITY
   latitude: 50.048023
   longitude: 19.931456
   scoreValue: 75
   description: 
-  gameId: 103
   gameType: Puzzle
+  gameDifficulty: Easy

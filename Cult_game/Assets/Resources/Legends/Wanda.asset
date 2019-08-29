@@ -15,10 +15,11 @@ MonoBehaviour:
   id: 203
   engName: The legend of Wanda
   plName: Legenda o Wandzie
+  imagePath: wandas_death
   type: LEGEND
   latitude: 50.070156
   longitude: 20.068073
   scoreValue: 150
   description: 
-  gameId: 203
   gameType: Action
+  gameDifficulty: Hard

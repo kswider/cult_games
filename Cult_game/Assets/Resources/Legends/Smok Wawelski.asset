@@ -15,10 +15,11 @@ MonoBehaviour:
   id: 201
   engName: Wawel Dragon
   plName: Smok Wawelski
+  imagePath: wawel_dragon
   type: LEGEND
   latitude: 50.053013
   longitude: 19.933569
   scoreValue: 500
   description: 
-  gameId: 201
   gameType: Puzzle
+  gameDifficulty: Medium

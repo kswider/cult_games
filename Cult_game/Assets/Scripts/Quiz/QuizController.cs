@@ -28,7 +28,7 @@ public class QuizController : MonoBehaviour
     {
         _playerController = Utilities.FindPlayer();
         _sceneController = Utilities.FindSceneController();
-        _currentQuiz = Resources.LoadAll<Quiz>("Quizes").First(x => x.id == _playerController.CurrentPlayedGameId);
+        _currentQuiz = Resources.LoadAll<Quiz>("Quizes").First(x => x.id == _playerController.CurrentPlayedPlaceId);
         _buttons = buttonsHolder.GetComponentsInChildren<Button>();
         LoadNextQuestion();
     }

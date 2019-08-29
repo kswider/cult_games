@@ -20,15 +20,15 @@ public class TileTracker : MonoBehaviour
     private float _deltaX; //diff beetween touch pos and tile pivot
     private float _deltaY;
 
-    void Awake()
+    private void Awake()
     {
         _ownCollider = GetComponent<Collider2D>();
         
         GameObject gridHolder = GameObject.FindWithTag("GridHolder");
         _gridController = gridHolder.GetComponent<GridController>();
     }
-    
-    void Update()
+
+    private void Update()
     {
         CheckTouchEvent();
     }
@@ -46,14 +46,12 @@ public class TileTracker : MonoBehaviour
         
         switch (touch.phase)
         {
-
             case TouchPhase.Began:
                 _deltaX = touchPos.x - transform.position.x;
                 _deltaY = touchPos.y - transform.position.y;
                 break;
 
             case TouchPhase.Moved:
-
                 if(DetermineRealMovement(touchPos) && _insideBoard)
                 {
                     _gridController.DraggedTileKey = _originTileKey;
@@ -63,7 +61,6 @@ public class TileTracker : MonoBehaviour
                 break;
 
             case TouchPhase.Ended:
-
                 if (_gridController.DraggedTileKey == -1)
                 {          
                     RotateBy(90f);
@@ -94,7 +91,7 @@ public class TileTracker : MonoBehaviour
         if (collidedWithCollider2D.CompareTag("Tile")) 
         {
             //Debug.Log("" + collidedWithCollider2D.GetComponent<TileTracker>().GetOriginKey());
-            this._lastlyCollidedWith = collidedWithCollider2D;
+            _lastlyCollidedWith = collidedWithCollider2D;
 
         }
     }

@@ -15,10 +15,11 @@ MonoBehaviour:
   id: 4
   engName: Botanic Garden of the UJ
   plName: "Ogr\xF3d Botaniczny UJ"
+  imagePath: uj_garden
   type: PLACE
   latitude: 50.063396
   longitude: 19.955679
   scoreValue: 123
   description: 
-  gameId: 4
   gameType: Puzzle
+  gameDifficulty: Medium
