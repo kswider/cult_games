@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using ResourcesObjects;
+﻿using ResourcesObjects;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,14 +18,13 @@ public class InspirationalLearningController : MonoBehaviour
     void Start()
     {
         _playerController = Utilities.FindPlayer();
-        Place shownPlace = _playerController.places.Find(p => p.id == _playerController.CurrentPlayedPlaceId);
+        Place shownPlace = _playerController.Places.Find(p => p.id == _playerController.CurrentPlayedPlaceId);
 
         engName.text = shownPlace.engName;
         plName.text = "Polish name: " + shownPlace.plName;
         type.text = "Type: " + shownPlace.type;
         points.text = "Points: " + shownPlace.scoreValue;
         description.text = shownPlace.description;
-        
         _placePosition = new Vector2(shownPlace.latitude, shownPlace.longitude);
         InvokeRepeating(nameof(UpdateNavigation), 0.5f, 1f);
     }

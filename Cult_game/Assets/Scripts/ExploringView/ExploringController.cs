@@ -26,7 +26,7 @@ public class ExploringController : MonoBehaviour
         _promptExists = false;
         
         _playerController = Utilities.FindPlayer();
-        _sceneController = FindObjectOfType<SceneController>();
+        _sceneController = Utilities.FindSceneController();
         
         _playerPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
         if (_playerController.Settings.SelectedPlace == null)
@@ -88,7 +88,7 @@ public class ExploringController : MonoBehaviour
         newDiscoveryPrompt.transform.Find("SecondLine").GetComponent<Text>().text = _targetedPlace.engName;
 
         String gameType = _targetedPlace.gameType;
-        String difficulty = "???"; //TODO
+        String difficulty = _targetedPlace.gameDifficulty;
 
         newDiscoveryPrompt.transform.Find("FourthLine").GetComponent<Text>().text =
             "Game type: " + gameType + "\nDifficulty: " + difficulty;
@@ -103,22 +103,23 @@ public class ExploringController : MonoBehaviour
         });
         newDiscoveryPrompt.transform.Find("Buttons/BTN_YES").GetComponent<Button>().onClick.AddListener(delegate
         {
-            _playerController.CurrentPlayedGameId = _targetedPlace.gameId;
             _playerController.CurrentPlayedPlaceId = _targetedPlace.id;
+            
+            _playerController.Settings.SelectedPlace = null;
             
             if (gameType.Equals("Quiz"))
             {
-                _sceneController.GoToScene("SCN_QUIZ_LEARNING");
+                _sceneController.GoToScene(SceneController.SCN_QUIZ_LEARNING);
             }
             else if (gameType.Equals("Puzzle"))
             {
-                //TODO Puzzle minigame
-                _sceneController.GoToScene("SCN_INSPIRATIONAL_LEARNING");
+                _sceneController.GoToScene(SceneController.SCN_PUZZLE_GAME);
             }
             else
             {
                 //TODO Action minigame
-                _sceneController.GoToScene("SCN_INSPIRATIONAL_LEARNING");
+                _playerController.DiscoveredPlaces.Add(_targetedPlace.id);
+                _sceneController.GoToScene(SceneController.SCN_INSPIRATIONAL_LEARNING);
             }
 
         });
@@ -129,7 +130,7 @@ public class ExploringController : MonoBehaviour
         float minDistance = float.MaxValue;
         Place nearest = null;
         
-        foreach (var place in _playerController.places)
+        foreach (var place in _playerController.Places)
         {
             if(_playerController.DiscoveredPlaces.Contains(place.id)) 
                 continue;

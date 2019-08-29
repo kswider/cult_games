@@ -1,0 +1,691 @@
+fileFormatVersion: 2
+guid: 08e4d7486c0472c40a4044e16023e221
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1157524735634761898
+    second: wawel_dragon_lvl_med_0
+  - first:
+      213: 9218394880432354106
+    second: wawel_dragon_lvl_med_1
+  - first:
+      213: 7724383417077121222
+    second: wawel_dragon_lvl_med_2
+  - first:
+      213: 4507798688916258439
+    second: wawel_dragon_lvl_med_3
+  - first:
+      213: 778163645611830306
+    second: wawel_dragon_lvl_med_4
+  - first:
+      213: -181210283603544028
+    second: wawel_dragon_lvl_med_5
+  - first:
+      213: 2197116663730033989
+    second: wawel_dragon_lvl_med_6
+  - first:
+      213: 8298326222250070619
+    second: wawel_dragon_lvl_med_7
+  - first:
+      213: 1789922305645192558
+    second: wawel_dragon_lvl_med_8
+  - first:
+      213: -11296248502097965
+    second: wawel_dragon_lvl_med_9
+  - first:
+      213: -299644333393378109
+    second: wawel_dragon_lvl_med_10
+  - first:
+      213: -9200227141753755593
+    second: wawel_dragon_lvl_med_11
+  - first:
+      213: -5183438951799333917
+    second: wawel_dragon_lvl_med_12
+  - first:
+      213: -4868780705782933555
+    second: wawel_dragon_lvl_med_13
+  - first:
+      213: 5061500528746447156
+    second: wawel_dragon_lvl_med_14
+  - first:
+      213: 4302007014102064029
+    second: wawel_dragon_lvl_med_15
+  - first:
+      213: -6242787210614560972
+    second: wawel_dragon_lvl_med_16
+  - first:
+      213: -888032262457124750
+    second: wawel_dragon_lvl_med_17
+  - first:
+      213: -3415508809594967037
+    second: wawel_dragon_lvl_med_18
+  - first:
+      213: -6894218343569831703
+    second: wawel_dragon_lvl_med_19
+  - first:
+      213: -7331179755142872826
+    second: wawel_dragon_lvl_med_20
+  - first:
+      213: 8073662722841826966
+    second: wawel_dragon_lvl_med_21
+  - first:
+      213: 5154177249386630628
+    second: wawel_dragon_lvl_med_22
+  - first:
+      213: 5050804899045538223
+    second: wawel_dragon_lvl_med_23
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 1
+  spritePivot: {x: 0, y: 1}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1300
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d197dfa5b23d3084296292ee8f90c9cd
+      internalID: -1157524735634761898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1300
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81fd09ee7583c44478aa0729d7734f61
+      internalID: 9218394880432354106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1300
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0c2f558a01e6041b422fccde83b581
+      internalID: 7724383417077121222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1300
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17699aeee984b9745845325f7f462bb6
+      internalID: 4507798688916258439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1040
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad7acef795935e46936555b5c4b9612
+      internalID: 778163645611830306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1040
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bedba5ca1813c548a4087b8bd045f8e
+      internalID: -181210283603544028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_6
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1040
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c703a502f6b03e41a28c4e2f12f67fd
+      internalID: 2197116663730033989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_7
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1040
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72179219811330248b9d5a3de95fed8f
+      internalID: 8298326222250070619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca09c7a2be4a86c4d85c33505b596c30
+      internalID: 1789922305645192558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_9
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 780
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e5909a6716369418d6eaab55949e3b
+      internalID: -11296248502097965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_10
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 780
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e726d4ead192a4daffaacc120f92f9
+      internalID: -299644333393378109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_11
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 780
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a13ba206727f041a22763682a3a973
+      internalID: -9200227141753755593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98378b199c1e8d14ba1d8f7138d5dc3d
+      internalID: -5183438951799333917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_13
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 520
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33184e1b333172747abcd61fb159f69f
+      internalID: -4868780705782933555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_14
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 520
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c9a1e07cb4ffb4a852c91542105474
+      internalID: 5061500528746447156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_15
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 520
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f357b7f493379ce43ae2604a49a1594c
+      internalID: 4302007014102064029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b7dd9f300185d49a56d4a7084a9d99
+      internalID: -6242787210614560972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_17
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 260
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a224b714f8240c0478dcf5e20e9d8c82
+      internalID: -888032262457124750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_18
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 260
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3793e79534e4c43a2af129fb0c2da4
+      internalID: -3415508809594967037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_19
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 260
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fc5f28300baa347bb9f5e93ddf2ebe
+      internalID: -6894218343569831703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd079504b910ec348b43e284168d2abb
+      internalID: -7331179755142872826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_21
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52cfd460610cc8489b13e73fdefee61
+      internalID: 8073662722841826966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_22
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aedcc550dcf5ad429289b758a0cfc95
+      internalID: 5154177249386630628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_dragon_lvl_med_23
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fbc1e789215c6642ba9edb509887537
+      internalID: 5050804899045538223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

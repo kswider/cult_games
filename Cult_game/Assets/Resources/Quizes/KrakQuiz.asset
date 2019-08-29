@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a12d0148d34e246a2ac48910a488bb, type: 3}
+  m_Name: KrakQuiz
+  m_EditorClassIdentifier: 
+  id: 202
+  learningText: "The word 'Krak\xF3w' originates from 'Krak,' or 'Krakus' - the fabled
+    ruler of the Vistulan tribes. According to various legends (and there are many),
+    Krakus founded the city sometime around 700AD, built Wawel Castle, and vanquished
+    the menacing Wawel Dragon that lived beneath it. King Krak also allegedly beat
+    back the armies of the Roman Empire, and his daughter Wanda (who ruled the city
+    after his death) famously fended off the Germans after they invaded in retaliation
+    for her refusal to marry a German prince. Though scientific evidence of either
+    is otherwise scant, both rulers have prehistoric earthwork burial mounds in the
+    districts of Podg\xF3rze (Krakus Mound) and Nowa Huta (Wanda's Mound), respectively.
+    Extensive (though incomplete) inter-war excavations of Krakus Mound failed to
+    produce the mythical king\u2019s remains, however artefacts dating to the 8th
+    century were revealed. Theories vary on the exact age of either mound, but experts
+    agree that they are the oldest man-made structures in Krak\xF3w."
+  points: 100
+  questions:
+  - questionText: What creature lived under the Wawel hill according to the legend?
+    possibleAnswers:
+    - answerText: Chimera
+      isCorrect: 0
+    - answerText: Sphinx
+      isCorrect: 0
+    - answerText: Minotaur
+      isCorrect: 0
+    - answerText: Dragon
+      isCorrect: 1
+  - questionText: What was the name of King's Krak daughter?
+    possibleAnswers:
+    - answerText: Wanda
+      isCorrect: 1
+    - answerText: Anna
+      isCorrect: 0
+    - answerText: Maria
+      isCorrect: 0
+    - answerText: Dagmara
+      isCorrect: 0
+  - questionText: What country the prince that Wanda refused to marry was from?
+    possibleAnswers:
+    - answerText: Russia
+      isCorrect: 0
+    - answerText: Lithuania
+      isCorrect: 0
+    - answerText: Germany
+      isCorrect: 1
+    - answerText: Czech Republic
+      isCorrect: 0

@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: 6182b229b679397418df7519dd7debb7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1675268363445481266
+    second: kosciuszko_mound_lvl_easy_0
+  - first:
+      213: -968004626467259846
+    second: kosciuszko_mound_lvl_easy_1
+  - first:
+      213: -5743414934932213914
+    second: kosciuszko_mound_lvl_easy_2
+  - first:
+      213: 4988587475043659217
+    second: kosciuszko_mound_lvl_easy_3
+  - first:
+      213: 6012326395705786094
+    second: kosciuszko_mound_lvl_easy_4
+  - first:
+      213: 5923675910120581460
+    second: kosciuszko_mound_lvl_easy_5
+  - first:
+      213: -4091477382370093216
+    second: kosciuszko_mound_lvl_easy_6
+  - first:
+      213: 3751505824285496599
+    second: kosciuszko_mound_lvl_easy_7
+  - first:
+      213: 502856062288906670
+    second: kosciuszko_mound_lvl_easy_8
+  - first:
+      213: -7968686375441142674
+    second: kosciuszko_mound_lvl_easy_9
+  - first:
+      213: 5636061754974748782
+    second: kosciuszko_mound_lvl_easy_10
+  - first:
+      213: 9028479949676015006
+    second: kosciuszko_mound_lvl_easy_11
+  - first:
+      213: -860782497903312232
+    second: kosciuszko_mound_lvl_easy_12
+  - first:
+      213: 3469055392704243541
+    second: kosciuszko_mound_lvl_easy_13
+  - first:
+      213: -219658191673341170
+    second: kosciuszko_mound_lvl_easy_14
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a902153bcfc6a542af6d0ad3e7f3811
+      internalID: 1675268363445481266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_1
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1248
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ddf3fff52ee024391d5b6ab57e23ed
+      internalID: -968004626467259846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_2
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1248
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb59ef0c176ab643a83026f8e94f92b
+      internalID: -5743414934932213914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 936
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8037908a5188f47827c1207e447139
+      internalID: 4988587475043659217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_4
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 936
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c25aecf4ff245a4399ce72957e7d409
+      internalID: 6012326395705786094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_5
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 936
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a288a0e3de2abef438f2127a9ba674af
+      internalID: 5923675910120581460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd3648653daf5e469d921efe5427cb2
+      internalID: -4091477382370093216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_7
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 624
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f30a005cd9b30b4eaeb021e76acacbe
+      internalID: 3751505824285496599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_8
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 622
+        width: 333
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10f7ce090c1dee4ba6e4c835d5245b3
+      internalID: 502856062288906670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e09acf89d91ee45a95c35795a4c5cd
+      internalID: -7968686375441142674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_10
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 312
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b74e7df30e1c245b06bc43ee5086ac
+      internalID: 5636061754974748782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_11
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 312
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee797bf5156ae7d4e8e4af71767b7d38
+      internalID: 9028479949676015006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f618d7d2a7db3c4dabf0404ae979cbd
+      internalID: -860782497903312232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_13
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 0
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706dad87f2a3ae64ca05917097e37bce
+      internalID: 3469055392704243541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kosciuszko_mound_lvl_easy_14
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 0
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d1c03a9e0655642abacf3a113b750e
+      internalID: -219658191673341170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

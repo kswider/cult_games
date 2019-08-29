@@ -1,7 +1,4 @@
 ﻿using ResourcesObjects;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,7 +15,7 @@ public class QuizLearningController : MonoBehaviour
     void Start()
     {
         _playerController = Utilities.FindPlayer();
-        _currentQuiz = Resources.LoadAll<Quiz>("Quizes").First(x => x.id == _playerController.CurrentPlayedGameId);
+        _currentQuiz = Resources.LoadAll<Quiz>("Quizes").First(x => x.id == _playerController.CurrentPlayedPlaceId);
         learningText.text = _currentQuiz.learningText;
         scrollbar.value = 1;
     }

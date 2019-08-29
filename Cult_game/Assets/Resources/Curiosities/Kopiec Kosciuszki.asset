@@ -15,10 +15,11 @@ MonoBehaviour:
   id: 102
   engName: "Ko\u015Bciuszko Mound"
   plName: "Kopiec Ko\u015Bciuszki"
+  imagePath: kosciuszko_mound
   type: CURIOSITY
   latitude: 50.054867
   longitude: 19.893318
   scoreValue: 50
   description: 
-  gameId: 10
   gameType: Action
+  gameDifficulty: Easy
