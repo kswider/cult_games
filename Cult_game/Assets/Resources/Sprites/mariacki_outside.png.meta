@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: 797778b8fccc42a49b657c2fcbc853d9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3583853670764929623
+    second: mariacki_outside_lvl_easy_0
+  - first:
+      213: 262951698499621599
+    second: mariacki_outside_lvl_easy_1
+  - first:
+      213: -8116471953597119447
+    second: mariacki_outside_lvl_easy_2
+  - first:
+      213: 5104077796065018291
+    second: mariacki_outside_lvl_easy_3
+  - first:
+      213: 6949644857062916888
+    second: mariacki_outside_lvl_easy_4
+  - first:
+      213: -7926712872600354821
+    second: mariacki_outside_lvl_easy_5
+  - first:
+      213: 240504145324275165
+    second: mariacki_outside_lvl_easy_6
+  - first:
+      213: 2184507336378810236
+    second: mariacki_outside_lvl_easy_7
+  - first:
+      213: 6667449544679197853
+    second: mariacki_outside_lvl_easy_8
+  - first:
+      213: 9134310497069442258
+    second: mariacki_outside_lvl_easy_9
+  - first:
+      213: 1922767106209716333
+    second: mariacki_outside_lvl_easy_10
+  - first:
+      213: -5353160993750369609
+    second: mariacki_outside_lvl_easy_11
+  - first:
+      213: -8615684543292967143
+    second: mariacki_outside_lvl_easy_12
+  - first:
+      213: -8640206599074278079
+    second: mariacki_outside_lvl_easy_13
+  - first:
+      213: -8293399065298196403
+    second: mariacki_outside_lvl_easy_14
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d778fb3415acc7419683d2abc768b8b
+      internalID: 3583853670764929623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_1
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1248
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9faea0815a8ef14780ba5de5f6d9ee8
+      internalID: 262951698499621599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_2
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1248
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94301f0ffd6989043853cd4d360513ae
+      internalID: -8116471953597119447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 936
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244e77bd518da8446aba916a07edd6de
+      internalID: 5104077796065018291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_4
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 936
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfacc59f0f1c95c4dbb5619dce215da1
+      internalID: 6949644857062916888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_5
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 936
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1093d202f7709e4684a2c6c5b775c84
+      internalID: -7926712872600354821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96788954a7ca5c4abec2bac87a0e376
+      internalID: 240504145324275165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_7
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 624
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47101946eb3c84a4cb8a3a080b8ba753
+      internalID: 2184507336378810236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_8
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 624
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474b956f4dd5d394880a5fe7c6eeac6d
+      internalID: 6667449544679197853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe06c7ee52204ac4d88c65f96615fdd0
+      internalID: 9134310497069442258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_10
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 312
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8259c630f29c67c4884df070aaa28ef6
+      internalID: 1922767106209716333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_11
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 312
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75f730b89532dd44944d14f011642bb
+      internalID: -5353160993750369609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6136d926145a14b9c8ad03b941bf28
+      internalID: -8615684543292967143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_13
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 0
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2652fd78581b200408ae664eef6ff925
+      internalID: -8640206599074278079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mariacki_outside_lvl_easy_14
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 0
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d473ce11efc1c0428f0c27f1d2cb616
+      internalID: -8293399065298196403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

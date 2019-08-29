@@ -1,0 +1,691 @@
+fileFormatVersion: 2
+guid: 0d79fe16978b585429858c79ab12d9e2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3711144201338047750
+    second: wawel_lvl_med_0
+  - first:
+      213: -7732979389805851493
+    second: wawel_lvl_med_1
+  - first:
+      213: -6463107755591152201
+    second: wawel_lvl_med_2
+  - first:
+      213: 1580063199259481695
+    second: wawel_lvl_med_3
+  - first:
+      213: -2564498168380150373
+    second: wawel_lvl_med_4
+  - first:
+      213: 6413651799471422413
+    second: wawel_lvl_med_5
+  - first:
+      213: 7344362973161046510
+    second: wawel_lvl_med_6
+  - first:
+      213: 889830730518278830
+    second: wawel_lvl_med_7
+  - first:
+      213: -3399535159879300147
+    second: wawel_lvl_med_8
+  - first:
+      213: -4489379290976613366
+    second: wawel_lvl_med_9
+  - first:
+      213: -2546341033473228764
+    second: wawel_lvl_med_10
+  - first:
+      213: 7484399397723170416
+    second: wawel_lvl_med_11
+  - first:
+      213: 6296363023818601239
+    second: wawel_lvl_med_12
+  - first:
+      213: 4549723193380574575
+    second: wawel_lvl_med_13
+  - first:
+      213: 4779751205189679571
+    second: wawel_lvl_med_14
+  - first:
+      213: 8856114385470062408
+    second: wawel_lvl_med_15
+  - first:
+      213: -3745865115735944010
+    second: wawel_lvl_med_16
+  - first:
+      213: 4495197947330258739
+    second: wawel_lvl_med_17
+  - first:
+      213: 8069464225237848542
+    second: wawel_lvl_med_18
+  - first:
+      213: 2600435153692067616
+    second: wawel_lvl_med_19
+  - first:
+      213: -6054122771773493210
+    second: wawel_lvl_med_20
+  - first:
+      213: 6323381474372562496
+    second: wawel_lvl_med_21
+  - first:
+      213: -9093540831123987483
+    second: wawel_lvl_med_22
+  - first:
+      213: -2007280230860907002
+    second: wawel_lvl_med_23
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wawel_lvl_med_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1300
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9079c177c394214ca8172418c4b51e5
+      internalID: 3711144201338047750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1300
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ddcfb9b1419be4cb9adfcb16e78b76
+      internalID: -7732979389805851493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1300
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29ec6ecc35bcef4ebd49843713e0df1
+      internalID: -6463107755591152201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1300
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803b9a02e7f7a6f45a812a4b5c901cd1
+      internalID: 1580063199259481695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1040
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541d9bf6c606bad478a6bc45e3417b5a
+      internalID: -2564498168380150373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1040
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f311f0387b61d64284c8d51d06bbaa0
+      internalID: 6413651799471422413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_6
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1040
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc6c5a0ed09a3d343a125300d3073cd4
+      internalID: 7344362973161046510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_7
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1040
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e074fd44f5195b469831f9320f0f1f7
+      internalID: 889830730518278830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1dea18dedc48f947ab0376daaee9267
+      internalID: -3399535159879300147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_9
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 780
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac548141cb7cc844b7b590eefd3e28a
+      internalID: -4489379290976613366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_10
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 780
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e9fed4d90a127458075b5078645724
+      internalID: -2546341033473228764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_11
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 780
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5843e43c6675e3941ac4c152e1620b25
+      internalID: 7484399397723170416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962d32693744b614e827e1b2065cd0bb
+      internalID: 6296363023818601239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_13
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 520
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6ba18182e2dc846905c5377de0cad4
+      internalID: 4549723193380574575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_14
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 520
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53ce21ca48f2964cb518f58558b3769
+      internalID: 4779751205189679571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_15
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 520
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c944e00a0b04ab47ae6172fc3dec8d3
+      internalID: 8856114385470062408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2427c88bb271c94987dacb4706e0616
+      internalID: -3745865115735944010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_17
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 260
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6acabbfe8b5f3948a2b3d3d7f6421ae
+      internalID: 4495197947330258739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_18
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 260
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e698010094cba47804fd0a8fccd931
+      internalID: 8069464225237848542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_19
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 260
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38964c87b869467438fa20cc4c3eb1b1
+      internalID: 2600435153692067616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ddb65203edb639439f54381d6672f80
+      internalID: -6054122771773493210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_21
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94360e2bde9cce641b53515c22549bb8
+      internalID: 6323381474372562496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_22
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e699f6e275c2a47bc868d57d964947
+      internalID: -9093540831123987483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wawel_lvl_med_23
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00babcfda3631c0478237268904ccf3b
+      internalID: -2007280230860907002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

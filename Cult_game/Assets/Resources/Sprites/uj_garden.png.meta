@@ -1,0 +1,691 @@
+fileFormatVersion: 2
+guid: a0e51d87e04390d478d88c7c6c42e7a5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1729167553452403762
+    second: uj_garden_lvl_med_0
+  - first:
+      213: 9007933772032745849
+    second: uj_garden_lvl_med_1
+  - first:
+      213: -1204207694190017289
+    second: uj_garden_lvl_med_2
+  - first:
+      213: -3840420179609162169
+    second: uj_garden_lvl_med_3
+  - first:
+      213: -4601002518752725103
+    second: uj_garden_lvl_med_4
+  - first:
+      213: -1941923004485953439
+    second: uj_garden_lvl_med_5
+  - first:
+      213: -6004499055550636018
+    second: uj_garden_lvl_med_6
+  - first:
+      213: -5249941891859403736
+    second: uj_garden_lvl_med_7
+  - first:
+      213: -3148513482238671978
+    second: uj_garden_lvl_med_8
+  - first:
+      213: -8542050762003910874
+    second: uj_garden_lvl_med_9
+  - first:
+      213: 7575584053491595970
+    second: uj_garden_lvl_med_10
+  - first:
+      213: 4616898060708831145
+    second: uj_garden_lvl_med_11
+  - first:
+      213: -8416423274967622842
+    second: uj_garden_lvl_med_12
+  - first:
+      213: 1108427824248188340
+    second: uj_garden_lvl_med_13
+  - first:
+      213: -6544667211896578854
+    second: uj_garden_lvl_med_14
+  - first:
+      213: -6775228457793074154
+    second: uj_garden_lvl_med_15
+  - first:
+      213: 8075781016950282073
+    second: uj_garden_lvl_med_16
+  - first:
+      213: 1163489728784263177
+    second: uj_garden_lvl_med_17
+  - first:
+      213: 1519690247570980906
+    second: uj_garden_lvl_med_18
+  - first:
+      213: -7358889051065748346
+    second: uj_garden_lvl_med_19
+  - first:
+      213: 197794029699273176
+    second: uj_garden_lvl_med_20
+  - first:
+      213: 7349760959104036029
+    second: uj_garden_lvl_med_21
+  - first:
+      213: 7459420508082529980
+    second: uj_garden_lvl_med_22
+  - first:
+      213: -4195671354132061615
+    second: uj_garden_lvl_med_23
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1300
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15049b793b204b4dbd60c31462672a5
+      internalID: -1729167553452403762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1300
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1b489b754c98a43af8bec9cb5cd741
+      internalID: 9007933772032745849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1300
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69c9817123750843b1ff21f4280d831
+      internalID: -1204207694190017289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1300
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301717ee4b9b98243973045d5015bb52
+      internalID: -3840420179609162169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1040
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d2fe90d2be552489a35de85848f0fc
+      internalID: -4601002518752725103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1040
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35dcbe340c333ee45b80e1fd06323e5c
+      internalID: -1941923004485953439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_6
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1040
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0daf2a8687aab604ca792ea7560f5f00
+      internalID: -6004499055550636018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_7
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1040
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97977e2d1d9dcc6458e4801b72944074
+      internalID: -5249941891859403736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9ef921604e7ed4bba314f744e05fb0
+      internalID: -3148513482238671978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_9
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 780
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44302e59d37df8a40bedc2cc27a2b547
+      internalID: -8542050762003910874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_10
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 780
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5b4a58c33a92f45bfe30f6a337080f
+      internalID: 7575584053491595970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_11
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 780
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7c4d574c11a9742842426dfa68386a
+      internalID: 4616898060708831145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04cf8eaea675ee94f80ab1bfa17a421d
+      internalID: -8416423274967622842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_13
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 520
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd28de29e9ffde42ab947bf06872895
+      internalID: 1108427824248188340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_14
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 520
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42cf5159c496ba34297289b6fd5132a3
+      internalID: -6544667211896578854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_15
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 520
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1a4393692675c448e16407ba1a982d
+      internalID: -6775228457793074154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27c9c26be68df14ba96b96e7480cd2e
+      internalID: 8075781016950282073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_17
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 260
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582bc9361dcca944f9198e90540b7bec
+      internalID: 1163489728784263177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_18
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 260
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bfa07ce4b22aa248a9cab4d3f4b88aa
+      internalID: 1519690247570980906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_19
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 260
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab589521d7a85b4fbd3081b9c9b732a
+      internalID: -7358889051065748346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2887877d55661c04e82ea4e3a5da769b
+      internalID: 197794029699273176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_21
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e5f4d3408fd8943a358be91489c020
+      internalID: 7349760959104036029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_22
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aef782d080bbd947a6bf636bcdb80c2
+      internalID: 7459420508082529980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uj_garden_lvl_med_23
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 250
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a220f692efbcc448eba3d42df06772
+      internalID: -4195671354132061615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

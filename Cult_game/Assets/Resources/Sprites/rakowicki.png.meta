@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: 6988f64488f877f4abe0c0c247bf771c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6060395252650233672
+    second: rakowicki_lvl_easy_0
+  - first:
+      213: 1941653696431799485
+    second: rakowicki_lvl_easy_1
+  - first:
+      213: 8029209310067648624
+    second: rakowicki_lvl_easy_2
+  - first:
+      213: -7860145002565242222
+    second: rakowicki_lvl_easy_3
+  - first:
+      213: -2696284073970486205
+    second: rakowicki_lvl_easy_4
+  - first:
+      213: -8243999247804859465
+    second: rakowicki_lvl_easy_5
+  - first:
+      213: -3519439074010541925
+    second: rakowicki_lvl_easy_6
+  - first:
+      213: 1161866157100709889
+    second: rakowicki_lvl_easy_7
+  - first:
+      213: 3413917437487946914
+    second: rakowicki_lvl_easy_8
+  - first:
+      213: 4125693579693810682
+    second: rakowicki_lvl_easy_9
+  - first:
+      213: 804086386652394650
+    second: rakowicki_lvl_easy_10
+  - first:
+      213: -3112754622033136216
+    second: rakowicki_lvl_easy_11
+  - first:
+      213: -4236408194394598532
+    second: rakowicki_lvl_easy_12
+  - first:
+      213: 8019048695514031577
+    second: rakowicki_lvl_easy_13
+  - first:
+      213: 8753639993184017304
+    second: rakowicki_lvl_easy_14
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136bd095e61bedb46bd77a634895e2f1
+      internalID: 6060395252650233672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_1
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1248
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda4da96b9e27d14cb349a5303b1a073
+      internalID: 1941653696431799485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_2
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1248
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0446231d5c5c9154e9aeb6d34520523a
+      internalID: 8029209310067648624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 936
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd47a7f58e3adfc4781909cd925232a4
+      internalID: -7860145002565242222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_4
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 936
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250e90f5e5737da4cab751cd84cae9bf
+      internalID: -2696284073970486205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_5
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 936
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556a581a7adbb5247a8453d14e68e5c2
+      internalID: -8243999247804859465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4361acd93f514c347aa203a02f6f95ea
+      internalID: -3519439074010541925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_7
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 624
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a037b3b0850501344a51dc1900eee172
+      internalID: 1161866157100709889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_8
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 624
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccec60ac50e9a44190262594dfa6db1
+      internalID: 3413917437487946914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59bdc4045be03684b9b99f7dd746fffe
+      internalID: 4125693579693810682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_10
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 312
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f19be98ffabbbe49a044e65c50b5a80
+      internalID: 804086386652394650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_11
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 312
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110475af207bc0f4186bef5840e71491
+      internalID: -3112754622033136216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c94117039848c743a5b2098dbc24ff2
+      internalID: -4236408194394598532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_13
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 0
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7702a3286f7db4bae1838db5aab5d1
+      internalID: 8019048695514031577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rakowicki_lvl_easy_14
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 0
+        width: 333.33334
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664787f92e5bc354eb7b999aeb1ba018
+      internalID: 8753639993184017304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

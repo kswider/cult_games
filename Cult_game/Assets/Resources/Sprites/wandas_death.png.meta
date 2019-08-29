@@ -1,0 +1,1075 @@
+fileFormatVersion: 2
+guid: 2d17cd3071cf27e4dbe670d97398e342
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1444416694451635190
+    second: wandas_death_0
+  - first:
+      213: 8618098875921630367
+    second: wandas_death_1
+  - first:
+      213: 684020199372208172
+    second: wandas_death_2
+  - first:
+      213: 6976351419877080165
+    second: wandas_death_3
+  - first:
+      213: -5899910842019613920
+    second: wandas_death_4
+  - first:
+      213: -193169175096045158
+    second: wandas_death_5
+  - first:
+      213: -7734666503161523698
+    second: wandas_death_6
+  - first:
+      213: -6663125336675758181
+    second: wandas_death_7
+  - first:
+      213: -3990192009954103616
+    second: wandas_death_8
+  - first:
+      213: -3791905810801952804
+    second: wandas_death_9
+  - first:
+      213: 1633252435147384022
+    second: wandas_death_10
+  - first:
+      213: 4330590294129959729
+    second: wandas_death_11
+  - first:
+      213: 805973534131764219
+    second: wandas_death_12
+  - first:
+      213: -6775267040636312551
+    second: wandas_death_13
+  - first:
+      213: -882354051082940139
+    second: wandas_death_14
+  - first:
+      213: -237622946135943531
+    second: wandas_death_15
+  - first:
+      213: -7692406723258978855
+    second: wandas_death_16
+  - first:
+      213: 3333324147130637134
+    second: wandas_death_17
+  - first:
+      213: 4325036811971113250
+    second: wandas_death_18
+  - first:
+      213: 7648365493424952657
+    second: wandas_death_19
+  - first:
+      213: -989236518766513413
+    second: wandas_death_20
+  - first:
+      213: 3747911713789487571
+    second: wandas_death_21
+  - first:
+      213: -1948795672594759803
+    second: wandas_death_22
+  - first:
+      213: 5931664787852853745
+    second: wandas_death_23
+  - first:
+      213: -1035754150695335355
+    second: wandas_death_24
+  - first:
+      213: 6691281428231926116
+    second: wandas_death_25
+  - first:
+      213: 2107986139644939469
+    second: wandas_death_26
+  - first:
+      213: -5296102089678568318
+    second: wandas_death_27
+  - first:
+      213: 2251733655865257480
+    second: wandas_death_28
+  - first:
+      213: 3176376943850867138
+    second: wandas_death_29
+  - first:
+      213: 8979817631154476700
+    second: wandas_death_30
+  - first:
+      213: -5725891976781156907
+    second: wandas_death_31
+  - first:
+      213: -499353393730721499
+    second: wandas_death_32
+  - first:
+      213: 7823778299983037840
+    second: wandas_death_33
+  - first:
+      213: 147912995504358843
+    second: wandas_death_34
+  - first:
+      213: 5508508320708749527
+    second: wandas_death_35
+  - first:
+      213: -7852397065604324542
+    second: wandas_death_36
+  - first:
+      213: 839764139659202000
+    second: wandas_death_37
+  - first:
+      213: 5752631616846522147
+    second: wandas_death_38
+  - first:
+      213: -6266854167280758049
+    second: wandas_death_39
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wandas_death_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b7542e830157b40b7e6f7d9ca95914
+      internalID: 1444416694451635190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d548038d1f33d8d47804e9c3d973abe6
+      internalID: 8618098875921630367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa6d0fac117cc84c815641090e87aee
+      internalID: 684020199372208172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18aed11747c502041b1e81e93a39448a
+      internalID: 6976351419877080165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1365
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3603984ad78d54145942ecf6aea8778c
+      internalID: -5899910842019613920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab59da9226f966842b5d1250c2c12138
+      internalID: -193169175096045158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641f32208f84fdd40893af193720a174
+      internalID: -7734666503161523698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_7
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30920ee95d20819489c782cf6ed55f56
+      internalID: -6663125336675758181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509be17957712ca4699d9bc8b9455f97
+      internalID: -3990192009954103616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_9
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1170
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16903f081a5293e4196f2368e07dbcd2
+      internalID: -3791905810801952804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefe7ef57d9198b48aa4f3fbecad3957
+      internalID: 1633252435147384022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33144cd611ef7424780c1da3c572a13c
+      internalID: 4330590294129959729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb290950b23e8b4db457eda8f1753eb
+      internalID: 805973534131764219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0835ddac3266f8845b12d3d68b1ea04a
+      internalID: -6775267040636312551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 975
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d072a69d601ef4f8fb040da905905f
+      internalID: -882354051082940139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258b6d11d3c4d3148bcf5f0e2473ea4d
+      internalID: -237622946135943531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_16
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b013fd4ab0b786c43a601cc62b3877b3
+      internalID: -7692406723258978855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17cd9c7bb7b15f24e9bcbddf90eea9fc
+      internalID: 3333324147130637134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_18
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64580802c6219c40b78ee0eadd1b6e0
+      internalID: 4325036811971113250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_19
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 780
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625b8ea2cfa3a9a4cb9c2d03f80ea830
+      internalID: 7648365493424952657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a8a096f154d284d86d89f49c3ca5e1
+      internalID: -989236518766513413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 093e9408123c91346ac75bd85760406f
+      internalID: 3747911713789487571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3610ea764a14e478d02d8a4f3fe896
+      internalID: -1948795672594759803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_23
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f644c1b0493b37946bb04e45996b4db6
+      internalID: 5931664787852853745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_24
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 585
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79582aa8ea4fc9f4da558897b0da65c2
+      internalID: -1035754150695335355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04dc6db1fd97d35408a9297a83c30f50
+      internalID: 6691281428231926116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_26
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37b060de9b051e45856854e1de6789d
+      internalID: 2107986139644939469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_27
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2031b3a1b3db274299cf7cc6ce361f7
+      internalID: -5296102089678568318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_28
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd633504912a8b4ba362ebc14116118
+      internalID: 2251733655865257480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_29
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 390
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1939be127cbea941ad1085c5adbc9eb
+      internalID: 3176376943850867138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814589541893ec94387c736e2f9660fa
+      internalID: 8979817631154476700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_31
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6faed5d737831b0478ca4a5750c7eb4a
+      internalID: -5725891976781156907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_32
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702b21f9b83dc0a47a49f8332d99c002
+      internalID: -499353393730721499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_33
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23eee41f944b1d146a162e981cf235be
+      internalID: 7823778299983037840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_34
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 195
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d4b0a5a5cb8e94db988268193c2258
+      internalID: 147912995504358843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b12018f431ec124d8a4e91f2d5daf57
+      internalID: 5508508320708749527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_36
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0bde038d7b750d4698822d2ef33721c
+      internalID: -7852397065604324542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_37
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d878f2d3c6b06347a723f9f618753a0
+      internalID: 839764139659202000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_38
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5603917b04668148add13a19ba61765
+      internalID: 5752631616846522147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandas_death_39
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e8e2fba78d2be4993c0de21cce96d5
+      internalID: -6266854167280758049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a12d0148d34e246a2ac48910a488bb, type: 3}
   m_Name: WawelQuiz
   m_EditorClassIdentifier: 
-  id: 1
+  id: 3
   learningText: "Wawel is a limestone hill in the centre of Krak\xF3w upon the Vistula
     River with a complex of impressive historical monuments of unique historical
     and artistic values. This extraordinary sanctuary determines the Poles\u2019
