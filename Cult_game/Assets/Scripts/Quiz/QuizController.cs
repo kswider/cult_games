@@ -65,6 +65,7 @@ public class QuizController : MonoBehaviour
             if (_correctlyAnsweredQuestionsNumber == _currentQuiz.questions.Count)
             {
                 _playerController.AddPoints(_currentQuiz.points);
+                _playerController.DiscoveredPlaces.Add(_currentQuiz.id);
                 questionText.text = "Quiz was passed successfully!";
                 yield return new WaitForSeconds(3);
                 _sceneController.GoToScene(SceneController.SCN_INSPIRATIONAL_LEARNING);

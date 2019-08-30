@@ -13,6 +13,7 @@ public class SceneController : Singleton<SceneController>
     public const string SCN_QUIZ = "SCN_QUIZ";
     public const string SCN_QUIZ_LEARNING = "SCN_QUIZ_LEARNING";
     public const string SCN_PUZZLE_GAME = "SCN_PUZZLE_GAME";
+    public const string SCN_ACTION_GAME = "SCN_ACTION_GAME";
         
     private PlayerController _playerController;
     private Stack<string> _sceneStack = new Stack<string>();
