@@ -28,7 +28,7 @@ public class QuizController : MonoBehaviour
     {
         _playerController = Utilities.FindPlayer();
         _sceneController = Utilities.FindSceneController();
-        _currentQuiz = Resources.LoadAll<Quiz>("Quizes").First(x => x.id == _playerController.CurrentPlayedGameId);
+        _currentQuiz = Resources.LoadAll<Quiz>("Quizes").First(x => x.id == _playerController.CurrentPlayedPlaceId);
         _buttons = buttonsHolder.GetComponentsInChildren<Button>();
         LoadNextQuestion();
     }
@@ -36,11 +36,10 @@ public class QuizController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_isButtonClicked)
-        {
-            _isButtonClicked = false;
-            StartCoroutine(AnswerWasClicked());
-        }
+        if (!_isButtonClicked) return;
+        
+        _isButtonClicked = false;
+        StartCoroutine(AnswerWasClicked());
     }
 
     private IEnumerator AnswerWasClicked()
@@ -74,7 +73,7 @@ public class QuizController : MonoBehaviour
             {
                 var pb = new Save.PlaceBlock { placeId = _playerController.CurrentPlayedPlaceId, blockUntil = DateTime.Now.AddSeconds(300) };
                 _playerController.BlockedPlaces.Add(pb);
-                questionText.text = $"Unfortunatelly you have not passed the quiz successfully. Number of correct answers: {_correctlyAnsweredQuestionsNumber}/{_currentQuiz.questions.Count}";
+                questionText.text = $"Unfortunately you have not passed the quiz successfully. Number of correct answers: {_correctlyAnsweredQuestionsNumber}/{_currentQuiz.questions.Count}";
                 yield return new WaitForSeconds(5);
                 _sceneController.GoToScene(SceneController.SCN_EXPLORING_VIEW);
             }

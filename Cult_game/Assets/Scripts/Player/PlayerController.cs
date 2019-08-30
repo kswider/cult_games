@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using ResourcesObjects;
 using UnityEngine;
@@ -11,21 +12,21 @@ public class PlayerController : Singleton<PlayerController>
     public int Score { get; set; }
     public List<int> DiscoveredPlaces { get; set; }
     public List<Save.PlaceBlock> BlockedPlaces { get; set; }
-    public int CurrentPlayedGameId { get; set; }
     public int CurrentPlayedPlaceId { get; set; }
     
     //Database
-    public List<Place> places;
+    public List<Place> Places { get; set; }
     
     //PlayerSettings
     public Settings Settings { get; private set; }
 
     private void Start()
     {
+        ReadPlaces();
         LoadGame();
         
         Settings = new Settings();
-        Place selected = places.Find(p => p.id == Settings.SelectedPlaceId);
+        Place selected = Places.Find(p => p.id == Settings.SelectedPlaceId);
         if (selected != null)
         {
             Settings.SelectedPlace = selected;
@@ -34,7 +35,7 @@ public class PlayerController : Singleton<PlayerController>
 
     public void SaveGame()
     {
-        clearPlaceBlocks();
+        ClearPlaceBlocks();
         Save save = CreateSaveGameObject();
         
         BinaryFormatter bf = new BinaryFormatter();
@@ -61,16 +62,24 @@ public class PlayerController : Singleton<PlayerController>
     {
         Score += points;
     }
+
+    private void ReadPlaces()
+    {
+        Place[] regular = Resources.LoadAll<Place>("Places");
+        Place[] curiosities = Resources.LoadAll<Place>("Curiosities");
+        Place[] legends = Resources.LoadAll<Place>("Legends");
+
+        Places = regular.Concat(curiosities).Concat(legends).ToList();
+    }
     
     private Save CreateSaveGameObject()
     {
-        Save save = new Save
+        return new Save
         {
             generalScore = Score
             , discoveredPlaces = DiscoveredPlaces
             , blockedPlaces = BlockedPlaces
         };
-        return save;
     }
 
     private void LoadGame()
@@ -87,7 +96,7 @@ public class PlayerController : Singleton<PlayerController>
             BlockedPlaces = save.blockedPlaces;
             
             Debug.Log("Game Loaded");
-            clearPlaceBlocks();
+            ClearPlaceBlocks();
         }
         else
         {
@@ -98,14 +107,12 @@ public class PlayerController : Singleton<PlayerController>
         }
     }
 
-    private void clearPlaceBlocks()
+    private void ClearPlaceBlocks()
     {
-        foreach (var block in BlockedPlaces)
+        var copy = BlockedPlaces.ToList();
+        foreach (var block in copy.Where(block => block.blockUntil.CompareTo(DateTime.Now) <= 0))
         {
-            if (block.blockUntil.CompareTo(DateTime.Now) <= 0)
-            {
-                BlockedPlaces.Remove(block);
-            }
+            BlockedPlaces.Remove(block);
         }
     }
 }

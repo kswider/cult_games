@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
+using ResourcesObjects;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GridController : MonoBehaviour
 {
     //one sprite has 100 px per one unit
-    private static int SHUFFLE_GRID_LOOPS = 3;
+    private const int SHUFFLE_GRID_LOOPS = 3;
     private static Vector2Int CONFIG_GRID_EASY_BOUNDS = new Vector2Int(3, 5);
     private static Vector2Int CONFIG_GRID_MEDIUM_BOUNDS = new Vector2Int(4, 6);
     private static Vector2Int CONFIG_GRID_HARD_BOUNDS = new Vector2Int(5, 8);
@@ -22,108 +23,88 @@ public class GridController : MonoBehaviour
     public GameObject btn_help;
 
     private bool inHelpMode;
-    private bool successfull;
 
     private JigsawGrid grid;
     private JigsawGrid grid_help;
     private GameObject flames_help;
 
-    private int draggedTileKey;
+    public int DraggedTileKey { get; set; }
 
     private int optimalMoves;
     private int userMoves;
     private int properlyPlacedAmount;
     private float efficiency;
 
-    void Awake()
+    private PlayerController _playerController;
+    private SceneController _sceneController;
+
+    private Place _playedPlace;
+    
+    private void Awake()
     {
-        InitializeGridHolder(3);
+        _playerController = Utilities.FindPlayer();
+        _sceneController = Utilities.FindSceneController();
+
+        _playedPlace = _playerController.Places.Find(p => p.id == _playerController.CurrentPlayedPlaceId);
+        InitializeGridHolder();
     }
 
-    public void InitializeGridHolder(int id)
+    private void InitializeGridHolder()
     {
-        switch (id)
+        Vector2Int difficulty;
+        switch (_playedPlace.gameDifficulty)
         {
-            case 1:
-                InitializeGrid("mariacki_inside_lvl_hard", "St. Mary's Basilica", CONFIG_GRID_HARD_BOUNDS);
+            case "Easy":
+                difficulty = CONFIG_GRID_EASY_BOUNDS;
                 break;
-            case 11:
-                InitializeGrid("mariacki_outside_lvl_easy", "St. Mary's Basilica", CONFIG_GRID_EASY_BOUNDS);
+            case "Medium":
+                difficulty = CONFIG_GRID_MEDIUM_BOUNDS;
                 break;
-            case 2:
-                InitializeGrid("sukiennice_lvl_hard", "Krakow Cloth Hall", CONFIG_GRID_HARD_BOUNDS);
+            case "Hard":
+                difficulty = CONFIG_GRID_HARD_BOUNDS;
                 break;
-            case 3:
-                InitializeGrid("wawel_lvl_med", "Wawel Castle", CONFIG_GRID_MEDIUM_BOUNDS);
-                break;
-            case 202:
-                InitializeGrid("king_krak_lvl_med", "The Legend of Krakus", CONFIG_GRID_MEDIUM_BOUNDS);
-                break;
-            case 201:
-                InitializeGrid("wawel_dragon_lvl_med", "Wawel Dragon", CONFIG_GRID_MEDIUM_BOUNDS);
-                break;
-            case 203:
-                InitializeGrid("wandas_death_lvl_hard", "The legend of Wanda", CONFIG_GRID_HARD_BOUNDS);
-                break;
-            case 101:
-                InitializeGrid("rakowicki_lvl_easy", "Rakowicki Cemetery", CONFIG_GRID_EASY_BOUNDS);
-                break;
-            case 102:
-                InitializeGrid("kosciuszko_mound_lvl_easy", "Kosciuszko Mound", CONFIG_GRID_EASY_BOUNDS);
-                break;
-            case 103:
-                InitializeGrid("ice_lvl_easy", "ICE Congress Centre", CONFIG_GRID_EASY_BOUNDS);
-                break;
-            case 4:
-                InitializeGrid("uj_garden_lvl_med", "Botanic Garden of the UJ", CONFIG_GRID_MEDIUM_BOUNDS);
-                break;
+            default:
+                throw new NotImplementedException("Error: wrong difficulty");
         }
+        
+        InitializeGrid(_playedPlace.imagePath, _playedPlace.engName, difficulty);
+        
     }
 
-    private void InitializeGrid(String jigsaw_subject, string title, Vector2Int lvlIndicator)
+    private void InitializeGrid(string jigsaw_subject, string title, Vector2Int lvlIndicator)
     {
-        this.grid = new JigsawGrid(lvlIndicator, jigsaw_subject, this.canvasGui);
-        this.grid_help = new JigsawGrid(lvlIndicator, jigsaw_subject, this.canvasGui);
+        grid = new JigsawGrid(lvlIndicator, jigsaw_subject, _playedPlace.gameDifficulty, canvasGui);
+        grid_help = new JigsawGrid(lvlIndicator, jigsaw_subject, _playedPlace.gameDifficulty, canvasGui);
 
-        this.txt_title.text = title; 
-        this.successfull = false;
-        this.inHelpMode = false;
-        this.txt_help.enabled = false;
+        txt_title.text = title; 
+        inHelpMode = false;
+        txt_help.enabled = false;
         
-        this.flames_help = Instantiate(Resources.Load<GameObject>("Jigsaw_prefabs/" + "Grid_Help_Flames"));
-        this.flames_help.transform.SetParent(canvasGui.transform, false);
+        flames_help = Instantiate(Resources.Load<GameObject>("Jigsaw_prefabs/" + "Grid_Help_Flames"), canvasGui.transform, false);
 
-        GridHelper.SetPosition(this.grid_help, this.flames_help.transform);
-        GridHelper.ScaleGrid(this.grid_help, new Vector3(0.7f, 0.7f, 0.7f));
-        GridHelper.TurnOffFlamesAtAll(this.grid_help);
-        GridHelper.TurnOffPhysics(this.grid_help);
+        GridHelper.SetPosition(grid_help, flames_help.transform);
+        GridHelper.ScaleGrid(grid_help, new Vector3(0.7f, 0.7f, 0.7f));
+        GridHelper.TurnOffFlamesAtAll(grid_help);
+        GridHelper.TurnOffPhysics(grid_help);
 
         GridHelper.SetGravityModifierForFlames(this.grid, -0.02f);
+        
+        grid_help.gameObjectGrid.SetActive(false);
+        flames_help.SetActive(false);
 
-        this.grid_help.gameObjectGrid.SetActive(false);
-        this.flames_help.SetActive(false);
-
-        initGridForGame();
+        InitGridForGame();
     }
-    private void initGridForGame()
+    private void InitGridForGame()
     {
-        this.properlyPlacedAmount = 0;
-        this.draggedTileKey = -1;
-        this.optimalMoves = 0;
-        this.userMoves = 0;
-        this.ShuffleGrid();
-        this.computeOptimalMoves();
-        this.CheckProperPlacement();
+        properlyPlacedAmount = 0;
+        DraggedTileKey = -1;
+        optimalMoves = 0;
+        userMoves = 0;
+        ShuffleGrid();
+        ComputeOptimalMoves();
+        CheckProperPlacement();
     }
-
-    public void SetDraggingTile(int key)
-    {
-        this.draggedTileKey = key;
-    }
-    public int CheckDraggingTile()
-    {
-        return this.draggedTileKey;
-    }
+    
     public void MarkNewPlacement(TileTracker dragged, TileTracker on, bool isInit)
     {
         Vector3 onPos = on.GetStationaryPosition();
@@ -141,104 +122,105 @@ public class GridController : MonoBehaviour
     }
     public void CheckProperPlacement()
     {
-        int properlyPlacedAmount = 0;
-        foreach(TileTracker tileTracker in this.grid.tiles_grid)
-        {
-            if (tileTracker.CheckProperPlace() && (tileTracker.CheckNeededRotationsAmount() == 0))
-            {
-                properlyPlacedAmount++;
-            }
-        }
-        this.properlyPlacedAmount = properlyPlacedAmount;
-        this.updateProgress();
+        properlyPlacedAmount = grid.tiles_grid.Count(tileTracker => tileTracker.CheckProperPlace() && (tileTracker.CheckNeededRotationsAmount() == 0));
+        UpdateProgress();
 
         if (properlyPlacedAmount == this.grid.rows * this.grid.cols)
         {
-            proceedEndGameEvent();
+            ProceedEndGameEvent();
         }
     }
     private void ShuffleGrid()
     {
         //MarkNewPlacement(this.grid.tiles_grid[0].RotateBy(90f), this.grid.tiles_grid[5].RotateBy(270f), true); // this for tests and debug
-        for (int i = 0; i < SHUFFLE_GRID_LOOPS * this.grid.rows * this.grid.cols; i++)
+        for (int i = 0; i < SHUFFLE_GRID_LOOPS * grid.rows * grid.cols; i++)
         {
-            MarkNewPlacement(this.grid.tiles_grid[UnityEngine.Random.Range(0, this.grid.rows * this.grid.cols)].RotateBy(UnityEngine.Random.Range(0, 4) * 90f),
-            this.grid.tiles_grid[UnityEngine.Random.Range(0, this.grid.rows * this.grid.cols)].RotateBy(UnityEngine.Random.Range(0, 4) * 90f), true);
+            MarkNewPlacement(grid.tiles_grid[UnityEngine.Random.Range(0, grid.rows * grid.cols)].RotateBy(UnityEngine.Random.Range(0, 4) * 90f),
+            grid.tiles_grid[UnityEngine.Random.Range(0, grid.rows * grid.cols)].RotateBy(UnityEngine.Random.Range(0, 4) * 90f), true);
         }
     }
-    private void computeOptimalMoves()
+    private void ComputeOptimalMoves()
     {
-        foreach (TileTracker tile in this.grid.tiles_grid)
+        foreach (TileTracker tile in grid.tiles_grid)
         {
             if (!tile.CheckProperPlace())
-                this.optimalMoves++;
-            this.optimalMoves += tile.CheckNeededRotationsAmount();
+                optimalMoves++;
+            optimalMoves += tile.CheckNeededRotationsAmount();
         }
-        this.optimalMoves--;
+        optimalMoves--;
     }
-    public void updateEfficiency()
+    public void UpdateEfficiency()
     {
-        this.userMoves++;
-        this.efficiency = ((float)this.optimalMoves / (float)this.userMoves) * 100.0f;
-        this.txt_efficiency.text = "Efficiency " + (int)(this.efficiency)+ "%";
+        userMoves++;
+        efficiency = ((float)optimalMoves / (float)userMoves) * 100.0f;
+        txt_efficiency.text = "Efficiency " + (int)efficiency + "%";
     }
-    public void updateProgress()
+
+    private void UpdateProgress()
     {
-        this.txt_progress.text = "Progress " + this.properlyPlacedAmount + "/" + this.grid.rows*this.grid.cols;
+        txt_progress.text = "Progress " + properlyPlacedAmount + "/" + grid.rows* grid.cols;
     }
-    public void updateTitle(String title)
+
+    private void ProceedEndGameEvent()
     {
-        this.txt_title.text = title;
+        GridHelper.PutFireOnlyOnGridBounds(grid);
+
+        Place wonPlace = _playerController.Places.Find(p => p.id == _playerController.CurrentPlayedPlaceId);
+        
+        _playerController.AddPoints(wonPlace.scoreValue);
+        _playerController.DiscoveredPlaces.Add(wonPlace.id);
+        StartCoroutine(EndGameWait(5));
     }
-   
-    private void proceedEndGameEvent()
+
+    private IEnumerator EndGameWait(int seconds)
     {
-        GridHelper.PutFireOnlyOnGridBounds(this.grid);
-        this.successfull = true;
+        yield return new WaitForSeconds(seconds);
+        _sceneController.GoToScene(SceneController.SCN_INSPIRATIONAL_LEARNING);
     }
+
     public void OnClickBtnReset()
     {
-        initGridForGame();
-        if (this.inHelpMode)
-        {
-            
-            this.btn_help.GetComponentInChildren<Text>().text = "Help";
-            this.inHelpMode = false;
-            this.grid.gameObjectGrid.SetActive(true);
-            this.grid_help.gameObjectGrid.SetActive(false);
-            this.flames_help.SetActive(false);
-            this.txt_title.resizeTextMaxSize = 30;
-            this.txt_help.enabled = false;
-            
-        }
+        InitGridForGame();
+        if (!inHelpMode) return;
+        
+        DisableHelpMode();
     }
     public void OnClickBtnHelp()
     {
-        if (!this.inHelpMode)
+        if (!inHelpMode)
         {
-            this.btn_help.GetComponentInChildren<Text>().text = "Back to game";
-            this.inHelpMode = true;
-            this.grid.gameObjectGrid.SetActive(false);
-            this.grid_help.gameObjectGrid.SetActive(true);
-            this.flames_help.SetActive(true);
-            this.txt_title.resizeTextMaxSize = 50;
-            this.txt_help.enabled = true;
+            EnableHelpMode();
         }
         else
         {
-            this.btn_help.GetComponentInChildren<Text>().text = "Help";
-            this.inHelpMode = false;
-            this.grid.gameObjectGrid.SetActive(true);
-            this.grid_help.gameObjectGrid.SetActive(false);
-            this.flames_help.SetActive(false);
-            this.txt_title.resizeTextMaxSize = 30;
-            this.txt_help.enabled = false;
+            DisableHelpMode();
         }
+    }
 
+    private void EnableHelpMode()
+    {
+        btn_help.GetComponentInChildren<Text>().text = "Back to game";
+        grid.gameObjectGrid.SetActive(false);
+        grid_help.gameObjectGrid.SetActive(true);
+        flames_help.SetActive(true);
+        txt_title.resizeTextMaxSize = 50;
+        txt_help.enabled = true;
+        inHelpMode = true;
+    }
+
+    private void DisableHelpMode()
+    {
+        btn_help.GetComponentInChildren<Text>().text = "Help";
+        grid.gameObjectGrid.SetActive(true);
+        grid_help.gameObjectGrid.SetActive(false);
+        flames_help.SetActive(false);
+        txt_title.resizeTextMaxSize = 30;
+        txt_help.enabled = false;
+        inHelpMode = false;
     }
 
     public void OnClickBtnLeave()
     {
-        //
+        _sceneController.GoBackFromGame();
     }
 }

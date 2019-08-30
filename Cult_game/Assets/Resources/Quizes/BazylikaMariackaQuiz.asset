@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a12d0148d34e246a2ac48910a488bb, type: 3}
   m_Name: BazylikaMariackaQuiz
   m_EditorClassIdentifier: 
-  id: 2
+  id: 1
   learningText: "Saint Mary's Basilica (Polish: Ko\u015Bci\xF3\u0142 Mariacki) is
     a Brick Gothic church adjacent to the Main Market Square in Krak\xF3w, Poland.
     Built in the 14th century, its foundations date back to the early 13th century
