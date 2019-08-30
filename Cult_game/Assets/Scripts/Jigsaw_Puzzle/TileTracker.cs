@@ -150,15 +150,12 @@ public class TileTracker : MonoBehaviour
 
     public bool CheckProperPlace()
     {
+        //Debug.Log("CheckProperPlace - " + originTileKey + " <- " + (int) this.transform.eulerAngles.z / 90 + " -> " + currentTileKey);  //for future debug
         return _originTileKey == _currentTileKey;
     }
     public int CheckNeededRotationsAmount()
     {
-        int rotZ = (int)this.transform.eulerAngles.z;
-        if (rotZ == 0f)
-            return 0;
-
-        return (int)( 4f - (this.transform.eulerAngles.z / 90f));
+        return (4 - (int)transform.eulerAngles.z / 90) % 4; 
     }
 
     public Vector3 GetStationaryPosition()
