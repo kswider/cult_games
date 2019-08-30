@@ -23,8 +23,7 @@ public class OptionsController : MonoBehaviour
 
     public void SetThreshold(float value)
     {
-        // normal equation -- value * 25 + 50
-        int trueValue = (int) value * 2500 + 50;
+        int trueValue = (int) value * 25 + 50;
         _playerController.Settings.DistanceThreshold = trueValue;
         _playerController.Settings.SaveSettings();
     }

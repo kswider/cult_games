@@ -20,7 +20,8 @@ public class ExploringController : MonoBehaviour
     private Place _targetedPlace;
 
     private bool _promptExists;
-    
+
+    private bool _debugMode = true;
     // Start is called before the first frame update
     private void Start()
     {
@@ -85,11 +86,13 @@ public class ExploringController : MonoBehaviour
         float distance = Geometry.DistanceFromCoordinates(_playerPosition, _localTargetPosition);
         
         distanceText.text = "Distance: " + Mathf.Round(distance) + "m";
-        
-        
-        if (!(distance < _playerController.Settings.DistanceThreshold) || _promptExists) return;
-        _promptExists = true;
-        CreateDiscoveryPrompt();
+
+        if ((distance < _playerController.Settings.DistanceThreshold || _debugMode == true) && !_promptExists)
+        {
+            _promptExists = true;
+            CreateDiscoveryPrompt();
+        }
+
     }
     private void UpdateArrowDirection()
     {
@@ -109,9 +112,6 @@ public class ExploringController : MonoBehaviour
             "Game type: " + gameType + "\nDifficulty: " + difficulty;
         newDiscoveryPrompt.transform.Find("Buttons/BTN_NO").GetComponent<Button>().onClick.AddListener(delegate
         {
-            // debug!
-            _playerController.DiscoveredPlaces.Add(_targetedPlace.id);
-            // end debug
             var pb = new Save.PlaceBlock {placeId = _targetedPlace.id, blockUntil = DateTime.Now.AddSeconds(300)};
             _playerController.BlockedPlaces.Add(pb);
             _playerController.Settings.SelectedPlace = null;
