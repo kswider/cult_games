@@ -15,13 +15,10 @@ public class ActionGameController : MonoBehaviour
     public float startWait;
     public float waveWait;
 
-    public Text scoreText;
     public Text restartText;
     public Text gameOverText;
 
-    private bool _gameOver;
-    private bool _restart;
-    private int _score;
+    private bool _gameOver = false;
 
     private PlayerController _playerController;
     private SceneController _sceneController;
@@ -32,21 +29,15 @@ public class ActionGameController : MonoBehaviour
         _sceneController = Utilities.FindSceneController();
         _rewardPlace = _playerController.Places
             .Find(p => p.id == _playerController.CurrentPlayedPlaceId);
-
-        _gameOver = false;
-        _restart = false;
+        
         restartText.text = "";
         gameOverText.text = "";
-        _score = 0;
-        UpdateScore();
         StartCoroutine(SpawnWaves());
     }
 
     private void Update()
     {
-        if (!_restart) return;
-        
-        if (Input.GetKeyDown(KeyCode.R))
+        if (_gameOver && Input.GetButton("Fire1"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
@@ -87,8 +78,7 @@ public class ActionGameController : MonoBehaviour
 
             if (_gameOver)
             {
-                restartText.text = "Press 'R' for Restart";
-                _restart = true;
+                restartText.text = "Tap to Restart";
                 break;
             }
             currentWave++;
@@ -101,20 +91,7 @@ public class ActionGameController : MonoBehaviour
             EndGame();
         }
     }
-
-
     
-    public void AddScore(int newScoreValue)
-    {
-        _score += newScoreValue;
-        UpdateScore();
-    }
-
-    void UpdateScore()
-    {
-        scoreText.text = "Score: " + _score;
-    }
-
     public void GameOver()
     {
         gameOverText.text = "Game Over!";

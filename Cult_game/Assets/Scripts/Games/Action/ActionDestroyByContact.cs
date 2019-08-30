@@ -4,7 +4,6 @@ public class ActionDestroyByContact : MonoBehaviour
 {
 	public GameObject explosion;
 	public GameObject playerExplosion;
-	public int scoreValue;
 	private ActionGameController _gameController;
 
 	void Start ()
@@ -38,7 +37,6 @@ public class ActionDestroyByContact : MonoBehaviour
 			_gameController.GameOver();
 		}
 		
-		_gameController.AddScore(scoreValue);
 		Destroy (other.gameObject);
 		Destroy (gameObject);
 	}

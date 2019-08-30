@@ -10,7 +10,8 @@ public class ExploringController : MonoBehaviour
     public Text distanceText;
     public Transform background;
     public GameObject discoveryPromptPrefab;
-
+    public GameObject completionPrompt;
+    
     private PlayerController _playerController;
     private SceneController _sceneController;
     
@@ -45,8 +46,18 @@ public class ExploringController : MonoBehaviour
         _playerController.Settings.SelectedPlaceId = -1;
         _playerController.Settings.SelectedPlace = null;
         _targetedPlace = FindNearestPlace();
-        SetPlaceAsLocalTarget(_targetedPlace);
-        nameText.text = "Nearest attraction: " + _targetedPlace.engName;
+
+        if (_targetedPlace == null)
+        {
+            completionPrompt.SetActive(true);
+            nameText.text = "Nearest attraction: None";
+        }
+        else
+        {
+            SetPlaceAsLocalTarget(_targetedPlace);
+            nameText.text = "Nearest attraction: " + _targetedPlace.engName;
+        }
+
     }
     
     private void SetTargetToCustomPlace()
@@ -63,6 +74,8 @@ public class ExploringController : MonoBehaviour
 
     private void UpdateNavigation()
     {
+        if (_targetedPlace == null) return;
+        
         _playerPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
         UpdateDistance();
         UpdateArrowDirection();
@@ -70,7 +83,9 @@ public class ExploringController : MonoBehaviour
     private void UpdateDistance()
     {
         float distance = Geometry.DistanceFromCoordinates(_playerPosition, _localTargetPosition);
+        
         distanceText.text = "Distance: " + Mathf.Round(distance) + "m";
+        
         
         if (!(distance < _playerController.Settings.DistanceThreshold) || _promptExists) return;
         _promptExists = true;
@@ -94,6 +109,9 @@ public class ExploringController : MonoBehaviour
             "Game type: " + gameType + "\nDifficulty: " + difficulty;
         newDiscoveryPrompt.transform.Find("Buttons/BTN_NO").GetComponent<Button>().onClick.AddListener(delegate
         {
+            // debug!
+            _playerController.DiscoveredPlaces.Add(_targetedPlace.id);
+            // end debug
             var pb = new Save.PlaceBlock {placeId = _targetedPlace.id, blockUntil = DateTime.Now.AddSeconds(300)};
             _playerController.BlockedPlaces.Add(pb);
             _playerController.Settings.SelectedPlace = null;
