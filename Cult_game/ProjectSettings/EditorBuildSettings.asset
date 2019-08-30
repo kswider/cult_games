@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SCN_PUZZLE_GAME.unity
     guid: ff508408747c79940910b1b29b077843
+  - enabled: 1
+    path: Assets/Scenes/SCN_ACTION_GAME.unity
+    guid: d6cf7ed2faf3b47eb8f72eaa9c1a495a
   m_configObjects: {}
