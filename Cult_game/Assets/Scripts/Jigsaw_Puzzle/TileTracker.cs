@@ -155,7 +155,7 @@ public class TileTracker : MonoBehaviour
     }
     public int CheckNeededRotationsAmount()
     {
-        return (4 - ((((int)this.transform.eulerAngles.z) / 90))) % 4; 
+        return (4 - (int)transform.eulerAngles.z / 90) % 4; 
     }
 
     public Vector3 GetStationaryPosition()

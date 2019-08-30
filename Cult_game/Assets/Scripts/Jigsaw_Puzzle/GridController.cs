@@ -9,9 +9,9 @@ public class GridController : MonoBehaviour
 {
     //one sprite has 100 px per one unit
     private const int SHUFFLE_GRID_LOOPS = 3;
-    private static Vector2Int CONFIG_GRID_EASY_BOUNDS = new Vector2Int(3, 5);
-    private static Vector2Int CONFIG_GRID_MEDIUM_BOUNDS = new Vector2Int(4, 6);
-    private static Vector2Int CONFIG_GRID_HARD_BOUNDS = new Vector2Int(5, 8);
+    public static Vector2Int CONFIG_GRID_EASY_BOUNDS = new Vector2Int(3, 5);
+    public static Vector2Int CONFIG_GRID_MEDIUM_BOUNDS = new Vector2Int(4, 6);
+    public static Vector2Int CONFIG_GRID_HARD_BOUNDS = new Vector2Int(5, 8);
 
     public Canvas canvasGui;
     public Text txt_title;
@@ -39,6 +39,21 @@ public class GridController : MonoBehaviour
     private SceneController _sceneController;
 
     private Place _playedPlace;
+
+    public static Vector2Int DifficultyToBounds(string difficulty)
+    {
+        switch (difficulty)
+        {
+            case "Easy":
+                return CONFIG_GRID_EASY_BOUNDS;
+            case "Medium":
+                return CONFIG_GRID_MEDIUM_BOUNDS;
+            case "Hard":
+                return CONFIG_GRID_HARD_BOUNDS;
+            default:
+                throw new NotImplementedException("Error: wrong difficulty");
+        }
+    }
     
     private void Awake()
     {
@@ -51,24 +66,9 @@ public class GridController : MonoBehaviour
 
     private void InitializeGridHolder()
     {
-        Vector2Int difficulty;
-        switch (_playedPlace.gameDifficulty)
-        {
-            case "Easy":
-                difficulty = CONFIG_GRID_EASY_BOUNDS;
-                break;
-            case "Medium":
-                difficulty = CONFIG_GRID_MEDIUM_BOUNDS;
-                break;
-            case "Hard":
-                difficulty = CONFIG_GRID_HARD_BOUNDS;
-                break;
-            default:
-                throw new NotImplementedException("Error: wrong difficulty");
-        }
+        Vector2Int difficulty = DifficultyToBounds(_playedPlace.gameDifficulty);
         
         InitializeGrid(_playedPlace.imagePath, _playedPlace.engName, difficulty);
-        
     }
 
     private void InitializeGrid(string jigsaw_subject, string title, Vector2Int lvlIndicator)
@@ -87,13 +87,14 @@ public class GridController : MonoBehaviour
         GridHelper.TurnOffFlamesAtAll(grid_help);
         GridHelper.TurnOffPhysics(grid_help);
 
-        GridHelper.SetGravityModifierForFlames(this.grid, -0.02f);
+        GridHelper.SetGravityModifierForFlames(grid, -0.02f);
         
         grid_help.gameObjectGrid.SetActive(false);
         flames_help.SetActive(false);
 
         InitGridForGame();
     }
+    
     private void InitGridForGame()
     {
         properlyPlacedAmount = 0;
@@ -125,7 +126,7 @@ public class GridController : MonoBehaviour
         properlyPlacedAmount = grid.tiles_grid.Count(tileTracker => tileTracker.CheckProperPlace() && (tileTracker.CheckNeededRotationsAmount() == 0));
         UpdateProgress();
 
-        if (properlyPlacedAmount == this.grid.rows * this.grid.cols)
+        if (properlyPlacedAmount == grid.rows * grid.cols)
         {
             ProceedEndGameEvent();
         }
