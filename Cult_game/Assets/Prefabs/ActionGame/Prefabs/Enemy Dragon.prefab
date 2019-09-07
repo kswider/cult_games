@@ -4716,7 +4716,7 @@ GameObject:
   - component: {fileID: 11400006}
   - component: {fileID: 11400008}
   m_Layer: 0
-  m_Name: Done_Enemy Ship
+  m_Name: Enemy Dragon
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4782,7 +4782,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 100012, guid: 160925a6fe2664f2a978566b819f0af0, type: 3}
   playerExplosion: {fileID: 100008, guid: 3455fe69f7ddc4604b95bf9b0a1e88d7, type: 3}
-  scoreValue: 20
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4938,7 +4937,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalPosition: {x: 0, y: 0.5, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}

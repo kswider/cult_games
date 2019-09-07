@@ -13,10 +13,13 @@ public class ActionEvasiveManeuver : MonoBehaviour
 
 	private float _currentSpeed;
 	private float _targetManeuver;
-
+	
+	private Rigidbody _rigidbody;
+	
 	private void Start ()
 	{
-		_currentSpeed = GetComponent<Rigidbody>().velocity.z;
+		_rigidbody = GetComponent<Rigidbody>();
+		_currentSpeed = _rigidbody.velocity.z;
 		StartCoroutine(Evade());
 	}
 
@@ -34,13 +37,13 @@ public class ActionEvasiveManeuver : MonoBehaviour
 
 	private void FixedUpdate ()
 	{
-		float newManeuver = Mathf.MoveTowards (GetComponent<Rigidbody>().velocity.x, _targetManeuver, smoothing * Time.deltaTime);
-		GetComponent<Rigidbody>().velocity = new Vector3 (newManeuver, 0.0f, _currentSpeed);
-		GetComponent<Rigidbody>().position = new Vector3
+		float newManeuver = Mathf.MoveTowards (_rigidbody.velocity.x, _targetManeuver, smoothing * Time.deltaTime);
+		_rigidbody.velocity = new Vector3 (newManeuver, 0.0f, _currentSpeed);
+		_rigidbody.position = new Vector3
 		(
-			Mathf.Clamp(GetComponent<Rigidbody>().position.x, boundary.xMin, boundary.xMax), 
+			Mathf.Clamp(_rigidbody.position.x, boundary.xMin, boundary.xMax), 
 			0.0f, 
-			Mathf.Clamp(GetComponent<Rigidbody>().position.z, boundary.zMin, boundary.zMax)
+			Mathf.Clamp(_rigidbody.position.z, boundary.zMin, boundary.zMax)
 		);
 		
 		GetComponent<Rigidbody>().rotation = Quaternion.Euler (0, 0, GetComponent<Rigidbody>().velocity.x * -tilt);

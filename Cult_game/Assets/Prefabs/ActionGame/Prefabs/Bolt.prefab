@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400000}
-  - component: {fileID: 5400000}
+  - component: {fileID: 5037851015103470665}
   - component: {fileID: 13600000}
   - component: {fileID: 11400002}
+  - component: {fileID: -4506560587220713964}
   m_Layer: 0
   m_Name: Bolt
   m_TagString: Untagged
@@ -34,7 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &5400000
+--- !u!54 &5037851015103470665
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76,7 +77,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7850f24249e4056b2189de03ae584c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 15
+--- !u!114 &-4506560587220713964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3069907128af34efca9780c9aea75eb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 2
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0

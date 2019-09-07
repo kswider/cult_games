@@ -1,6 +1,4 @@
-﻿using System;
-using UnityEngine;
-using System.Collections;
+﻿using UnityEngine;
 
 [System.Serializable]
 public class Boundary 
@@ -21,9 +19,11 @@ public class ActionPlayerController : MonoBehaviour
 	private float _nextFire;
 
 	private Quaternion _calibrationQuaternion;
+	private Rigidbody _rigidbody;
 
 	private void Start()
 	{
+		_rigidbody = GetComponent<Rigidbody>();
 		CalibrateAccelerometer();
 	}
 	
@@ -41,16 +41,16 @@ public class ActionPlayerController : MonoBehaviour
 		Vector3 acceleration = FixAcceleration(accelerationRaw); // by initial zero point
 
 		Vector3 movement = new Vector3(acceleration.x, 0.0f, acceleration.y);
-		GetComponent<Rigidbody>().velocity = movement * speed;
+		_rigidbody.velocity = movement * speed;
 		
-		GetComponent<Rigidbody>().position = new Vector3
+		_rigidbody.position = new Vector3
 		(
-			Mathf.Clamp (GetComponent<Rigidbody>().position.x, boundary.xMin, boundary.xMax), 
+			Mathf.Clamp (_rigidbody.position.x, boundary.xMin, boundary.xMax), 
 			0.0f, 
-			Mathf.Clamp (GetComponent<Rigidbody>().position.z, boundary.zMin, boundary.zMax)
+			Mathf.Clamp (_rigidbody.position.z, boundary.zMin, boundary.zMax)
 		);
 		
-		GetComponent<Rigidbody>().rotation = Quaternion.Euler (0.0f, 0.0f, GetComponent<Rigidbody>().velocity.x * -tilt);
+		_rigidbody.rotation = Quaternion.Euler (0.0f, 0.0f, _rigidbody.velocity.x * -tilt);
 	}
 	
 	//Used to calibrate the Input.acceleration input

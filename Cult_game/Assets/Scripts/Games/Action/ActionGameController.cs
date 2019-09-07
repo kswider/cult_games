@@ -9,8 +9,13 @@ using Random = UnityEngine.Random;
 public class ActionGameController : MonoBehaviour
 {
     public GameObject[] hazards;
-    public Vector3 spawnValues;
-    public int hazardCount;
+    public Vector3 hazardSpawnValues;
+    public int hazardsPerWave;
+    
+    public GameObject[] neutrals;
+    public Vector3 neutralSpawnValues;
+    public int neutralsPerWave;
+    
     public float spawnWait;
     public float startWait;
     public float waveWait;
@@ -39,10 +44,16 @@ public class ActionGameController : MonoBehaviour
     {
         if (_gameOver && Input.GetButton("Fire1"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            StartCoroutine(ReloadScene());
         }
     }
 
+    private IEnumerator ReloadScene()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    
     private IEnumerator SpawnWaves()
     {
         yield return new WaitForSeconds(startWait);
@@ -64,14 +75,30 @@ public class ActionGameController : MonoBehaviour
         }
         int currentWave = 1;
         
+        Quaternion spawnRotation = Quaternion.identity;
+        
         while (currentWave <= wavesToBeat)
         {
-            for (int i = 0; i < hazardCount; i++)
+            int hazardToSpawn = hazardsPerWave;
+            int neutralToSpawn = neutralsPerWave;
+            while (hazardToSpawn > 0)
             {
-                GameObject hazard = hazards[Random.Range(0, hazards.Length)];
-                Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
-                Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(hazard, spawnPosition, spawnRotation);
+                if (Random.Range(0, hazardToSpawn + neutralToSpawn) <= hazardToSpawn)
+                {
+                    hazardToSpawn--;
+                    
+                    GameObject hazard = hazards[Random.Range(0, hazards.Length)];
+                    Vector3 spawnPosition = new Vector3(Random.Range(-hazardSpawnValues.x, hazardSpawnValues.x), hazardSpawnValues.y, hazardSpawnValues.z);
+                    Instantiate(hazard, spawnPosition, spawnRotation);
+                }
+                else
+                {
+                    neutralToSpawn--;
+                    
+                    GameObject neutral = neutrals[Random.Range(0, neutrals.Length)];
+                    Vector3 spawnPosition = new Vector3(Random.Range(-neutralSpawnValues.x, neutralSpawnValues.x), neutralSpawnValues.y, neutralSpawnValues.z);
+                    Instantiate(neutral, spawnPosition, spawnRotation);
+                }
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);

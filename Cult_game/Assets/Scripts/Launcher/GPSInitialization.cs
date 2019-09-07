@@ -11,11 +11,12 @@ public class GPSInitialization : Singleton<GPSInitialization>
     
     private IEnumerator InitializeLocation()
     {
+        
 #if UNITY_EDITOR
         //Wait until Unity connects to the Unity Remote, while not connected, yield return null
         while (!UnityEditor.EditorApplication.isRemoteConnected)
         {
-            yield return null;
+            yield return new WaitForSeconds(1);
         }
 #endif
         if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
@@ -53,6 +54,7 @@ public class GPSInitialization : Singleton<GPSInitialization>
             Debug.Log("unable to determine device location");
             yield break;
         }
+
         Debug.Log("location service loaded");
         
         Destroy(gameObject);
