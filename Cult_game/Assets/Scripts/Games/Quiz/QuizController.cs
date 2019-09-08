@@ -26,7 +26,7 @@ public class QuizController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _playerController = Utilities.FindPlayer();
+        _playerController = Utilities.FindPlayerController();
         _sceneController = Utilities.FindSceneController();
         _currentQuiz = Resources.LoadAll<Quiz>("Quizes").First(x => x.id == _playerController.CurrentPlayedPlaceId);
         _buttons = buttonsHolder.GetComponentsInChildren<Button>();

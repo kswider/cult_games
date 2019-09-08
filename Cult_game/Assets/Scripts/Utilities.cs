@@ -1,6 +1,6 @@
 ﻿public static class Utilities
 {
-    public static PlayerController FindPlayer()
+    public static PlayerController FindPlayerController()
     {
         return Singleton<PlayerController>.Instance;
     }

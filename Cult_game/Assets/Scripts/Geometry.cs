@@ -17,7 +17,7 @@ public static class Geometry
         return (float)d * 1000; // meters
     }
     
-    public static float AngleFromCoordinate(Vector2 coord1, Vector2 coord2)
+    public static float AngleFromCoordinates(Vector2 coord1, Vector2 coord2)
     {
         //sauce: https://stackoverflow.com/questions/3932502/calculate-angle-between-two-latitude-longitude-points
         double dLon = coord2.y - coord1.y;

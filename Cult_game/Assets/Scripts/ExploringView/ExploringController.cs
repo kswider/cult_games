@@ -27,7 +27,7 @@ public class ExploringController : MonoBehaviour
     {
         _promptExists = false;
         
-        _playerController = Utilities.FindPlayer();
+        _playerController = Utilities.FindPlayerController();
         _sceneController = Utilities.FindSceneController();
         
         _playerPosition = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
@@ -96,7 +96,7 @@ public class ExploringController : MonoBehaviour
     }
     private void UpdateArrowDirection()
     {
-        float angle = Geometry.AngleFromCoordinate(_playerPosition, _localTargetPosition);
+        float angle = Geometry.AngleFromCoordinates(_playerPosition, _localTargetPosition);
         compassArrow.transform.localRotation = Quaternion.Euler(0, 0, Mathf.Round(angle));
     }
 

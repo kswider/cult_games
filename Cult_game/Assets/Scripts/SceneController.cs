@@ -21,7 +21,7 @@ public class SceneController : Singleton<SceneController>
     
     private void Start()
     {
-        _playerController = Utilities.FindPlayer();
+        _playerController = Utilities.FindPlayerController();
     }
 
     // Update is called once per frame

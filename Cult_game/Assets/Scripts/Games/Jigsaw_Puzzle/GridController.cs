@@ -57,7 +57,7 @@ public class GridController : MonoBehaviour
     
     private void Awake()
     {
-        _playerController = Utilities.FindPlayer();
+        _playerController = Utilities.FindPlayerController();
         _sceneController = Utilities.FindSceneController();
 
         _playedPlace = _playerController.Places.Find(p => p.id == _playerController.CurrentPlayedPlaceId);

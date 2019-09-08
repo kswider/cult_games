@@ -9,7 +9,7 @@ public class OptionsController : MonoBehaviour
     
     private void Start()
     {
-        _playerController = Utilities.FindPlayer();
+        _playerController = Utilities.FindPlayerController();
 
         float sliderValue = (_playerController.Settings.DistanceThreshold - 50) / 25;
         slider.value = sliderValue;

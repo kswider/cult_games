@@ -8,7 +8,7 @@ public class InspirationalLearningSceneController : MonoBehaviour
 
     private void Start()
     {
-        _playerController = Utilities.FindPlayer();
+        _playerController = Utilities.FindPlayerController();
         _sceneController = Utilities.FindSceneController();
     }
 

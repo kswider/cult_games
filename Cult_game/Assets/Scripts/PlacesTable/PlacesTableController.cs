@@ -18,7 +18,7 @@ public class PlacesTableController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _playerController = Utilities.FindPlayer();
+        _playerController = Utilities.FindPlayerController();
         _sceneController = Utilities.FindSceneController();
         
         SetTypeBarToLookedType();
