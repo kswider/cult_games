@@ -11,6 +11,7 @@ public class Save
         public DateTime blockUntil;
     }
 
+    public string nick;
     public int generalScore;
     public List<int> discoveredPlaces = new List<int>();
     public List<PlaceBlock> blockedPlaces = new List<PlaceBlock>();
