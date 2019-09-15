@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SCN_ACTION_GAME.unity
     guid: d6cf7ed2faf3b47eb8f72eaa9c1a495a
+  - enabled: 1
+    path: Assets/Scenes/SCN_MULTIPLAYER.unity
+    guid: 05445fa22bb7f1742a33670c0d0d4d72
   m_configObjects: {}
