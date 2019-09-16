@@ -18,4 +18,9 @@ public class PlayPanelController : MonoBehaviour
     {
         _sceneController.GoToPlacesSceneWithType(type);
     }
+
+    public void GoToMultiplayer()
+    {
+        _sceneController.GoToScene(SceneController.SCN_MULTIPLAYER);
+    }
 }

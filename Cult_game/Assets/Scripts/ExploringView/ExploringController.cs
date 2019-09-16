@@ -21,7 +21,7 @@ public class ExploringController : MonoBehaviour
 
     private bool _promptExists;
 
-    private bool _debugMode = true;
+    private bool _debugMode = false;
     // Start is called before the first frame update
     private void Start()
     {

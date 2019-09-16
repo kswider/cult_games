@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Settings
 {
+    public const string IP = "http://bd0cc1fd.ngrok.io";
     private Place _selectedPlace;
 
     public Settings()

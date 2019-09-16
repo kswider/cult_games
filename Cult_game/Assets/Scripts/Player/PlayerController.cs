@@ -1,14 +1,17 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using ResourcesObjects;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class PlayerController : Singleton<PlayerController>
 {
     //Save
+    public string Nick { get; set; }
     public int Score { get; set; }
     public List<int> DiscoveredPlaces { get; set; }
     public List<Save.PlaceBlock> BlockedPlaces { get; set; }
@@ -42,8 +45,32 @@ public class PlayerController : Singleton<PlayerController>
         FileStream file = File.Create(Application.persistentDataPath + "/gamesave.save");
         bf.Serialize(file, save);
         file.Close();
-        
+
+        if (Nick != null && !Nick.Equals(""))
+        {
+            StartCoroutine(SendScoreToRemote());
+        }
         Debug.Log("Game Saved");
+    }
+
+    IEnumerator SendScoreToRemote()
+    {
+        string bodyData = "{\"points\": " + Score + "}";
+        string uri = Settings.IP + "/api/players/" + Nick;
+        using (UnityWebRequest webRequest = UnityWebRequest.Put(uri, bodyData))
+        {
+            webRequest.SetRequestHeader("Content-Type", "application/json");
+            yield return webRequest.SendWebRequest();
+
+            if (webRequest.isNetworkError || webRequest.isHttpError)
+            {
+                Debug.Log(webRequest.error);
+            }
+            else
+            {
+                Debug.Log("Upload complete!");
+            }
+        }
     }
     
     public void DeleteSave()
@@ -52,6 +79,8 @@ public class PlayerController : Singleton<PlayerController>
         {
             File.Delete(Application.persistentDataPath + "/gamesave.save");
         }
+
+        Nick = "";
         Score = 0;
         DiscoveredPlaces = new List<int>();
         BlockedPlaces = new List<Save.PlaceBlock>();
@@ -76,7 +105,8 @@ public class PlayerController : Singleton<PlayerController>
     {
         return new Save
         {
-            generalScore = Score
+            nick = Nick
+            , generalScore = Score
             , discoveredPlaces = DiscoveredPlaces
             , blockedPlaces = BlockedPlaces
         };
@@ -91,6 +121,7 @@ public class PlayerController : Singleton<PlayerController>
             Save save = (Save)bf.Deserialize(file);
             file.Close();
 
+            Nick = save.nick;
             Score = save.generalScore;
             DiscoveredPlaces = save.discoveredPlaces;
             BlockedPlaces = save.blockedPlaces;
@@ -100,6 +131,7 @@ public class PlayerController : Singleton<PlayerController>
         }
         else
         {
+            Nick = "";
             Score = 0;
             DiscoveredPlaces = new List<int>();
             BlockedPlaces = new List<Save.PlaceBlock>();
