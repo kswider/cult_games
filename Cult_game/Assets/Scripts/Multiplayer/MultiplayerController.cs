@@ -12,7 +12,7 @@ public class MultiplayerController : MonoBehaviour
     
     public GameObject entryPrefab;
     public Transform tableContent;
-    public InputField inputFiled;
+    public GameObject inputField;
     
     private PlayerController _playerController;
     private SceneController _sceneController;
@@ -28,29 +28,34 @@ public class MultiplayerController : MonoBehaviour
 
         if (_playerController.Nick == null || _playerController.Nick.Equals(""))
         {
-            inputFiled.enabled = true;
+            inputField.SetActive(true);
         }
-        GetPlayers();
+        else
+        {
+            InvokeRepeating(nameof(GetPlayers), 0.0f, 0.5f);
+        }
     }
-
-    private void SetTopText()
-    {
-        nickText.text = "Hello " + _playerController.Nick + "!";
-        scoreText.text = "Your score: " + _playerController.Score;
-
-        int position = _playerInfos.FindIndex(p => p.username.Equals(_playerController.Nick));
-        positionText.text = "You are " + position + " comparing to other players";
-    }
+    
     public void SetNick(InputField userInput)
     {
         _playerController.Nick = userInput.text;
         _playerController.SaveGame();
-        GetPlayers();
+        inputField.SetActive(false);
+        InvokeRepeating(nameof(GetPlayers), 0.0f, 0.5f);
     }
 
     public void GoBack()
     {
         _sceneController.GoBack();
+    }
+    
+    private void SetTopText()
+    {
+        nickText.text = "Hello " + _playerController.Nick + "!";
+        scoreText.text = "Your score: " + _playerController.Score;
+
+        int position = _playerInfos.FindIndex(p => p.username.Equals(_playerController.Nick))+1;
+        positionText.text = "You are " + position + " comparing to other players";
     }
     
     private void GetPlayers()
@@ -78,8 +83,7 @@ public class MultiplayerController : MonoBehaviour
             UpdateUI();
         }
     }
-
-
+    
     private void UpdateUI()
     {
         ClearTable();
@@ -98,6 +102,7 @@ public class MultiplayerController : MonoBehaviour
             
             _shownPlayers.Add(newPlayer);
         }
+        SetTopText();
     }
     
     private void ClearTable()

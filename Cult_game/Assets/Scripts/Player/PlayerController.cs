@@ -46,7 +46,7 @@ public class PlayerController : Singleton<PlayerController>
         bf.Serialize(file, save);
         file.Close();
 
-        if (!Nick.Equals(""))
+        if (Nick != null && !Nick.Equals(""))
         {
             StartCoroutine(SendScoreToRemote());
         }
@@ -55,10 +55,11 @@ public class PlayerController : Singleton<PlayerController>
 
     IEnumerator SendScoreToRemote()
     {
-        string bodyData = "{points: " + Score + "}";
-        string uri = "localhost:5000/api/players/" + Nick;
+        string bodyData = "{\"points\": " + Score + "}";
+        string uri = "http://localhost:5000/api/players/" + Nick;
         using (UnityWebRequest webRequest = UnityWebRequest.Put(uri, bodyData))
         {
+            webRequest.SetRequestHeader("Content-Type", "application/json");
             yield return webRequest.SendWebRequest();
 
             if (webRequest.isNetworkError || webRequest.isHttpError)
