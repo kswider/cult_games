@@ -56,7 +56,7 @@ public class PlayerController : Singleton<PlayerController>
     IEnumerator SendScoreToRemote()
     {
         string bodyData = "{\"points\": " + Score + "}";
-        string uri = "http://localhost:5000/api/players/" + Nick;
+        string uri = Settings.IP + "/api/players/" + Nick;
         using (UnityWebRequest webRequest = UnityWebRequest.Put(uri, bodyData))
         {
             webRequest.SetRequestHeader("Content-Type", "application/json");
@@ -79,6 +79,8 @@ public class PlayerController : Singleton<PlayerController>
         {
             File.Delete(Application.persistentDataPath + "/gamesave.save");
         }
+
+        Nick = "";
         Score = 0;
         DiscoveredPlaces = new List<int>();
         BlockedPlaces = new List<Save.PlaceBlock>();

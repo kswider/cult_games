@@ -60,7 +60,8 @@ public class MultiplayerController : MonoBehaviour
     
     private void GetPlayers()
     {
-        StartCoroutine(GetRequest("http://localhost:5000/api/players"));
+        string uri = Settings.IP + "/api/players";
+        StartCoroutine(GetRequest(uri));
     }
     
     IEnumerator GetRequest(string uri)
